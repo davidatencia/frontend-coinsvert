@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>singup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formAgregar="ngForm" (ngSubmit)="formSubmit()">
+
+    <label for="anombre">Nombre:</label><br>
+    <input type="text" name="anombre" #anombre="ngModel" [(ngModel)]="newUser.name" required><br>
+    
+    <label for="ajob">Trabajo:</label><br>
+    <input type="text" name="ajob" #ajob="ngModel" [(ngModel)]="newUser.username" required><br>
+    
+    <label for="apassword">password:</label><br>
+    <input type="password" name="apassword" #apassword="ngModel" [(ngModel)]="newUser.password" required><br>
+
+    <input type="submit" value="Enviar" >
+
+</form>
+</ion-content>
