@@ -1,60 +1,64 @@
-<div class="container">
-  <div class="logo-section">
-    <figure class="logo">
-      <img src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
+<ion-content>
 
-    </figure>
-  </div>
-  <div class="content">
-
-
-    <div class="switch">
-      <span id="slider" class="slider"></span>
-      <button (click)=loginButton() (click)="condicion = 'inicio'" class="button">Login</button>
-      <button (click)=registerButton() (click)="condicion = 'register'" class="button">register</button>
+  <ion-infinite-scroll threshold="100px" >
+  <div class="container">
+    <div class="logo-section">
+      <figure class="logo">
+        <img src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
+  
+      </figure>
     </div>
-
-    <!-- inicio -->
-    <div class="subcontent" *ngIf="condicion == 'inicio'">
-      <form class="formulario">
-        <ion-input class="input" placeholder="Usuario"></ion-input>
-        <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
-        <button class="submit-button">Ingresar</button>
-      </form>
-      <p>Olvidé mi contraseña</p>
-      <div class="login-social-media">
-        <div class="ingresa-con">
-          <div class="line"></div>
-          <p>O ingresa con</p>
-          <div class="line"></div>
+    <div class="content">
+          <div class="switch">
+            <span id="slider" class="slider"></span>
+            <button (click)=loginButton() (click)="condicion = 'inicio'" class="button">Login</button>
+            <button (click)=registerButton() (click)="condicion = 'register'" class="button">register</button>
+          </div>
+      
+          <!-- inicio -->
+          <div class="subcontent" *ngIf="condicion == 'inicio'">
+            <form class="formulario">
+              <ion-input class="input" placeholder="Usuario"></ion-input>
+              <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
+              <button class="submit-button">Ingresar</button>
+            </form>
+            <p>Olvidé mi contraseña</p>
+            <div class="login-social-media">
+              <div class="ingresa-con">
+                <div class="line"></div>
+                <p>O ingresa con</p>
+                <div class="line"></div>
+              </div>
+              <button class="social-button">Ingresar con Google</button>
+              <button class="social-button">Ingresar con Facebook</button>
+            </div>
+          </div>
+  
+          
+          <!-- register -->
+          <div class="subcontent" *ngIf="condicion == 'register'">
+            <form class="formulario">
+              <ion-input class="input" placeholder="Usuario"></ion-input>
+              <ion-input class="input" placeholder="Email"></ion-input>
+              <ion-select class="input" placeholder="Seleccionar País">
+                <ion-select-option value="Colombia">Colombia</ion-select-option>
+              </ion-select>
+              <ion-select class="input" placeholder="Seleccionar Estado">
+                <ion-select-option value="Atlantico">Atlantico</ion-select-option>
+              </ion-select>
+              <ion-select class="input" placeholder="Seleccionar ciudad">
+                <ion-select-option value="Barranquilla">Barranquilla</ion-select-option>
+              </ion-select>
+              <ion-input class="input" placeholder="Teléfono Móvil"></ion-input>
+              <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
+              <button class="submit-button">Ingresar</button>
+            </form>
+          </div>
+          
         </div>
-        <button class="social-button">Ingresar con Google</button>
-        <button class="social-button">Ingresar con Facebook</button>
       </div>
-    </div>
-
-    <!-- register -->
-    <div class="subcontent" *ngIf="condicion == 'register'">
-      <form class="formulario">
-        <ion-input class="input" placeholder="Usuario"></ion-input>
-        <ion-input class="input" placeholder="Email"></ion-input>
-        <ion-select class="input" placeholder="Seleccionar País">
-          <ion-select-option value="Colombia">Colombia</ion-select-option>
-        </ion-select>
-        <ion-select class="input" placeholder="Seleccionar Estado">
-          <ion-select-option value="Atlantico">Atlantico</ion-select-option>
-        </ion-select>
-        <ion-select class="input" placeholder="Seleccionar ciudad">
-          <ion-select-option value="Barranquilla">Barranquilla</ion-select-option>
-        </ion-select>
-        <ion-input class="input" placeholder="Teléfono Móvil"></ion-input>
-        <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
-        <button class="submit-button">Ingresar</button>
-      </form>
-    </div>
-
-  </div>
-</div>
+    </ion-infinite-scroll>
+</ion-content>
 
 
 
