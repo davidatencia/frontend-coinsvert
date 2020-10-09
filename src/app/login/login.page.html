@@ -15,7 +15,7 @@
       </div>
 
       <!-- inicio -->
-      <div *ngIf="condicion == 'inicio'">
+      <div class="subcontent" *ngIf="condicion == 'inicio'">
         <form class="formulario">
           <ion-input class="input" placeholder="Usuario"></ion-input>
           <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
@@ -34,8 +34,23 @@
       </div>
 
       <!-- register -->
-      <div *ngIf="condicion == 'register'" style="width: 50%;">
-        <h1>registro</h1>
+      <div class="subcontent" *ngIf="condicion == 'register'">
+        <form class="formulario">
+          <ion-input class="input" placeholder="Usuario"></ion-input>
+          <ion-input class="input" placeholder="Email"></ion-input>
+          <ion-select class="input" placeholder="Seleccionar País">
+            <ion-select-option value="Colombia">Colombia</ion-select-option>
+          </ion-select>
+          <ion-select class="input" placeholder="Seleccionar Estado">
+            <ion-select-option value="Atlantico">Atlantico</ion-select-option>
+          </ion-select>
+          <ion-select class="input" placeholder="Seleccionar ciudad">
+            <ion-select-option value="Barranquilla">Barranquilla</ion-select-option>
+          </ion-select>
+          <ion-input class="input" placeholder="Teléfono Móvil"></ion-input>
+          <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
+          <button class="submit-button">Ingresar</button>
+        </form>
       </div>
     
   </div>
