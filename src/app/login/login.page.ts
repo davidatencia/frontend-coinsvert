@@ -10,16 +10,15 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-  test(){
-    console.log('Testing')
-    const buttons = document.getElementsByClassName("button")
-    if(buttons[0].classList.contains("clicked")){
-      buttons[0].classList.remove("clicked")
-      buttons[1].classList.add("clicked")
-    } else {
-      buttons[0].classList.add("clicked")
-      buttons[1].classList.remove("clicked")
-    }
+  loginButton(){
+    const slider = document.getElementById("slider")
+    slider.classList.remove("clicked")
+    
   }
+  registerButton(){
+    const slider = document.getElementById("slider")
+    slider.classList.add("clicked")
 
+  }
+  
 }
