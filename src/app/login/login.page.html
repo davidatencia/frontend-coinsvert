@@ -1,33 +1,43 @@
 
 <div class="container">
   <div class="logo-section">
-    <figure>
+    <figure >
       <img src="../../assets/icon/favicon.png" alt="coinsvert-logo">
 
     </figure>
     <h2>coinsvert</h2>
   </div>
   <div class="content">
-    <div class="switch">
-      <button (click)= test() class="clicked button">Login</button>
-      <button (click)= test() class="button">Registro</button>
-    </div>
-    <form class="formulario">
-      <ion-input class="input" placeholder="Usuario"></ion-input>
-      <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
-      <button class="submit-button">Ingresar</button>
-    </form>
-    <p>Olvidé mi contraseña</p>
-    <div class="login-social-media">
-      <div class="ingresa-con">
-        <div class="line"></div>
-        <p>O ingresa con</p>
-        <div class="line"></div>
-      </div>
-      <button class="social-button">Ingresar con Google</button>
-      <button class="social-button">Ingresar con Facebook</button>
 
-    </div>
+      <div class="switch">
+        <button (click)= test() (click)="condicion = 'inicio'" class="button">Login</button>
+        <button (click)= test() (click)="condicion = 'register'" class="button">register</button>
+      </div>
+
+      <!-- inicio -->
+      <div *ngIf="condicion == 'inicio'">
+        <form class="formulario">
+          <ion-input class="input" placeholder="Usuario"></ion-input>
+          <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
+          <button class="submit-button">Ingresar</button>
+        </form>
+        <p>Olvidé mi contraseña</p>
+        <div class="login-social-media">
+          <div class="ingresa-con">
+            <div class="line"></div>
+            <p>O ingresa con</p>
+            <div class="line"></div>
+          </div>
+          <button class="social-button">Ingresar con Google</button>
+          <button class="social-button">Ingresar con Facebook</button>
+        </div>
+      </div>
+
+      <!-- register -->
+      <div *ngIf="condicion == 'register'" style="width: 50%;">
+        <h1>registro</h1>
+      </div>
+    
   </div>
 </div>
 

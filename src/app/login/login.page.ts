@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor() { }
+  condicion: String;
+
+  constructor(private _router: Router) { 
+    this.condicion= "inicio";
+  }
 
   ngOnInit() {
   }
+
   test(){
     console.log('Testing')
     const buttons = document.getElementsByClassName("button")

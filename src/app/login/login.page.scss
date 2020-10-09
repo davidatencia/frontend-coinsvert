@@ -34,8 +34,10 @@
   border-radius: 50px;
   background: #3284B7;
   box-shadow: 0 2px 9px 0 rgba(0,0,0,.1);
-  padding: 2px;
+  padding: 5px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 .button{
   color: white;
