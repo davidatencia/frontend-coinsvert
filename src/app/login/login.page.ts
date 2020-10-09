@@ -17,12 +17,16 @@ export class LoginPage implements OnInit {
   }
 
   loginButton(){
-    const slider = document.getElementById("slider")
-    slider.classList.remove("clicked")
+    const slider = document.getElementById("slider");
+    slider.classList.remove("clicked");
+    const logo = document.querySelector("#imgLogo");
+    logo.setAttribute("src", "../../assets/icon/coinsvert imagotipo-10.png");
   }
   registerButton(){
-    const slider = document.getElementById("slider")
-    slider.classList.add("clicked")
+    const slider = document.getElementById("slider");
+    slider.classList.add("clicked");
+    const logo = document.querySelector("#imgLogo");
+    logo.setAttribute("src", "../../assets/coinsvrtlogos/coinsvert horizontal-24.svg");
 
   }
   

@@ -1,8 +1,7 @@
 <div class="container">
   <div class="logo-section">
     <figure class="logo">
-      <img src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
-
+      <img id="imgLogo" src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
     </figure>
   </div>
   <div class="content">
@@ -34,7 +33,7 @@
     </div>
 
     <!-- register -->
-    <div class="subcontent" *ngIf="condicion == 'register'">
+	  <div *ngIf="condicion == 'register'">
       <form class="formulario">
         <ion-input class="input" placeholder="Usuario"></ion-input>
         <ion-input class="input" placeholder="Email"></ion-input>
@@ -52,7 +51,7 @@
         <button class="submit-button">Ingresar</button>
       </form>
     </div>
-
+  
   </div>
 </div>
 
