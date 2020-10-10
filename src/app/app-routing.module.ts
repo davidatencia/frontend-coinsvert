@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'singup',
     loadChildren: () => import('./singup/singup.module').then( m => m.SingupPageModule)
+  },  {
+    path: 'pwr-recover',
+    loadChildren: () => import('./pages/pwr-recover/pwr-recover.module').then( m => m.PwrRecoverPageModule)
   },
+
 ];
 
 @NgModule({
