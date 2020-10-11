@@ -1,25 +1,29 @@
 <ion-content>
   <ion-infinite-scroll threshold="100%">
     <div class="container">
-      <div class="logo-section" [style.height] = "condicion == 'inicio' ? '40vh' : '10vh'">
+      <div class="logo-section" [style.height] = "condicion == 'inicio' ? '20em' : '5em'">
         <figure class="logo">
           <img id="imgLogo" src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
         </figure>
       </div>
-      <div class="content" [style.height] = "condicion == 'inicio' ? 'unset' : '84vh'">
+      <div class="content" [style.height] = "condicion == 'inicio' ? '29em' : '44em'">
         <div class="switch">
           <span id="slider" class="slider"></span>
-          <button (click)=loginButton() (click)="condicion = 'inicio'" class="button"><strong>Login</strong></button>
-          <button (click)=registerButton() (click)="condicion = 'register'" class="button"><strong>register</strong></button>
+          <button (click)=loginButton() (click)="condicion = 'inicio'" class="button"><strong>Iniciar Sesion</strong></button>
+          <button (click)=registerButton() (click)="condicion = 'register'" class="button"><strong>Registrar</strong></button>
         </div>
 
         <!-- inicio -->
         <div class="subcontent" *ngIf="condicion == 'inicio'">
-          <form class="formulario">
-            <ion-input class="input" placeholder="Usuario"></ion-input>
-            <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
-            <button class="submit-button"><strong>Ingresar</strong></button>
+
+          <form id="formInicio" class="formulario" #formIniciar="ngForm" (ngSubmit)="formIniciarSubmit()">
+            <ion-input class="input" placeholder="Usuario" name="usuario" #usuario="ngModel" [(ngModel)]="User.username" required></ion-input>
+              <span *ngIf="usuario.touched && !usuario.valid">Ingrese el nombre de usuario</span>
+            <ion-input class="input" type="password" placeholder="Contraseña" name="password" #password="ngModel" [(ngModel)]="User.password" required></ion-input>
+              <span *ngIf="password.touched && !password.valid">Ingrese su contraseña</span>
+            <button class="submit-button" [disabled]="!formIniciar.form.valid" [style.background] = "!formIniciar.form.valid ? 'gainsboro' : 'white'"><strong>Ingresar</strong></button>
           </form>
+
           <p style="text-align: center;">Olvidé mi contraseña</p>
           <div class="login-social-media">
             <div class="ingresa-con">
@@ -27,8 +31,8 @@
             <p style="font-size: 13px;">O ingresa con</p>
             <div class="line"></div>
             </div>
-            <button class="social-button">Ingresar con Google</button>
-            <button class="social-button">Ingresar con Facebook</button>
+            <button class="social-button"><svg class="icon_socialb" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path class="icon" d="M22.288 21h-20.576c-.945 0-1.712-.767-1.712-1.712v-13.576c0-.945.767-1.712 1.712-1.712h20.576c.945 0 1.712.767 1.712 1.712v13.576c0 .945-.767 1.712-1.712 1.712zm-10.288-6.086l-9.342-6.483-.02 11.569h18.684v-11.569l-9.322 6.483zm8.869-9.914h-17.789l8.92 6.229s6.252-4.406 8.869-6.229z"/></svg>Ingresar con Google</button>
+            <button class="social-button"><svg class="icon_socialb" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class="icon" d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>Ingresar con Facebook</button>
           </div>
           <p style="font-size: 13px; text-align: center;">Sigue nuestras redes</p>
           <div class="siguenos">
@@ -42,22 +46,31 @@
 
         <!-- register -->
         <div class="subcontent" *ngIf="condicion == 'register'">
-          <form class="formulario">
-            <ion-input class="input" placeholder="Usuario"></ion-input>
-            <ion-input class="input" placeholder="Email"></ion-input>
-            <ion-select class="input" placeholder="Seleccionar País">
+
+          <form id="formRegistro" class="formulario" #formRegistro="ngForm" (ngSubmit)="formRegistroSubmit()">
+            <ion-input class="input" type="text" placeholder="Usuario" name="rusuario" #rusuario="ngModel" [(ngModel)]="newUser.rusername" required></ion-input>
+              <span *ngIf="rusuario.touched && !rusuario.valid">Ingrese un nombre de usuario</span>
+            <ion-input class="input" type="email" placeholder="Email" name="remail" #remail="ngModel" [(ngModel)]="newUser.remail" required></ion-input>
+              <span *ngIf="remail.touched && !remail.valid">Ingrese una direccion de correo</span>
+            <ion-select class="input" placeholder="Seleccionar País" name="rpais" #rpais="ngModel" [(ngModel)]="newUser.rpais" required>
               <ion-select-option value="Colombia">Colombia</ion-select-option>
             </ion-select>
-            <ion-select class="input" placeholder="Seleccionar Estado">
+              <span *ngIf="rpais.touched && !rpais.valid">Seleccione su país</span>
+            <ion-select class="input" placeholder="Seleccionar Estado"  name="restado" #restado="ngModel" [(ngModel)]="newUser.restado" required>
               <ion-select-option value="Atlantico">Atlantico</ion-select-option>
             </ion-select>
-            <ion-select class="input" placeholder="Seleccionar ciudad">
+              <span *ngIf="restado.touched && !restado.valid">Seleccione su estado</span>
+            <ion-select class="input" placeholder="Seleccionar ciudad" name="rciudad" #rciudad="ngModel" [(ngModel)]="newUser.rciudad" required>
               <ion-select-option value="Barranquilla">Barranquilla</ion-select-option>
             </ion-select>
-            <ion-input class="input" placeholder="Teléfono Móvil"></ion-input>
-            <ion-input class="input" type="password" placeholder="Contraseña"></ion-input>
-            <button class="submit-button">Ingresar</button>
+              <span *ngIf="rciudad.touched && !rciudad.valid">Seleccione su ciudad</span>
+            <ion-input class="input" type="number" placeholder="Teléfono Móvil" name="rTel" #rTel="ngModel" [(ngModel)]="newUser.rTel" required></ion-input>
+              <span *ngIf="rTel.touched && !rTel.valid">Ingrese un número de teléfono</span>
+            <ion-input class="input" type="password" placeholder="Contraseña" name="rpassword" #rpassword="ngModel" [(ngModel)]="newUser.rpassword" required></ion-input>
+              <span *ngIf="rpassword.touched && !rpassword.valid">Ingrese una contraseña</span>
+            <button class="submit-button" [disabled]="!formRegistro.form.valid" [style.background] = "!formRegistro.form.valid ? 'gainsboro' : 'white'">Ingresar</button>
           </form>
+
         </div>
 
       </div>

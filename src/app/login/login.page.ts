@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {PeticionesService} from '../services/userService'
 
 @Component({
   selector: 'app-login',
@@ -7,27 +7,63 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  condicion: String;
 
-  constructor(private _router: Router) { 
+  condicion: String;
+  public User: any;
+  public newUser: any;
+
+  constructor(private _peticionesservice: PeticionesService) { 
     this.condicion= "inicio";
+    this.User = {
+      username: "",
+      password: ""
+    };
+    this.newUser = {
+      rusername: "",
+      remail: "",
+      rpais: "",
+      restado: "",
+      rciudad: "",
+      rTel: "",
+      rPassword: ""
+    }
+
   }
 
   ngOnInit() {
   }
 
   loginButton(){
-    const slider = document.getElementById("slider");
+    let slider = document.getElementById("slider");
     slider.classList.remove("clicked");
-    const logo = document.querySelector("#imgLogo");
+    let logo = document.querySelector("#imgLogo");
     logo.setAttribute("src", "../../assets/icon/coinsvert imagotipo-10.png");
   }
   registerButton(){
-    const slider = document.getElementById("slider");
+    let slider = document.getElementById("slider");
     slider.classList.add("clicked");
-    const logo = document.querySelector("#imgLogo");
+    let logo = document.querySelector("#imgLogo");
     logo.setAttribute("src", "../../assets/coinsvrtlogos/coinsvert horizontal-24.svg");
-
   }
-  
+
+  // Inicio De Sesion
+  formIniciarSubmit(){
+    this._peticionesservice.addUser(this.User).subscribe(Response=>{
+      console.log(Response);
+      document.getElementById("formInicio").reset();
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
+  }
+
+  formRegistroSubmit(){
+    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+      this.condicion="inicio"; 
+      document.getElementById("formRegistro").reset();
+      console.log(Response);
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
+  }
+
 }

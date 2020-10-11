@@ -5,6 +5,7 @@
 .container{
   margin: 0 auto;  
   max-width: 500px;
+  background-color: white;
   color: white;
   
   h2{
@@ -17,11 +18,11 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: .2s;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
-  -ms-transition: .2s;
-  -o-transition: .2s;
+  transition: .8s;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
 }
 .logo > img{
   width: 215px;
@@ -34,6 +35,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all  .8s;
+  -webkit-transition: all  .8s;
+  -moz-transition: all  .8s;
+  -ms-transition: all  .8s;
+  -o-transition: all  .8s;
 }
 .switch{
   width: 100%;
@@ -124,6 +130,7 @@
 }
 .social-button{
   height: 35px;
+  line-height: 26px;
   border-radius: 50px;
   border: 1px solid white;  
   background: none;
@@ -142,16 +149,17 @@
   line-height: 50px;
   svg{
     margin: 0px 10px;
-    
-    .icon {
-      fill: white; 
-    }
-    .icon:hover {
-      box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
-    }
   }
 }
 
+.icon {
+  fill: white; 
+}
+
+.icon_socialb{
+  float: left;
+  margin: auto -22px auto 12px;
+}
 
 
 // registrar
