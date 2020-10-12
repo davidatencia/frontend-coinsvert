@@ -1,5 +1,55 @@
 <div class="container">
+    <ion-menu side="start" content-id="main-content">
+        <ion-header>
+          <ion-toolbar translucent>
+            <ion-title>Menú</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <ion-item>
+              <ion-icon name="mail" slot="start"></ion-icon>
+              <ion-label>Inbox</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="paper-plane" slot="start"></ion-icon>
+              <ion-label>Outbox</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="heart" slot="start"></ion-icon>
+              <ion-label>Favorites</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="archive" slot="start"></ion-icon>
+              <ion-label>Archived</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="trash" slot="start"></ion-icon>
+              <ion-label>Trash</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="warning" slot="start"></ion-icon>
+              <ion-label>Spam</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+  
+      <div class="ion-page" id="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Inbox</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-button expand="block" onclick="openMenu()">Open Menu</ion-button>
+        </ion-content>
+      </div>
   <div class="profile">
+  
   </div>
   <div class="content">
         <h2>Ultimas transacciones</h2>
@@ -18,7 +68,7 @@
     <ion-tab-bar slot="bottom">
 
         <ion-tab-button tab="panel"> 
-            <img src="../../assets/icon/favicon.png">
+            <img src="../../assets/icon/favicon.png" class="dashboard-tab-icon">
             <ion-label>Dashboard</ion-label>
         </ion-tab-button>
 
