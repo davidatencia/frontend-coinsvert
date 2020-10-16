@@ -1,51 +1,148 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  .container{
-    background: linear-gradient( to right bottom, #5FCEDC, #644296 85%) ;
-    margin: 0 auto;  
-    max-width: 500px;
-    color: white;
-    h2{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      color: gray;
-    }
-  }
-  .profile{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 40vh;
-  }
-  .content{
-    background: #fff;
-    //background: linear-gradient( #5FCEDC, #644296 85%) ;
-    box-shadow: 0 2px 9px 0 rgba(0,0,0,.6);
-    border-radius: 40px 40px 0 0;
-    height: 100vh;
-    padding: 25px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .clicked{
-    background: #70C6DD;
-  }
-  
+// Vista del Dashboard - rebeca
 
-  .recovery-button{
-    height: 35px;
-    border-radius: 50px;
-    border: none;  
-    box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
-    color: #644296;
-    margin-top: 15px;
-    background: white;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+.container {
+  background: linear-gradient(to right bottom, #5FCEDC, #644296 85%);
+  margin: 0 auto;
+  max-width: 500px;
+  color: white;
 
-.dashboard-tab-icon{
-  width: 20px;
-  height: 20px;
+  h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gray;
+  }
+}
+
+// tabs en formato svg
+.dashb{
+  -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
+  background:  #644296;
+  height: 58px;
+  align-items: center;
+}
+
+.cartera{
+  -webkit-mask: url(../../assets/imgs/wallet.svg) no-repeat;
+  background:  #644296;
+  height: 58px;
+  align-items: center;
+}
+
+
+.home{
+  -webkit-mask: url(../../assets/imgs/perfil.svg) no-repeat;
+  background:  #644296;
+  height: 50px;
+  align-items: center;
+}
+
+
+.precios{
+  -webkit-mask: url(../../assets/imgs/precios.svg) no-repeat;
+  background:  #644296;
+  height: 50px;
+  align-items: center;
+}
+
+.market{
+  -webkit-mask: url(../../assets/imgs/market.svg) no-repeat;
+  background:  #644296;
+  height: 50px;
+  align-items: center;
+}
+
+// Final del menu inferior - tabs 
+
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+}
+
+.row {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+
+.col{
+  border-style: dashed;
+  border-color: #000;
+}
+
+.content {
+  background: #fff;
+  //background: linear-gradient( #5FCEDC, #644296 85%) ;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .6);
+  border-radius: 40px 40px 0 0;
+  height: 100vh;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switch {
+  width: 100%;
+  height: 6%;
+  border-radius: 50px;
+  background: #eae7f2;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .1);
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.is-selected {
+  color: white;
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  background: #644296;
+  border: none;
+  outline: 0;
+}
+
+.not-selected {
+  color: white;
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  background: transparent;
+  border: none;
+  outline: 0;
+}
+
+// .recovery-button{
+//   height: 35px;
+//   border-radius: 50px;
+//   border: none;  
+//   box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
+//   color: #644296;
+//   margin-top: 15px;
+//   background: white;
+// }
+
+.botontrans {
+  padding: 50px;
+  align-items: center;
+}
+
+// dashboard
+
+
+.dashboard-tab {
+  mask-image: url();
+}
+
+.tab-bar{
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .5);
 }
