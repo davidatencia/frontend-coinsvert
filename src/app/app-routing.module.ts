@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'pwr-recover',
     loadChildren: () => import('./pages/pwr-recover/pwr-recover.module').then( m => m.PwrRecoverPageModule)
   },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
+    path: 'tab-dashboard',
+    loadChildren: () => import('./tab-dashboard/tab-dashboard.module').then( m => m.TabDashboardPageModule)
+  },
 
 ];
 
