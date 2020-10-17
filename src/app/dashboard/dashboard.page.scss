@@ -10,6 +10,7 @@
   margin: 0 auto;
   max-width: 500px;
   color: white;
+  font-family: 'Source Sans Pro', sans-serif;
 
   h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -92,7 +93,7 @@ justify-content: center;
 
 .switch {
   width: 100%;
-  height: 6%;
+  height: 5%;
   border-radius: 50px;
   background: #eae7f2;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, .1);
@@ -111,7 +112,7 @@ justify-content: center;
 }
 
 .not-selected {
-  color: white;
+  color: #644296;
   width: 50%;
   height: 100%;
   border-radius: 50px;
@@ -129,6 +130,39 @@ justify-content: center;
 //   margin-top: 15px;
 //   background: white;
 // }
+.content-transactions{
+  width: auto;
+}
+.transacciones {
+  margin-top: 15px;
+}
+.list-item {
+  border-radius: 15px;
+  box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+//items del listado de transacciones
+.crypto-avatar{
+  // -webkit-mask: url(../../assets/imgs/bitcoin-1.svg) no-repeat;
+  // height: 50px;
+  // align-items: center;
+  // margin: auto;
+  
+}
+.crypto-type {
+  text-align: left;
+}
+.crypto-price {
+  color: #23c762;
+  text-align: right;
+}
+.money-change {
+  color: #644296;
+  text-align: right;
+}
+
 
 .botontrans {
   padding: 50px;
