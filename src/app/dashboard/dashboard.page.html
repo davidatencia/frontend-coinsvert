@@ -1,37 +1,44 @@
 <!-- Vista del Dashboard - Rebeca -->
 
 <div class="container">
-  <div class="profile">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="3">
-          <img src="../../assets/icon/envio.svg" alt="" />
-        </ion-col>
-        <ion-col size="3">
-          <img src="../../assets/icon/recarga.svg" alt="" />
-        </ion-col>
-        <ion-col size="3">
-          <img src="../../assets/icon/compra.svg" alt="" />
-        </ion-col>
-        <ion-col size="3">
-          <img src="../../assets/icon/retiro.svg" alt="" />
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+  <ion-grid no-padding>
+  <ion-row class="alert-menu" no-padding justify-content-start align-items-start>
+    <ion-col class="ion-float-left" size="6" ion-item no-lines no-padding>
+      <ion-button (click)="onClick()" fill="clear" shape="round">
+        <ion-icon id="icon-notifications" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6" class="ion-float-right">
+    <div>
+      <ion-button (click)="onClick()" fill="clear" shape="round">
+        <ion-icon id="icon-menu" slot="start" name="menu-outline"></ion-icon>
+      </ion-button>
+    </div>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col size="8">
+      <h1>Balance</h1>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6"></ion-col>
+      <ion-col size="6"></ion-col>
+    </ion-row>
+  </ion-grid> 
 
   <div class="content">
     <div class="switch">
-      <button
-        (click)="test()"
-        title="toggle-ultimasTransacciones"
-        class="is-selected"
-      >
+      <button (click)= test() class="clicked button">
         Ultimas Transacciones
       </button>
-      <button (click)="test()" title="toggle-precios" class="not-selected">
+      <button (click)= test() class="button">
         Precios
       </button>
+    </div>
       <div class="content-transactions">
         <!-- Listado de transacciones -->
         <ion-list class="transacciones">
@@ -112,7 +119,6 @@
         </ion-list>
         <!-- ./listado de transacciones -->
       </div>
-    </div>
   </div>
 
   <!-- Tabs utilizados en el Dashboard -->
