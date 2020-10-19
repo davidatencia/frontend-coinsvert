@@ -13,6 +13,11 @@
 .sc-ion-input-md-h{
   --placeholder-opacity: 0.5;
 }
+@media screen and (max-width:480px){
+	body {
+		font-size:80%; // achicamos la fuente en pantallas pequeñas 
+	} 
+}
 @import "~@ionic/angular/css/core.css";
 
 // CSS básico para que las apps construidas con Ionic

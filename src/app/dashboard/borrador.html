@@ -1,9 +1,11 @@
 <!-- Vista del Dashboard - Rebeca -->
+
 <div class="container-fluid">
   <ion-grid no-padding>
     <!-- iconos de notificación y menú desplegable -->
+
     <ion-row
-      class="header-icons"
+      class="alert-menu"
       no-padding
       justify-content-start
       align-items-start
@@ -29,11 +31,11 @@
       </ion-col>
     </ion-row>
     <!-- ./iconos de notificación y menú desplegable -->
-
     <!-- balance -->
-    <ion-row class="ion-text-md-left balance">
+    <ion-row class="ion-text-center">
       <ion-col size="6">
-        <h1 class="balance-price">$9.999,99</h1>
+        <h1 id="balance-price">$2.590,66</h1>
+        <h5>Balance</h5>
       </ion-col>
       <ion-col size="6">
         <ion-button (click)="onClick()" fill="clear" shape="round">
@@ -45,22 +47,72 @@
         </ion-button>
       </ion-col>
     </ion-row>
-    <ion-row class="ion-text-left balance">
-      <ion-col size="12" class="balance-label"><h5>Balance</h5></ion-col>
-    </ion-row>
     <!-- ./balance -->
+    <!-- menú de acciones rápidas -->
+    <ion-row class="actions-menu" justify-content-center align-items-start>
+      <ion-col class="ion-text-center" size="3" ion-item no-lines>
+        <div class="actions-menu-button">
+          <img
+            class="action-menu-icon"
+            (click)="onClick()"
+            src="../../assets/imgs/envio.svg"
+            alt="enviar-icon"
+          />
+        </div>
+        <ion-label>Enviar</ion-label>
+
+        <!-- <ion-button class="actions-menu-button" (click)="onClick()" fill="clear" shape="round">
+            <img class="action-menu-icon" src="../../assets/imgs/envio.svg" alt="enviar-icon" (click)="onClick()">
+          </ion-button>
+          <ion-label>Enviar</ion-label> -->
+      </ion-col>
+
+      <ion-col class="ion-text-center" size="3" no-lines>
+        <div class="actions-menu-button">
+          <img
+            class="action-menu-icon"
+            src="../../assets/imgs/recarga.svg"
+            alt="enviar-icon"
+          />
+        </div>
+        <ion-label>Recargar</ion-label>
+      </ion-col>
+
+      <ion-col class="ion-text-center" size="3" no-lines>
+        <div class="actions-menu-button">
+          <img
+            class="action-menu-icon"
+            src="../../assets/imgs/compra.svg"
+            alt="enviar-icon"
+          />
+        </div>
+        <ion-label>Comprar</ion-label>
+      </ion-col>
+
+      <ion-col class="ion-text-center" size="3" no-lines>
+        <div class="actions-menu-button">
+          <img
+            class="action-menu-icon"
+            src="../../assets/imgs/retiro.svg"
+            alt="enviar-icon"
+          />
+        </div>
+        <ion-label>Retirar</ion-label>
+      </ion-col>
+    </ion-row>
+    <!-- ./menú de acciones rápidas -->
   </ion-grid>
 
   <div class="content-fluid">
     <div class="switch">
-      <button (click)="test()" class="clicked switch-button">
-        Últimas transacciones
+      <button (click)="test()" class="clicked button">
+        Ultimas Transacciones
       </button>
-      <button (click)="test()" class="switch-button">Precios</button>
+      <button (click)="test()" class="button">Precios</button>
     </div>
     <div class="content-transactions">
-      <ion-list class="transactions-list">
-        <!-- item -->
+      <!-- Listado de transacciones -->
+      <ion-list class="transacciones">
         <ion-item class="list-item">
           <ion-avatar slot="start">
             <img
@@ -81,8 +133,7 @@
             </ion-row>
           </ion-grid>
         </ion-item>
-        <!-- ./item -->
-        <!-- item -->
+
         <ion-item class="list-item">
           <ion-avatar slot="start">
             <img
@@ -93,7 +144,7 @@
           </ion-avatar>
           <ion-grid>
             <ion-row>
-              <ion-col class="crypto-type" size="6"> Ethereum </ion-col>
+              <ion-col class="crypto-type" size="6"> Bitcoin </ion-col>
               <ion-col class="crypto-price" size="6"> +0.958674 </ion-col>
             </ion-row>
             <ion-row>
@@ -102,9 +153,12 @@
               <ion-col class="money-change" size="6"> $254.222 </ion-col>
             </ion-row>
           </ion-grid>
+          <!--ion-label>
+                <h2>Bitcoin</h2>
+                <h3>I'm a big deal</h3>
+              </ion-label-->
         </ion-item>
-        <!-- ./item -->
-        <!-- item -->
+
         <ion-item class="list-item">
           <ion-avatar slot="start">
             <img
@@ -115,7 +169,7 @@
           </ion-avatar>
           <ion-grid>
             <ion-row>
-              <ion-col class="crypto-type" size="6"> Dashcoin </ion-col>
+              <ion-col class="crypto-type" size="6"> Bitcoin </ion-col>
               <ion-col class="crypto-price" size="6"> +0.958674 </ion-col>
             </ion-row>
             <ion-row>
@@ -125,8 +179,8 @@
             </ion-row>
           </ion-grid>
         </ion-item>
-        <!-- ./item -->
       </ion-list>
+      <!-- ./listado de transacciones -->
     </div>
   </div>
 
@@ -134,21 +188,19 @@
   <ion-tabs>
     <ion-tab-bar class="tab-bar" slot="bottom">
       <!-- Dashboard -->
-      <ion-tab-button tab="panel" class="dashboard-tab">
-        <ion-label class="tab-label">Dashboard</ion-label>
-      </ion-tab-button>
+      <ion-tab-button tab="panel" class="dashb"> </ion-tab-button>
 
       <!-- Wallet -->
-      <ion-tab-button tab="wallet" class="wallet-tab"> </ion-tab-button>
+      <ion-tab-button tab="wallet" class="cartera"> </ion-tab-button>
 
       <!-- Home -->
-      <ion-tab-button tab="account" class="profile-tab"> </ion-tab-button>
+      <ion-tab-button tab="account" class="perfil"> </ion-tab-button>
 
       <!-- Precio -->
-      <ion-tab-button tab="usd" class="prices-tab"> </ion-tab-button>
+      <ion-tab-button tab="usd" class="precios"> </ion-tab-button>
 
       <!-- Market -->
-      <ion-tab-button tab="cart" class="market-tab"> </ion-tab-button>
+      <ion-tab-button tab="cart" class="market"> </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
 </div>
