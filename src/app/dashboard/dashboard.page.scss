@@ -12,9 +12,10 @@
   h1 {
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
-    text-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+    text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
     font-weight: bold;
     font-size: 10vw;
+    // max-width: 15vw;
     }
   
     h2 {
@@ -41,15 +42,39 @@
 //Balance info
 .balance {
   margin-left: 30px;
+  max-width: 100%;
+}
+//menú acciones rápidas
+.actions-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  margin: 2vh;
+}
+.actions-menu-button {
+  background: #3866a291;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  width: 80%;
+  min-width: 50px;
+  max-width: 100px;
 }
 
+.action-menu-label {
+  align-items: center;
+}
 //
 .content-fluid {
   background: #fff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
   border-radius: 40px 40px 0 0;
   height: 100vh;
-  padding: 25px 40px;
+  padding: 20px;
   // display: flex;
   // flex-direction: column;
   align-items: center;
@@ -83,13 +108,14 @@
   width: auto;
 }
 .transactions-list {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .list-item {
   border-radius: 10px;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+  height: 70px;
+  // margin-bottom: 5px;
 }
 .crypto-type {
   text-align: left;
@@ -102,15 +128,21 @@
   color: #644296;
   text-align: right;
 }
+// imagenes de las transacciones
+.thumbnail{
+  margin-top: 20%;
+  width: 70%;
+  height: 70%;
+  }
 //Estilos del tab-bar
 //tab-bar styles
 .tab-bar {
   border-radius: 20px 20px 0 0;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
-  .dashboard-tab {
-    -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
-    background: #644296;
-    height: 45px;
+  .dashboard-icon {
+    // -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
+    // background: #644296;
+    width: 5px;
     align-items: center;
   }
   .wallet-tab {
@@ -141,4 +173,3 @@
     color: #000;
   }
 }
-
