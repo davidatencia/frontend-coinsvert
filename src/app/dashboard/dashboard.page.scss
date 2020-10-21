@@ -3,8 +3,7 @@
   padding: 0;
   max-width: 100%;
 }
-
-ion-row, ion-col {
+ion-row, ion-col, div {
   border-style: solid;
   border-color: #000;
 }
@@ -55,13 +54,16 @@ ion-row, ion-col {
   justify-content: center;
   // align-items: center;
   // text-align: center;
-  height: 20vh;
+  height: 15vh;
   margin: 2vh;
 }
 .action-menu-col {
-  padding: 20px;
+  // padding-top: 15px;
+  // padding-left: 15px;
 }
 .actions-menu-button {
+  position: relative;
+  left: 8px;
   background: #3866a291;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
   border-radius: 10px;
@@ -76,8 +78,11 @@ ion-row, ion-col {
   right: -20px;
 }
 
-.action-menu-label {
-  align-items: center;
+.actions-menu-label {
+  position: absolute;
+  left: 8px;
+  width: 80%;
+  text-align: center;
 }
 //
 .content-fluid {

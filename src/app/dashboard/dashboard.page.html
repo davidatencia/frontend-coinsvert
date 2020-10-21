@@ -52,7 +52,7 @@
       <!-- ./balance -->
       <!-- menú de acciones rápidas -->
       <ion-row class="actions-menu" justify-content-center>
-        <ion-col class="ion-text-center action-menu-col" size="3" ion-item no-lines><!--Enviar-->
+        <ion-col class="action-menu-col" size="3" ion-item no-lines><!--Enviar-->
           <div class="actions-menu-button">
             <ion-img
               class="action-menu-icon"
@@ -61,20 +61,24 @@
               alt="enviar-icon"
             ></ion-img>
           </div>
-          <ion-label class="action-menu-label">Enviar</ion-label>
+          <div class="actions-menu-label">
+            <ion-label>Enviar</ion-label>
+          </div>
         </ion-col>
 
-        <ion-col class="ion-text-center" size="3" no-lines>
-          <div class="actions-menu-button">
+        <ion-col class="ion-text-center action-menu-col ion-no-padding" size="3" no-lines>
+        <div class="actions-menu-button">
             <ion-img class="action-menu-icon"
             (click)="onClick()"
             src="../../assets/imgs/recarga.svg"
             alt="recargar-icon"></ion-img>
           </div>
-          <ion-label class="action-menu-label">Recargar</ion-label>
+          <div class="actions-menu-label">
+            <ion-label>Recargar</ion-label>
+          </div>
         </ion-col>
 
-        <ion-col class="ion-text-center" size="3" no-lines>
+        <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
           <div class="actions-menu-button">
             <ion-img
               class="action-menu-icon"
@@ -83,10 +87,12 @@
               alt="comprar-icon"
             ></ion-img>
           </div>
-          <ion-label class="action-menu-label">Comprar</ion-label>
+          <div class="actions-menu-label">
+            <ion-label>Comprar</ion-label>
+          </div>
         </ion-col>
 
-        <ion-col class="ion-text-center" size="3" no-lines>
+        <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
           <div class="actions-menu-button">
             <ion-img
               class="action-menu-icon"
@@ -95,7 +101,9 @@
               alt="retiro-icon"
             ></ion-img>
           </div>
-          <ion-label class="action-menu-label">Retirar</ion-label>
+          <div class="actions-menu-label">
+            <ion-label>Retirar</ion-label>
+          </div>
         </ion-col>
       </ion-row>
       <!-- ./menú de acciones rápidas -->
