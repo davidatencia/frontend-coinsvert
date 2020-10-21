@@ -3,6 +3,11 @@
   padding: 0;
   max-width: 100%;
 }
+
+ion-row, ion-col {
+  border-style: solid;
+  border-color: #000;
+}
 .container-fluid {
   background: linear-gradient(to right top, #5fcedc, #644296 90%);
   color: white;
@@ -48,21 +53,27 @@
 .actions-menu {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  // align-items: center;
+  // text-align: center;
   height: 20vh;
   margin: 2vh;
+}
+.action-menu-col {
+  padding: 20px;
 }
 .actions-menu-button {
   background: #3866a291;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
   border-radius: 10px;
-  align-items: center;
-  text-align: center;
+  align-content: center;
+  // text-align: center;
   padding: 5%;
   width: 80%;
   min-width: 50px;
   max-width: 100px;
+}
+.action-menu-icon {
+  right: -20px;
 }
 
 .action-menu-label {
