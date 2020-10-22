@@ -3,10 +3,10 @@
   padding: 0;
   max-width: 100%;
 }
-ion-row, ion-col, div {
-  border-style: solid;
-  border-color: #000;
-}
+// ion-row, ion-col, div {
+//   border-style: solid;
+//   border-color: #000;
+// }
 .container-fluid {
   background: linear-gradient(to right top, #5fcedc, #644296 90%);
   color: white;
@@ -34,25 +34,52 @@ ion-row, ion-col, div {
     }
     
     ion-badge{
-      position: absolute;
-      top: 1rem;
+      position: relative;
+      top: -0.5rem;
       right: -0.2rem;
       opacity: 0.9;
-      & ~ ion-icon {
-        margin-right: 1.2rem;
-      }
+      // & ~ ion-icon {
+      //   margin-right: 1.2rem;
+      // }
     }
 }
 .content {
   position: relative;
   height: auto;
   height: fit-content;
-  border-style: dashed;
+  // border-style: dashed;
+}
+.profile-icon {
+  position: relative;
+  height: 10vh;
+  max-height: 20vh;
+}
+.header-icons {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 2vh;
+}
+.header-button-menu {
+  height: 3vh;
+}
+.header-button-notif {
+  height: 3vh;
+}
+.notif-button {
+  position: relative;
+  left: -10px;
+}
+.notifications-icon, .menu-icon {
+  position: relative;
+  height: fit-content;
+  max-height: 15vh;
+  margin-right: 1.2rem;
 }
 //Balance info
 .balance {
   position: relative;
   max-width: 100%;
+  margin-bottom: 2vh;
 }
 //menú acciones rápidas
 .actions-menu {
@@ -61,6 +88,7 @@ ion-row, ion-col, div {
   justify-content: center;
   height: 15vh;
   max-height: 50vh;
+  margin-bottom: 2vh;
   // margin: 2vh;
 }
 .action-menu-col {

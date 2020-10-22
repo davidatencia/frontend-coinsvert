@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'market',
     loadChildren: () => import('./pagesdashboard/market/market.module').then( m => m.MarketPageModule)
+  },  {
+    path: 'prices',
+    loadChildren: () => import('./prices/prices.module').then( m => m.PricesPageModule)
   },
+
 ];
 
 @NgModule({
