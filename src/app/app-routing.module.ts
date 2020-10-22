@@ -46,6 +46,14 @@ const routes: Routes = [
     path: 'prices',
     loadChildren: () => import('./prices/prices.module').then( m => m.PricesPageModule)
   },
+  {
+    path: 'password-recover',
+    loadChildren: () => import('./pages/password-recover/password-recover.module').then( m => m.PasswordRecoverPageModule)
+  },
+  {
+    path: 'new-password',
+    loadChildren: () => import('./pages/new-password/new-password.module').then( m => m.NewPasswordPageModule)
+  },
 
 ];
 
