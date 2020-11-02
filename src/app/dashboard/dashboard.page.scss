@@ -1,0 +1,301 @@
+ * {
+   margin: 0;
+   padding: 0;
+   max-width: 100%;
+ }
+
+ // ion-row, ion-col, div {
+ //   border-style: solid;
+ //   border-color: #000;
+ // }
+ .container-fluid {
+   background: linear-gradient(to right top, #5fcedc, #644296 90%);
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: lighter;
+   font-weight: 400;
+
+   h1 {
+     color: white;
+     font-family: 'Source Sans Pro', sans-serif;
+     text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
+     font-weight: bold;
+     font-size: 10vw;
+     // max-width: 15vw;
+   }
+
+   h2 {
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color: gray;
+   }
+
+   h5 {
+     color: #fff;
+     text-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+     font-weight: bold;
+     font-size: 4vw;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+     font-weight: 700;
+   }
+
+   ion-badge {
+     position: relative;
+     top: -0.5rem;
+     right: -0.2rem;
+     opacity: 0.9;
+     // & ~ ion-icon {
+     //   margin-right: 1.2rem;
+     // }
+   }
+ }
+
+ .content {
+   position: relative;
+   height: auto;
+   height: fit-content;
+   // border-style: dashed;
+ }
+
+ .profile-icon {
+   position: relative;
+   height: 10vh;
+   max-height: 20vh;
+ }
+
+ .header-icons {
+   position: relative;
+   height: fit-content;
+   margin-bottom: 2vh;
+ }
+
+ .header-button-menu {
+   height: 3vh;
+ }
+
+ .header-button-notif {
+   height: 3vh;
+ }
+
+ .notif-button {
+   position: relative;
+   left: -10px;
+ }
+
+ .notifications-icon,
+ .menu-icon {
+   position: relative;
+   height: fit-content;
+   max-height: 15vh;
+   margin-right: 1.2rem;
+ }
+
+ //Balance info
+ .balance {
+   position: relative;
+   max-width: 100%;
+   margin-bottom: 2vh;
+ }
+
+ //menú acciones rápidas
+ .actions-menu {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   height: 15vh;
+   max-height: 50vh;
+   margin-bottom: 2vh;
+   // margin: 2vh;
+ }
+
+//  .action-menu-col {
+//    padding-top: 15px;
+//    padding-left: 15px;
+//  }
+
+ .actions-menu-button {
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   background: #3866a291;
+   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
+   border-radius: 10px;
+   align-content: center;
+   // text-align: center;
+   padding: 5%;
+   width: 80%;
+   min-width: 50px;
+   max-width: 100px;
+ }
+
+ // .action-menu-icon {
+ //   right: -20px;
+ // }
+ .actions-menu-label {
+   position: relative;
+   width: 80%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ //
+ .content-fluid {
+   background: #fff;
+   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+   border-radius: 40px 40px 0 0;
+   height: 100vh;
+   padding: 20px;
+   // display: flex;
+   // flex-direction: column;
+   align-items: center;
+ }
+
+ //switch últimas transacciones - precios
+ .switch {
+   width: 100%;
+   height: 6%;
+   border-radius: 50px;
+   background: #eae7f2;
+   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
+   padding: 2px;
+   margin-bottom: 10px;
+ }
+
+ .switch-button {
+   color: #644296;
+   width: 50%;
+   height: 100%;
+   border-radius: 50px;
+   background: transparent;
+   border: none;
+   outline: 0;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: bolder;
+   font-weight: 700;
+ }
+
+ .clicked {
+   background: #644296;
+   color: #fff;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: bolder;
+   font-weight: 700;
+ }
+
+ //lista de transacciones
+ .content-transactions {
+   width: auto;
+
+ }
+
+ .transactions-list {
+   margin-top: 20px;
+
+ }
+
+ .list-item {
+   border-radius: 10px;
+   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
+   margin-top: 8px;
+   height: 70px;
+
+
+   // margin-bottom: 5px;
+ }
+
+ // ---------------------------------------------------------------------
+ // lista de bitcoins,ether,dash 
+ .crypto-type {
+   text-align: left;
+   // tipo de fuente para el titulo de bitcoin,ether,dash
+   font-family: 'Montserrat', sans-serif;
+   font-weight: bolder;
+   font-weight: 600;
+
+ }
+
+ .crypto-price {
+   color: #23c762;
+   text-align: right;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: lighter;
+   font-weight: 400;
+ }
+ 
+ .money-change {
+   color: #644296;
+   text-align: right;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: lighter;
+   font-weight: 400;
+ }
+
+ .transaction-time {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: lighter;
+   font-weight: 400;
+ }
+
+ .transaction-date {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: lighter;
+   font-weight: 400;
+ }
+
+ // imagenes de las transacciones
+ .thumbnail {
+   margin-top: 20%;
+   width: 70%;
+   height: 70%;
+ }
+
+ // ----------------------------
+
+
+ //Estilos del tab-bar
+ //tab-bar styles
+ .tab-bar {
+   border-radius: 20px 20px 0 0;
+   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
+
+   .dashboard-tab {
+     -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
+     background: #644296;
+     height: 45px;
+     // width: 5px;
+     align-items: center;
+   }
+
+   .wallet-tab {
+     -webkit-mask: url(../../assets/imgs/wallet.svg) no-repeat;
+     background: #644296;
+     height: 45px;
+     align-items: center;
+   }
+
+   .home-tab {
+     -webkit-mask: url(../../assets/imgs/home.svg) no-repeat;
+     background: #644296;
+     height: 45px;
+     align-items: center;
+   }
+
+   .perfil-tab {
+     -webkit-mask: url(../../assets/imgs/perfil.svg) no-repeat;
+     background: #644296;
+     height: 45px;
+     align-items: center;
+   }
+
+   .market-tab {
+     -webkit-mask: url(../../assets/imgs/market.svg) no-repeat;
+     background: #644296;
+     height: 45px;
+     align-items: center;
+   }
+
+   .tab-label {
+     color: #000;
+   }
+ }
