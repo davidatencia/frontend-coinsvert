@@ -10,15 +10,14 @@ export class DashboardPage implements OnInit {
 
   ngOnInit() {
   }
-  test(){
-    console.log('Testing')
-    const buttons = document.getElementsByClassName("switch-button")
-    if(buttons[0].classList.contains("clicked")){
-      buttons[0].classList.remove("clicked")
-      buttons[1].classList.add("clicked")
-    } else {
-      buttons[0].classList.add("clicked")
-      buttons[1].classList.remove("clicked")
-    }
+
+
+  loginButton(){
+    let slider = document.querySelector(".slider");
+    slider.classList.remove("clicked");
+  }
+  registerButton(){
+    let slider = document.querySelector(".slider");
+    slider.classList.add("clicked");
   }
 }

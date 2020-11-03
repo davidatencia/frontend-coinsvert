@@ -31,16 +31,19 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+    setTimeout(()=>{ 
+      this.condicion="login";
+    }, 3000);
   }
 
   loginButton(){
-    let slider = document.getElementById("slider");
+    let slider = document.querySelector(".slider");
     slider.classList.remove("clicked");
     let logo = document.querySelector("#imgLogo");
     logo.setAttribute("src", "../../assets/icon/coinsvert imagotipo-10.png");
   }
   registerButton(){
-    let slider = document.getElementById("slider");
+    let slider = document.querySelector(".slider");
     slider.classList.add("clicked");
     let logo = document.querySelector("#imgLogo");
     logo.setAttribute("src", "../../assets/coinsvrtlogos/coinsvert horizontal-24.svg");

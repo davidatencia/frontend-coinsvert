@@ -1,20 +1,26 @@
 <ion-content>
-  <ion-infinite-scroll threshold="100%">
+
+  <!-- INICIO -->
+  <div id="containerinicio" *ngIf="condicion == 'inicio'">
+    <img id="imgLogoicinio" src="../../assets/coinsvrtlogos/coinsvert imagotipo-09.png" alt="coinsvert-logo">
+  </div>
+
+  <ion-infinite-scroll threshold="100%" *ngIf="condicion != 'inicio'">
     <div class="container">
-      <div class="logo-section" [style.height] = "condicion == 'inicio' ? '20em' : '5em'">
+      <div class="logo-section" [style.height] = "condicion == 'login' ? '20em' : '5em'">
         <figure class="logo">
           <img id="imgLogo" src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
         </figure>
       </div>
-      <div class="content" [style.height] = "condicion == 'inicio' ? '29em' : '44em'">
+      <div class="content" [style.height] = "condicion == 'login' ? '29em' : '44em'">
         <div class="switch">
-          <span id="slider" class="slider"></span>
-          <button (click)=loginButton() (click)="condicion = 'inicio'" class="button"><strong>Iniciar Sesion</strong></button>
+          <span class="slider"></span>
+          <button (click)=loginButton() (click)="condicion = 'login'" class="button"><strong>Iniciar Sesion</strong></button>
           <button (click)=registerButton() (click)="condicion = 'register'" class="button"><strong>Registrar</strong></button>
         </div>
 
-        <!-- inicio -->
-        <div class="subcontent" *ngIf="condicion == 'inicio'">
+        <!-- LOGIN -->
+        <div class="subcontent" *ngIf="condicion == 'login'">
 
           <form id="formInicio" class="formulario" #formIniciar="ngForm" (ngSubmit)="formIniciarSubmit()">
             <ion-input class="input" placeholder="Usuario" name="usuario" #usuario="ngModel" [(ngModel)]="User.username" required></ion-input>
@@ -43,7 +49,7 @@
           </div>
         </div>
 
-        <!-- register -->
+        <!-- REGISTER -->
         <div class="subcontent" *ngIf="condicion == 'register'">
 
           <form id="formRegistro" class="formulario" #formRegistro="ngForm" (ngSubmit)="formRegistroSubmit()">

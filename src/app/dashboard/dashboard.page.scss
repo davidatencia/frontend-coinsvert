@@ -1,15 +1,5 @@
- * {
-   margin: 0;
-   padding: 0;
-   max-width: 100%;
- }
-
- // ion-row, ion-col, div {
- //   border-style: solid;
- //   border-color: #000;
- // }
  .container-fluid {
-   background: linear-gradient(to right top, #5fcedc, #644296 90%);
+   background: linear-gradient(to top, #5fcedc 69%, #644296);
    color: white;
    font-family: 'Montserrat', sans-serif;
    font-weight: lighter;
@@ -44,9 +34,6 @@
      top: -0.5rem;
      right: -0.2rem;
      opacity: 0.9;
-     // & ~ ion-icon {
-     //   margin-right: 1.2rem;
-     // }
    }
  }
 
@@ -55,6 +42,12 @@
    height: auto;
    height: fit-content;
    // border-style: dashed;
+
+   .cabecera{
+     padding: 15px;
+     height: auto;
+     height: 280px;
+   }
  }
 
  .profile-icon {
@@ -77,10 +70,35 @@
    height: 3vh;
  }
 
+ .ion-color.ion-color-danger.ios.hydrated{
+  position: relative;
+  top: -0.5rem;
+  right: 0.8rem;
+  background-color: #70C6DD;
+  color: white;
+  border-radius: 50px ;
+  -webkit-border-radius: 50px ;
+  -moz-border-radius: 50px ;
+  -ms-border-radius: 50px ;
+  -o-border-radius: 50px ;
+}
+
  .notif-button {
+   background-color: transparent;
+   border: none;
+   outline:none;
    position: relative;
    left: -10px;
- }
+  }
+
+  .profile-icon{
+    margin-left: 40px;
+    width: auto;
+
+    #user-icon{
+      width: 53px;
+    }
+  }
 
  .notifications-icon,
  .menu-icon {
@@ -91,10 +109,8 @@
  }
 
  //Balance info
- .balance {
-   position: relative;
-   max-width: 100%;
-   margin-bottom: 2vh;
+ .balance-price {
+  margin: 0px;
  }
 
  //menú acciones rápidas
@@ -105,7 +121,10 @@
    height: 15vh;
    max-height: 50vh;
    margin-bottom: 2vh;
-   // margin: 2vh;
+   
+   *[_ngcontent-ptv-c132]{
+     padding: 0px;
+   }
  }
 
 //  .action-menu-col {
@@ -114,29 +133,32 @@
 //  }
 
  .actions-menu-button {
+   display: flex;
+   justify-content: center;
    position: relative;
-   margin-left: auto;
-   margin-right: auto;
    background: #3866a291;
    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
    border-radius: 10px;
-   align-content: center;
-   // text-align: center;
-   padding: 5%;
-   width: 80%;
+   width: 75px;
+   height: 75px;
    min-width: 50px;
    max-width: 100px;
- }
+}
 
- // .action-menu-icon {
- //   right: -20px;
- // }
+  .action-menu-icon {
+    width: 50px;
+  }
+  
  .actions-menu-label {
    position: relative;
    width: 80%;
    text-align: center;
    margin-left: auto;
    margin-right: auto;
+
+   .font-action-menu{
+     font-size: 15px;
+   }
  }
 
  //
@@ -145,110 +167,105 @@
    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
    border-radius: 40px 40px 0 0;
    height: 100vh;
-   padding: 20px;
-   // display: flex;
-   // flex-direction: column;
+   padding: 26px;
    align-items: center;
  }
 
+
  //switch últimas transacciones - precios
- .switch {
-   width: 100%;
-   height: 6%;
-   border-radius: 50px;
-   background: #eae7f2;
-   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
-   padding: 2px;
-   margin-bottom: 10px;
- }
 
- .switch-button {
-   color: #644296;
-   width: 50%;
-   height: 100%;
-   border-radius: 50px;
-   background: transparent;
-   border: none;
-   outline: 0;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: bolder;
-   font-weight: 700;
- }
+ .switch{
+  width: 97%;
+  height: 30px;
+  border-radius: 50px;
+  background: #eae7f2;
+  box-shadow: 0 2px 9px 0 rgba(0,0,0,.1);
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
 
- .clicked {
-   background: #644296;
-   color: #fff;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: bolder;
-   font-weight: 700;
- }
+  .button{
+    color: white;
+    width: 50%;
+    height: 100%;
+    border-radius: 50px;
+    background: transparent;
+    border: none;
+    outline: 0;
+    position: relative;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 50%;
+  bottom: 2px;
+  background: #644296;
+  border-radius: 50px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+}
+
+.clicked{
+  left: 50%;
+  right: 2px;
+}
 
  //lista de transacciones
  .content-transactions {
-   width: auto;
+    width: auto;
 
- }
+    .item{
+      height: 50px;
+      padding: 10px;
+      display: flex;
+      box-shadow: 0px 0px 3px gainsboro;
+      border-radius: 14px;
+      -webkit-border-radius: 14px;
+      -moz-border-radius: 14px;
+      -ms-border-radius: 14px;
+      -o-border-radius: 14px;
 
- .transactions-list {
-   margin-top: 20px;
+      img{
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+      }
 
- }
+      #info-item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
 
- .list-item {
-   border-radius: 10px;
-   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.1);
-   margin-top: 8px;
-   height: 70px;
+        .part{
+          height: 100%;
+          width: auto;
+        }
+
+        #nombre-item{
+          margin-top: 5px;
+          font-size: 15px;
+          color: gray;
+          font-family: "Source Sans Pro", sans-serif;
+        }
+
+        .info-coin{
+          color: gray;
+          margin-top: 7px;
+          color: gray;
+          font-size: 11px;
+        }
+      }
+    }
+  }
 
 
-   // margin-bottom: 5px;
- }
-
- // ---------------------------------------------------------------------
- // lista de bitcoins,ether,dash 
- .crypto-type {
-   text-align: left;
-   // tipo de fuente para el titulo de bitcoin,ether,dash
-   font-family: 'Montserrat', sans-serif;
-   font-weight: bolder;
-   font-weight: 600;
-
- }
-
- .crypto-price {
-   color: #23c762;
-   text-align: right;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: lighter;
-   font-weight: 400;
- }
- 
- .money-change {
-   color: #644296;
-   text-align: right;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: lighter;
-   font-weight: 400;
- }
-
- .transaction-time {
-   font-family: 'Montserrat', sans-serif;
-   font-weight: lighter;
-   font-weight: 400;
- }
-
- .transaction-date {
-   font-family: 'Montserrat', sans-serif;
-   font-weight: lighter;
-   font-weight: 400;
- }
-
- // imagenes de las transacciones
- .thumbnail {
-   margin-top: 20%;
-   width: 70%;
-   height: 70%;
- }
 
  // ----------------------------
 

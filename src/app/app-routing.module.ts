@@ -3,21 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'singup',
-    loadChildren: () => import('./singup/singup.module').then( m => m.SingupPageModule)
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
   {
     path: 'dashboard',
@@ -27,18 +19,18 @@ const routes: Routes = [
     path: 'panel',
     loadChildren: () => import('./pagesdashboard/panel/panel.module').then( m => m.PanelPageModule)
   },
-  {
-    path: 'wallet',
-    loadChildren: () => import('./pagesdashboard/wallet/wallet.module').then( m => m.WalletPageModule)
-  },
-  {
-    path: 'perfil',
-    loadChildren: () => import('./pagesdashboard/perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
-  {
-    path: 'precios',
-    loadChildren: () => import('./pagesdashboard/precios/precios.module').then( m => m.PreciosPageModule)
-  },
+  // {
+  //   path: 'wallet',
+  //   loadChildren: () => import('./pagesdashboard/wallet/wallet.module').then( m => m.WalletPageModule)
+  // },
+  // {
+  //   path: 'perfil',
+  //   loadChildren: () => import('./pagesdashboard/perfil/perfil.module').then( m => m.PerfilPageModule)
+  // },
+  // {
+  //   path: 'precios',
+  //   loadChildren: () => import('./pagesdashboard/precios/precios.module').then( m => m.PreciosPageModule)
+  // },
   {
     path: 'market',
     loadChildren: () => import('./pagesdashboard/market/market.module').then( m => m.MarketPageModule)
@@ -57,7 +49,6 @@ const routes: Routes = [
   },
 
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
