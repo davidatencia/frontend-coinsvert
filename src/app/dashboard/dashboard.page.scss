@@ -50,10 +50,8 @@
    }
  }
 
- .profile-icon {
-   position: relative;
-   height: 10vh;
-   max-height: 20vh;
+ .notif-button.profile-icon{
+  margin-left: 39%;
  }
 
  .header-icons {
@@ -127,11 +125,6 @@
    }
  }
 
-//  .action-menu-col {
-//    padding-top: 15px;
-//    padding-left: 15px;
-//  }
-
  .actions-menu-button {
    display: flex;
    justify-content: center;
@@ -199,6 +192,7 @@
 
 .slider {
   position: absolute;
+  color: #644296;
   top: 2px;
   left: 2px;
   right: 50%;
@@ -315,4 +309,10 @@
    .tab-label {
      color: #000;
    }
+ }
+
+ //----------------------------------MENU---------------------------------
+
+ #menu{
+
  }

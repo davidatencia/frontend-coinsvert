@@ -35,10 +35,7 @@
               </button>
         </ion-col>
       </ion-row>
-      <!-- <ion-row class="ion-text-left balance">
-        <ion-col size="6" class="balance-label"><h5>Balance</h5></ion-col>
-      </ion-row> -->
-      <!-- ./balance -->
+
       <!-- menú de acciones rápidas -->
       <ion-row class="actions-menu" justify-content-center>
         <ion-col class="action-menu-col" size="3" no-lines><!--Enviar-->
@@ -84,8 +81,8 @@
   <div class="content-fluid">
     <div class="switch">
       <span class="slider"></span>
-      <button (click)=loginButton() (click)="condicion = 'Utransacciones'" class="button"><strong>Ultimas Transacciones</strong></button>
-      <button (click)=registerButton() (click)="condicion = 'precios'" class="button"><strong>Precios</strong></button>
+      <button (click)="condicion = 'Utransacciones'" class="button"><strong>Ultimas Transacciones</strong></button>
+      <button (click)="condicion = 'precios'" class="button"><strong>Precios</strong></button>
     </div>
     
     <!-- ----------------------TRANSACCIONES------------------------- -->

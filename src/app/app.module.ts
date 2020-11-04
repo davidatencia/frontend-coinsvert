@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
-import { PeticionesService } from './services/userService';
+import { PeticionesService } from './services/LoginServices';
 // import { routing, appRoutingproviders } from './app-routing.module';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
