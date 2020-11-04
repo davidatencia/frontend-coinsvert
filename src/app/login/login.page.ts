@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PeticionesService} from '../services/LoginServices'
 
 @Component({
   selector: 'app-login',
@@ -6,20 +7,68 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor() { }
+
+  condicion: String;
+  public User: any;
+  public newUser: any;
+
+  constructor(private _peticionesservice: PeticionesService) { 
+    this.condicion= "inicio";
+    this.User = {
+      username: "",
+      password: ""
+    };
+    this.newUser = {
+      rusername: "",
+      remail: "",
+      rpais: "",
+      restado: "",
+      rciudad: "",
+      rTel: "",
+      rPassword: ""
+    }
+
+  }
 
   ngOnInit() {
-  }
-  test(){
-    console.log('Testing')
-    const buttons = document.getElementsByClassName("button")
-    if(buttons[0].classList.contains("clicked")){
-      buttons[0].classList.remove("clicked")
-      buttons[1].classList.add("clicked")
-    } else {
-      buttons[0].classList.add("clicked")
-      buttons[1].classList.remove("clicked")
-    }
+    setTimeout(()=>{ 
+      this.condicion="login";
+    }, 3000);
   }
 
+  loginButton(){
+    let slider = document.querySelector(".slider");
+    slider.classList.remove("clicked");
+    let logo = document.querySelector("#imgLogo");
+    logo.setAttribute("src", "../../assets/icon/coinsvert imagotipo-10.png");
+  }
+  registerButton(){
+    let slider = document.querySelector(".slider");
+    slider.classList.add("clicked");
+    let logo = document.querySelector("#imgLogo");
+    logo.setAttribute("src", "../../assets/coinsvrtlogos/coinsvert horizontal-24.svg");
+  }
+
+  // Inicio De Sesion
+
+  formIniciarSubmit(){
+    this._peticionesservice.addUser(this.User).subscribe(Response=>{
+      console.log(Response);
+      // document.getElementById("formInicio").reset();
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
+  }
+
+  // Registrarse
+
+  formRegistroSubmit(){
+    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+    this.condicion="inicio"; 
+    //document.getElementById("formRegistro").reset();
+    console.log(Response);
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
+  }
 }
