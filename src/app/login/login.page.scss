@@ -2,41 +2,72 @@
   margin: 0;
   padding: 0;
 }
+
+//-----------------INICIO - LOGO
+#containerinicio {
+  background: linear-gradient( to bottom, #5FCEDC, #644296 85%) ;
+  height: 100%;
+  width: auto;
+  display: flex;
+  img{
+    width: 270px;
+    margin: auto auto;
+  }
+}
+
+//-------------- LOGIN - REGISTER
 .container{
   margin: 0 auto;  
   max-width: 500px;
+  background-color: white;
   color: white;
+  
   h2{
     color: black;
   }
 }
+
 .logo-section{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 40vh;
+  transition: .8s;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
 }
+.logo > img{
+  width: 215px;
+}
+
 .content{
-  background: linear-gradient( to right bottom, #5FCEDC, #644296 85%) ;
-  //background: linear-gradient( #5FCEDC, #644296 85%) ;
+  background: linear-gradient( to bottom, #5FCEDC, #644296 85%) ;
   box-shadow: 0 2px 9px 0 rgba(0,0,0,.6);
   border-radius: 40px 40px 0 0;
-  height: 100vh;
   padding: 25px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all  .8s;
+  -webkit-transition: all  .8s;
+  -moz-transition: all  .8s;
+  -ms-transition: all  .8s;
+  -o-transition: all  .8s;
 }
+
 .switch{
   width: 100%;
-  height: 6%;
+  height: 30px;
   border-radius: 50px;
   background: #3284B7;
   box-shadow: 0 2px 9px 0 rgba(0,0,0,.1);
-  padding: 2px;
+  padding: 5px;
   margin-bottom: 10px;
+  position: relative;
 }
+
 .button{
   color: white;
   width: 50%;
@@ -45,9 +76,26 @@
   background: transparent;
   border: none;
   outline: 0;
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 50%;
+  bottom: 2px;
+  background: #70C6DD;
+  border-radius: 50px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
 }
 .clicked{
-  background: #70C6DD;
+  left: 50%;
+  right: 2px;
 }
 
 .formulario{
@@ -57,6 +105,7 @@
   width: 100%;
   padding: 15px;
 }
+
 .input{
   color: white;
   border-bottom: rgba(255, 255, 255, .5) solid 1px;
@@ -67,6 +116,7 @@
     color: rgba(255, 255, 255, 1);
   }
 }
+
 .submit-button{
   height: 35px;
   border-radius: 50px;
@@ -99,9 +149,33 @@
 }
 .social-button{
   height: 35px;
+  line-height: 26px;
   border-radius: 50px;
   border: 1px solid white;  
   background: none;
   color: white;
   margin: 3px 0;
+}
+
+.subcontent{
+  width: 90%;
+}
+
+.siguenos{
+  height: 35px;
+  border: 10px;
+  text-align: center;
+  line-height: 50px;
+  svg{
+    margin: 0px 10px;
+  }
+}
+
+.icon {
+  fill: white; 
+}
+
+.icon_socialb{
+  float: left;
+  margin: auto -22px auto 12px;
 }
