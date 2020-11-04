@@ -271,6 +271,7 @@
    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
 
    .dashboard-tab {
+     mask: url(../../assets/imgs/dashboard.svg) no-repeat;
      -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
      background: #644296;
      height: 45px;
@@ -279,6 +280,7 @@
    }
 
    .wallet-tab {
+     mask: url(../../assets/imgs/wallet.svg) no-repeat;
      -webkit-mask: url(../../assets/imgs/wallet.svg) no-repeat;
      background: #644296;
      height: 45px;
@@ -286,6 +288,7 @@
    }
 
    .home-tab {
+     mask: url(../../assets/imgs/home.svg) no-repeat;
      -webkit-mask: url(../../assets/imgs/home.svg) no-repeat;
      background: #644296;
      height: 45px;
@@ -293,6 +296,7 @@
    }
 
    .perfil-tab {
+     mask: url(../../assets/imgs/perfil.svg) no-repeat;
      -webkit-mask: url(../../assets/imgs/perfil.svg) no-repeat;
      background: #644296;
      height: 45px;
@@ -300,6 +304,7 @@
    }
 
    .market-tab {
+     mask: url(../../assets/imgs/market.svg) no-repeat;
      -webkit-mask: url(../../assets/imgs/market.svg) no-repeat;
      background: #644296;
      height: 45px;
@@ -313,6 +318,6 @@
 
  //----------------------------------MENU---------------------------------
 
- #menu{
+//  #menu{
 
- }
+//  }
