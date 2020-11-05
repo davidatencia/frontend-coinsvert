@@ -13,7 +13,7 @@ import { NewPasswordPage } from './new-password.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    NewPasswordPageRoutingModule
+    NewPasswordPageRoutingModule,
   ],
   declarations: [NewPasswordPage]
 })

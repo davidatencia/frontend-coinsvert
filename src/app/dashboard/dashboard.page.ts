@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPage implements OnInit {
 
+  prueba: any[] = Array(20);
+
   condicion: String;
   constructor() { 
     this.condicion= "Utransacciones";

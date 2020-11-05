@@ -4,6 +4,8 @@
    font-family: 'Montserrat', sans-serif;
    font-weight: lighter;
    font-weight: 400;
+   overflow: hidden;
+   overflow-y: scroll;
 
    h1 {
      color: white;
@@ -159,16 +161,17 @@
    background: #fff;
    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
    border-radius: 40px 40px 0 0;
-   height: 100vh;
-   padding: 26px;
+   height: 60vh;
+   padding: 20px 0px;
    align-items: center;
- }
+   }
 
 
  //switch últimas transacciones - precios
 
  .switch{
-  width: 97%;
+  width: 85%;
+  margin: 0px 25px;
   height: 30px;
   border-radius: 50px;
   background: #eae7f2;
@@ -212,12 +215,18 @@
 }
 
  //lista de transacciones
- .content-transactions {
+ .content-t-p {
     width: auto;
+    height: 350px;
+    padding: 1px 25px;
+    overflow: hidden;
+    overflow-y: scroll;
 
+    //ITEM TRANSACCIONES
     .item{
       height: 50px;
       padding: 10px;
+      margin-bottom: 10px;
       display: flex;
       box-shadow: 0px 0px 3px gainsboro;
       border-radius: 14px;
@@ -228,11 +237,11 @@
 
       img{
         width: 50px;
-        height: auto;
+        height: 50px;
         margin-right: 10px;
       }
 
-      #info-item{
+      .info-item{
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -242,7 +251,7 @@
           width: auto;
         }
 
-        #nombre-item{
+        .nombre-item{
           margin-top: 5px;
           font-size: 15px;
           color: gray;
@@ -257,67 +266,108 @@
         }
       }
     }
+
+    .item-p{
+      padding: 23px 25px 15px 25px;
+      height: 180px;
+    }
   }
-
-
-
- // ----------------------------
-
-
- //Estilos del tab-bar
- //tab-bar styles
- .tab-bar {
-   border-radius: 20px 20px 0 0;
-   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
-
-   .dashboard-tab {
-     mask: url(../../assets/imgs/dashboard.svg) no-repeat;
-     -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
-     background: #644296;
-     height: 45px;
-     // width: 5px;
-     align-items: center;
-   }
-
-   .wallet-tab {
-     mask: url(../../assets/imgs/wallet.svg) no-repeat;
-     -webkit-mask: url(../../assets/imgs/wallet.svg) no-repeat;
-     background: #644296;
-     height: 45px;
-     align-items: center;
-   }
-
-   .home-tab {
-     mask: url(../../assets/imgs/home.svg) no-repeat;
-     -webkit-mask: url(../../assets/imgs/home.svg) no-repeat;
-     background: #644296;
-     height: 45px;
-     align-items: center;
-   }
-
-   .perfil-tab {
-     mask: url(../../assets/imgs/perfil.svg) no-repeat;
-     -webkit-mask: url(../../assets/imgs/perfil.svg) no-repeat;
-     background: #644296;
-     height: 45px;
-     align-items: center;
-   }
-
-   .market-tab {
-     mask: url(../../assets/imgs/market.svg) no-repeat;
-     -webkit-mask: url(../../assets/imgs/market.svg) no-repeat;
-     background: #644296;
-     height: 45px;
-     align-items: center;
-   }
-
-   .tab-label {
-     color: #000;
-   }
- }
 
  //----------------------------------MENU---------------------------------
 
-//  #menu{
+ #bottom-menu{
+   width: 100%;
+   height: 80px;
+   background: white;
+   box-shadow: 0 2px 12px 0 grey;
+   border-radius: 20px 20px 0 0;
+   -webkit-border-radius: 20px 20px 0 0;
+   -moz-border-radius: 20px 20px 0 0;
+   -ms-border-radius: 20px 20px 0 0;
+   -o-border-radius: 20px 20px 0 0;
+   
+    ul{
+      display:-webkit-inline-box;
+      margin: 0px;
+      padding: 0px;
+          li{
+            list-style:none;
 
-//  }
+              .c-button-m{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                width: 57px;
+                margin: 9px 9px;
+
+                .title-b-m{
+                  color: gray;
+                  font-size: 12px;
+                }
+
+                .dashboard-tab {
+                  mask: url(../../assets/imgs/dashboard.svg) no-repeat;
+                  -webkit-mask: url(../../assets/imgs/dashboard.svg) no-repeat;
+                  background: #644296;
+                  height: 45px;
+                  width: 45px;
+                  margin: 0px auto;
+                }
+                
+                .wallet-tab {
+                  mask: url(../../assets/imgs/wallet.svg) no-repeat;
+                  -webkit-mask: url(../../assets/imgs/wallet.svg) no-repeat;
+                  background: #644296;
+                  height: 45px;
+                  width: 45px;
+                  margin: 0px auto;
+                }
+
+                .content-home-tab{
+                  background-color: #644296;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 55px;
+                  width: 55px;
+                  border-radius: 15px;
+                  position: relative;
+                  bottom: 14px;
+                  -webkit-border-radius: 15px;
+                  -moz-border-radius: 15px;
+                  -ms-border-radius: 15px;
+                  -o-border-radius: 15px;
+
+                  .home-tab{
+                    mask: url(../../assets/imgs/home.svg) no-repeat;
+                    -webkit-mask: url(../../assets/imgs/home.svg) no-repeat;
+                    background: white;
+                    height: 45px;
+                    width: 45px;
+                    margin: 0px auto;
+                  }
+                }
+                
+             
+                .perfil-tab {
+                  mask: url(../../assets/imgs/perfil.svg) no-repeat;
+                  -webkit-mask: url(../../assets/imgs/perfil.svg) no-repeat;
+                  background: #644296;
+                  height: 45px;
+                  width: 45px;
+                  margin: 0px auto;
+                }
+             
+                .market-tab {
+                  mask: url(../../assets/imgs/market.svg) no-repeat;
+                  -webkit-mask: url(../../assets/imgs/market.svg) no-repeat;
+                  background: #644296;
+                  height: 45px;
+                  width: 45px;
+                  margin: 0px auto;
+                }
+              }
+          }
+      }
+ }

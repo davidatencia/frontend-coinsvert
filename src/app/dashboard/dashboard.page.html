@@ -78,7 +78,9 @@
     </div>
   </div>
 
+  <!-- PARTE DE ABAJO -->
   <div class="content-fluid">
+    
     <div class="switch">
       <span class="slider"></span>
       <button (click)="loginButton()" (click)="condicion = 'Utransacciones'" class="button"><strong>Ultimas Transacciones</strong></button>
@@ -86,27 +88,53 @@
     </div>
     
     <!-- ----------------------TRANSACCIONES------------------------- -->
-    <div id="div-tansacciones" *ngIf="condicion == 'Utransacciones'">
-      <ion-infinite-scroll threshold="100%" class="content-transactions">
-        <div class="item">
-          <img src="../../assets/icon/coin3.png" alt="coin">
-          <div id="info-item">
-            <div class="part">
-              <p id="nombre-item">Bitcoin</p>
-              <p id="dia-item" class="info-coin">08-24 <span id="hora-item" class="info-coin">20.04PM</span></p>
-            </div>
-            <div class="part">
-              <p id="beneficio-item" class="info-coin">+0.94853</p>
-              <p id="precio-item" class="info-coin">$2,748.94</p>
+    <div class="content-t-p" *ngIf="condicion == 'Utransacciones'">
+      <!-- <ul>
+        <li> -->
+          <div class="item" *ngFor="let item of prueba">
+            <img src="../../assets/icon/coin3.png" alt="coin">
+            <div class="info-item">
+              <div class="part">
+                <p class="nombre-item">Bitcoin</p>
+                <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+              </div>
+              <div class="part">
+                <p class="info-coin">+0.94853</p>
+                <p class="info-coin">$2,748.94</p>
+              </div>
             </div>
           </div>
-        </div>
-      </ion-infinite-scroll>
+        <!-- </li>
+      </ul> -->
     </div>
     
     <!-- ----------------------PRECIOS------------------------- -->
-    <div id="div-precios" *ngIf="condicion == 'precios'">
+    <div class="content-t-p" *ngIf="condicion == 'precios'">
 
+      <div class="item item-p" *ngFor="let item of prueba">
+        <img src="../../assets/icon/coin3.png" alt="coin">
+        <div class="info-item">
+          <div class="part">
+            <p class="nombre-item">Bitcoin</p>
+            <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+          </div>
+          <div class="part">
+            <p class="info-coin">+0.94853</p>
+            <p class="info-coin">$2,748.94</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ----------------------MENU------------------------- -->
+    <div id="bottom-menu">
+      <ul>
+        <li><div class="c-button-m"><div class="dashboard-tab"></div><span class="title-b-m">dashboard</span></div></li>
+        <li><div class="c-button-m"><div class="wallet-tab"></div><span class="title-b-m">wallet</span></div></li>
+        <li><div class="c-button-m"><div class="content-home-tab"><div class="home-tab"></div></div><span class="title-b-m">home</span></div></li>
+        <li><div class="c-button-m"><div class="perfil-tab"></div><span class="title-b-m">perfil</span></div></li>
+        <li><div class="c-button-m"><div class="market-tab"></div><span class="title-b-m">market</span></div></li>
+      </ul>
     </div>
   </div>
 </div>

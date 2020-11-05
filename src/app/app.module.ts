@@ -4,7 +4,6 @@ import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import { PeticionesService } from './services/LoginServices';
-// import { routing, appRoutingproviders } from './app-routing.module';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -19,7 +18,6 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
     PeticionesService,
-    // appRoutingproviders,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
