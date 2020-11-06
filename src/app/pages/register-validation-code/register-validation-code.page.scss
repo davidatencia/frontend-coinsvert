@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 div,
 row,
 col {
-  border-color: #fff;
-  border-style: dashed;
+  //   border-color: #fff;
+  //   border-style: dashed;
+  text-align: center;
 }
 ion-back-button {
   text-transform: none;
@@ -14,9 +16,10 @@ ion-back-button {
   font-size: 15px;
 }
 .container-fluid {
-  background: linear-gradient(to bottom, #5fcedc, #644296 85%);
+  background: linear-gradient(150deg, #11cedc, #5163a6, #673e93);
   height: 100%;
   width: auto;
+  padding: 12px;
   display: flex;
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -28,14 +31,14 @@ ion-back-button {
   h2 {
     color: white;
     font-family: "Source Sans Pro", sans-serif;
-    text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
+    text-shadow: 1px 1px 1.5px #000000c7;
     font-weight: bold;
   }
-  h5 {
+  p {
     color: white;
     font-family: "Source Sans Pro", sans-serif;
-    text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
     font-weight: lighter;
+    font-size: 14px;
   }
   //   h5 {
   //     color: #fff;
@@ -58,16 +61,19 @@ ion-back-button {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 20vh;
+    height: 25vh;
+    max-height: 40vh;
   }
   .subtitle {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
   .cabecera {
-    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     height: auto;
     height: 280px;
     display: flex;
@@ -84,25 +90,36 @@ ion-back-button {
 }
 
 .code-main-container {
-  background: linear-gradient(to bottom, #377db0, #384b8d 85%);
-  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
-  border-radius: 10px;
+  background: linear-gradient(150deg, #2f91bb,#3f63a1, #464a91);
+//   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
+  border-radius: 20px;
+  padding: 16px;
 }
 .code-grid {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.code-fields-container {
+  margin-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .code-field {
   display: flex;
   justify-content: center;
   position: relative;
-  background: linear-gradient(to bottom, #377db0, #384b8d 85%);
-  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
+  background: linear-gradient(#375c995e, #38498bd9);
   border-radius: 10px;
-  // width: 75px;
-  // height: 75px;
-  // min-width: 50px;
-  // max-width: 100px;
+  margin: 3px;
+  height: 60px;
+  max-height: 120px;
+  input [type="text"] {
+      color: #fff;
+      font-size: 10pt;
+      font-weight: bold;
+      margin: 0%;
+      height: 100%;
+  }
 }
 .submit-button {
   height: 35px;
@@ -112,4 +129,5 @@ ion-back-button {
   color: #644296;
   margin-top: 15px;
   background: white;
+  width: 100%;
 }
