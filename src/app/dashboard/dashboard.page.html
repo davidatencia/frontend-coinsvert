@@ -1,140 +1,135 @@
-<!-- Vista del Dashboard - Rebeca -->
-<div class="container-fluid">
-  <div class="content">
-    <div class="cabecera">
-      <!-- iconos de notificación y menú desplegable -->
-      <ion-row
-        class="header-icons"
-        no-padding
-        justify-content-start
-        align-items-start
-      >
-        <ion-col class="ion-text-left" size="8">
-            <button (click)="onClick()" class="notif-button">
-              <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
-              <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
-            </button>
-        </ion-col>
-        <ion-col size="4" class="ion-text-right">
-            <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
-              <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
-            </button>
-        </ion-col>
-      </ion-row>
-      <!-- ./iconos de notificación y menú desplegable -->
-
-      <!-- balance -->
-      <ion-row class="ion-text-md-left balance">
-        <ion-col size="8">
-          <h1 class="balance-price">$9.999,99</h1>
-          <ion-label><h5>Balance</h5></ion-label>
-        </ion-col>
-        <ion-col size="4">
-            <button (click)="onClick()" class="notif-button profile-icon">
-              <img id="user-icon" src=".././../assets/imgs/usuario.png" alt="profile-icon">
+<ion-content>
+    
+  <div class="container-fluid">
+    <div class="content">
+      <div class="cabecera">
+        <!-- iconos de notificación y menú desplegable -->
+        <ion-row
+          class="header-icons"
+          no-padding
+          justify-content-start
+          align-items-start
+        >
+          <ion-col class="ion-text-left" size="8">
+              <button (click)="onClick()" class="notif-button">
+                <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
+                <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
               </button>
-        </ion-col>
-      </ion-row>
+          </ion-col>
+          <ion-col size="4" class="ion-text-right">
+              <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
+                <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
+              </button>
+          </ion-col>
+        </ion-row>
+        <!-- ./iconos de notificación y menú desplegable -->
 
-      <!-- menú de acciones rápidas -->
-      <ion-row class="actions-menu" justify-content-center>
-        <ion-col class="action-menu-col" size="3" no-lines><!--Enviar-->
+        <!-- balance -->
+        <ion-row class="ion-text-md-left balance">
+          <ion-col size="8">
+            <h1 class="balance-price">$9.999,99</h1>
+            <ion-label><h5>Balance</h5></ion-label>
+          </ion-col>
+          <ion-col size="4">
+              <button (click)="onClick()" class="notif-button profile-icon">
+                <img id="user-icon" src=".././../assets/imgs/usuario.png" alt="profile-icon">
+                </button>
+          </ion-col>
+        </ion-row>
+
+        <!-- menú de acciones rápidas -->
+        <ion-row class="actions-menu" justify-content-center>
+          <ion-col class="action-menu-col" size="3" no-lines><!--Enviar-->
+            <div class="actions-menu-button">
+              <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/envio.svg" alt="enviar-icon">
+            </div>
+            <div class="actions-menu-label">
+              <label class="font-action-menu">Enviar</label>
+            </div>
+          </ion-col>
+
+          <ion-col class="ion-text-center action-menu-col ion-no-padding" size="3" no-lines>
           <div class="actions-menu-button">
-            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/envio.svg" alt="enviar-icon">
-          </div>
-          <div class="actions-menu-label">
-            <label class="font-action-menu">Enviar</label>
-          </div>
-        </ion-col>
+              <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/recarga.svg" alt="recargar-icon">
+            </div>
+            <div class="actions-menu-label">
+              <label class="font-action-menu">Recargar</label>
+            </div>
+          </ion-col>
 
-        <ion-col class="ion-text-center action-menu-col ion-no-padding" size="3" no-lines>
-        <div class="actions-menu-button">
-            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/recarga.svg" alt="recargar-icon">
-          </div>
-          <div class="actions-menu-label">
-            <label class="font-action-menu">Recargar</label>
-          </div>
-        </ion-col>
+          <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
+            <div class="actions-menu-button">
+              <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/compra.svg" alt="comprar-icon" >
+            </div>
+            <div class="actions-menu-label">
+              <label class="font-action-menu">Comprar</label>
+            </div>
+          </ion-col>
 
-        <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
-          <div class="actions-menu-button">
-            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/compra.svg" alt="comprar-icon" >
-          </div>
-          <div class="actions-menu-label">
-            <label class="font-action-menu">Comprar</label>
-          </div>
-        </ion-col>
-
-        <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
-          <div class="actions-menu-button">
-            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/retiro.svg" alt="retiro-icon" >
-          </div>
-          <div class="actions-menu-label">
-            <label class="font-action-menu">Retirar</label>
-          </div>
-        </ion-col>
-      </ion-row>
-      <!-- ./menú de acciones rápidas -->
+          <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
+            <div class="actions-menu-button">
+              <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/retiro.svg" alt="retiro-icon" >
+            </div>
+            <div class="actions-menu-label">
+              <label class="font-action-menu">Retirar</label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <!-- ./menú de acciones rápidas -->
+      </div>
     </div>
-  </div>
 
-  <!-- PARTE DE ABAJO -->
-  <div class="content-fluid">
-    
-    <div class="switch">
-      <span class="slider"></span>
-      <button (click)="loginButton()" (click)="condicion = 'Utransacciones'" class="button"><strong>Ultimas Transacciones</strong></button>
-      <button (click)="registerButton()" (click)="condicion = 'precios'" class="button"><strong>Precios</strong></button>
-    </div>
-    
-    <!-- ----------------------TRANSACCIONES------------------------- -->
-    <div class="content-t-p" *ngIf="condicion == 'Utransacciones'">
-      <!-- <ul>
-        <li> -->
-          <div class="item" *ngFor="let item of prueba">
-            <img src="../../assets/icon/coin3.png" alt="coin">
-            <div class="info-item">
-              <div class="part">
-                <p class="nombre-item">Bitcoin</p>
-                <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
-              </div>
-              <div class="part">
-                <p class="info-coin">+0.94853</p>
-                <p class="info-coin">$2,748.94</p>
+    <!-- PARTE DE ABAJO -->
+    <div class="content-fluid">
+      
+      <div class="switch">
+        <span class="slider"></span>
+        <button (click)="loginButton()" (click)="condicion = 'Utransacciones'" class="button"><strong>Ultimas Transacciones</strong></button>
+        <button (click)="registerButton()" (click)="condicion = 'precios'" class="button"><strong>Precios</strong></button>
+      </div>
+      
+      <!-- ----------------------TRANSACCIONES------------------------- -->
+      <div class="content-t-p" *ngIf="condicion == 'Utransacciones'">
+        <!-- <ul>
+          <li> -->
+            <div class="item" *ngFor="let item of prueba">
+              <img src="../../assets/icon/coin3.png" alt="coin">
+              <div class="info-item">
+                <div class="part">
+                  <p class="nombre-item">Bitcoin</p>
+                  <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+                </div>
+                <div class="part">
+                  <p class="info-coin">+0.94853</p>
+                  <p class="info-coin">$2,748.94</p>
+                </div>
               </div>
             </div>
-          </div>
-        <!-- </li>
-      </ul> -->
-    </div>
-    
-    <!-- ----------------------PRECIOS------------------------- -->
-    <div class="content-t-p" *ngIf="condicion == 'precios'">
+          <!-- </li>
+        </ul> -->
+      </div>
+      
+      <!-- ----------------------PRECIOS------------------------- -->
+      <div class="content-t-p" *ngIf="condicion == 'precios'">
 
-      <div class="item item-p" *ngFor="let item of prueba">
-        <img src="../../assets/icon/coin3.png" alt="coin">
-        <div class="info-item">
-          <div class="part">
-            <p class="nombre-item">Bitcoin</p>
-            <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
-          </div>
-          <div class="part">
-            <p class="info-coin">+0.94853</p>
-            <p class="info-coin">$2,748.94</p>
+        <div class="item item-p" *ngFor="let item of prueba">
+          <img src="../../assets/icon/coin3.png" alt="coin">
+          <div class="info-item">
+            <div class="part">
+              <p class="nombre-item">Bitcoin</p>
+              <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+            </div>
+            <div class="part">
+              <p class="info-coin">+0.94853</p>
+              <p class="info-coin">$2,748.94</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- ----------------------MENU------------------------- -->
-    <div id="bottom-menu">
-      <ul>
-        <li><div class="c-button-m"><div class="dashboard-tab"></div><span class="title-b-m">dashboard</span></div></li>
-        <li><div class="c-button-m"><div class="wallet-tab"></div><span class="title-b-m">wallet</span></div></li>
-        <li><div class="c-button-m"><div class="content-home-tab"><div class="home-tab"></div></div><span class="title-b-m">home</span></div></li>
-        <li><div class="c-button-m"><div class="perfil-tab"></div><span class="title-b-m">perfil</span></div></li>
-        <li><div class="c-button-m"><div class="market-tab"></div><span class="title-b-m">market</span></div></li>
-      </ul>
+      
+      <!-- ----------------------MENU------------------------- -->
+      <app-tab-bar></app-tab-bar>
+      
     </div>
   </div>
-</div>
+</ion-content>
