@@ -88,43 +88,44 @@
         <button (click)="registerButton()" (click)="condicion = 'precios'" class="button"><strong>Precios</strong></button>
       </div>
       
-      <!-- ----------------------TRANSACCIONES------------------------- -->
-      <div class="content-t-p" *ngIf="condicion == 'Utransacciones'">
-        <!-- <ul>
-          <li> -->
-            <div class="item" *ngFor="let item of prueba">
-              <img src="../../assets/icon/coin3.png" alt="coin">
-              <div class="info-item">
-                <div class="part">
-                  <p class="nombre-item">Bitcoin</p>
-                  <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
-                </div>
-                <div class="part">
-                  <p class="info-coin">+0.94853</p>
-                  <p class="info-coin">$2,748.94</p>
+      <!-- ----------------------TRANSACCIONES - PRECIOS ------------------------- -->
+      <div class="content-t-p" >
+        
+            <!-- ----------------------TRANSACCIONES------------------------- -->
+            <div *ngIf="condicion == 'Utransacciones'">
+              <div class="item" *ngFor="let item of prueba">
+                <img src="../../assets/icon/coin3.png" alt="coin">
+                <div class="info-item">
+                  <div class="part">
+                    <p class="nombre-item">Bitcoin</p>
+                    <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+                  </div>
+                  <div class="part">
+                    <p class="info-coin">+0.94853</p>
+                    <p class="info-coin">$2,748.94</p>
+                  </div>
                 </div>
               </div>
             </div>
-          <!-- </li>
-        </ul> -->
-      </div>
-      
-      <!-- ----------------------PRECIOS------------------------- -->
-      <div class="content-t-p" *ngIf="condicion == 'precios'">
+            
 
-        <div class="item item-p" *ngFor="let item of prueba">
-          <img src="../../assets/icon/coin3.png" alt="coin">
-          <div class="info-item">
-            <div class="part">
-              <p class="nombre-item">Bitcoin</p>
-              <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+            <!-- ----------------------PRECIOS------------------------- -->
+            <div  *ngIf="condicion == 'precios'">
+              <div class="item item-p" *ngFor="let item of prueba">
+                <img src="../../assets/icon/coin3.png" alt="coin">
+                <div class="info-item">
+                  <div class="part">
+                    <p class="nombre-item">Bitcoin</p>
+                    <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+                  </div>
+                  <div class="part">
+                    <p class="info-coin">+0.94853</p>
+                    <p class="info-coin">$2,748.94</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="part">
-              <p class="info-coin">+0.94853</p>
-              <p class="info-coin">$2,748.94</p>
-            </div>
-          </div>
-        </div>
+            
       </div>
       
       <!-- ----------------------MENU------------------------- -->
