@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -28,6 +29,37 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+=======
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'password-recover',
+    loadChildren: () => import('./pages/password-recover/password-recover.module').then( m => m.PasswordRecoverPageModule)
+  },
+  {
+    path: 'new-password',
+    loadChildren: () => import('./pages/new-password/new-password.module').then( m => m.NewPasswordPageModule)
+  },  {
+    path: 'register-validation-code',
+    loadChildren: () => import('./pages/register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
+  },
+<<<<<<< HEAD
+>>>>>>> cebb6ea0fab3daf7d9b112c1146a6b54cd87ae9c
 ];
 @NgModule({
   imports: [
@@ -37,6 +69,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 =======
+<<<<<<< HEAD
 
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -93,6 +126,11 @@ const routes: Routes = [
   // },
 ];
 
+=======
+
+
+];
+>>>>>>> cebb6ea0fab3daf7d9b112c1146a6b54cd87ae9c
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
@@ -100,4 +138,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+<<<<<<< HEAD
 >>>>>>> 74bdfb890dfa9c7d34a142560bc9bd4bf0dad376
+=======
+>>>>>>> 5af72d2c2039decf33b27de80a34d8fba9da0ca7
+>>>>>>> cebb6ea0fab3daf7d9b112c1146a6b54cd87ae9c

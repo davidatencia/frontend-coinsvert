@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <ion-header>
   <ion-toolbar>
     <ion-title>dashboard</ion-title>
@@ -42,6 +43,82 @@
         </ion-col>
       </ion-row>
       <!-- ./iconos de notificación y menú desplegable -->
+=======
+<ion-content>
+    
+  <div class="container-fluid">
+    <div class="content">
+      <div class="cabecera">
+        <!-- iconos de notificación y menú desplegable -->
+        <ion-row
+          class="header-icons"
+          no-padding
+          justify-content-start
+          align-items-start
+        >
+          <ion-col class="ion-text-left" size="8">
+              <button (click)="onClick()" class="notif-button">
+                <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
+                <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
+              </button>
+          </ion-col>
+          <ion-col size="4" class="ion-text-right">
+              <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
+                <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
+=======
+<!-- Vista del Dashboard - Rebeca -->
+<div class="container-fluid">
+  <div class="content">
+    <div class="cabecera">
+      <!-- iconos de notificación y menú desplegable -->
+      <ion-row
+        class="header-icons"
+        no-padding
+        justify-content-start
+        align-items-start
+      >
+        <ion-col class="ion-text-left" size="8">
+            <button (click)="onClick()" class="notif-button">
+              <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
+              <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
+            </button>
+        </ion-col>
+        <ion-col size="4" class="ion-text-right">
+            <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
+              <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
+            </button>
+        </ion-col>
+      </ion-row>
+      <!-- ./iconos de notificación y menú desplegable -->
+      <!-- balance -->
+      <ion-row class="ion-text-md-left balance">
+        <ion-col size="8">
+          <h1 class="balance-price">$9.999,99</h1>
+          <ion-label><h5>Balance</h5></ion-label>
+        </ion-col>
+        <ion-col size="4">
+            <button (click)="onClick()" class="notif-button profile-icon">
+              <img id="user-icon" src=".././../assets/imgs/usuario.png" alt="profile-icon">
+>>>>>>> 5af72d2c2039decf33b27de80a34d8fba9da0ca7
+              </button>
+          </ion-col>
+        </ion-row>
+        <!-- ./iconos de notificación y menú desplegable -->
+
+<<<<<<< HEAD
+        <!-- balance -->
+        <ion-row class="ion-text-md-left balance">
+          <ion-col size="8">
+            <h1 class="balance-price">$9.999,99</h1>
+            <ion-label><h5>Balance</h5></ion-label>
+          </ion-col>
+          <ion-col size="4">
+              <button (click)="onClick()" class="notif-button profile-icon">
+                <img id="user-icon" src=".././../assets/imgs/usuario.png" alt="profile-icon">
+                </button>
+          </ion-col>
+        </ion-row>
+>>>>>>> cebb6ea0fab3daf7d9b112c1146a6b54cd87ae9c
 
       <!-- balance -->
       <ion-row class="ion-text-md-left balance">
@@ -108,6 +185,7 @@
           </div>
         </ion-col>
 
+<<<<<<< HEAD
         <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
           <div class="actions-menu-button">
             <ion-img
@@ -119,12 +197,64 @@
           </div>
           <div class="actions-menu-label">
             <ion-label>Retirar</ion-label>
+=======
+          <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
+            <div class="actions-menu-button">
+              <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/compra.svg" alt="comprar-icon" >
+            </div>
+            <div class="actions-menu-label">
+              <label class="font-action-menu">Comprar</label>
+            </div>
+          </ion-col>
+=======
+      <!-- menú de acciones rápidas - FAST ACTIONS MENU-->
+      <ion-row class="fast-actions-menu" justify-content-center>
+        <ion-col class="action-menu-col" size="3" no-lines><!--Enviar-->
+          <div class="fam-button">
+            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/envio.svg" alt="enviar-icon">
+          </div>
+          <div class="fam-label">
+            <label class="font-action-menu">Enviar</label>
+          </div>
+        </ion-col>
+
+        <ion-col class="ion-text-center action-menu-col ion-no-padding" size="3" no-lines>
+        <div class="fam-button">
+            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/recarga.svg" alt="recargar-icon">
+          </div>
+          <div class="fam-label">
+            <label class="font-action-menu">Recargar</label>
+          </div>
+        </ion-col>
+
+        <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
+          <div class="fam-button">
+            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/compra.svg" alt="comprar-icon" >
+          </div>
+          <div class="fam-label">
+            <label class="font-action-menu">Comprar</label>
+          </div>
+        </ion-col>
+
+        <ion-col class="ion-text-center action-menu-col" size="3" no-lines>
+          <div class="fam-button">
+            <img class="action-menu-icon" (click)="onClick()" src="../../assets/imgs/retiro.svg" alt="retiro-icon" >
+          </div>
+          <div class="fam-label">
+            <label class="font-action-menu">Retirar</label>
+>>>>>>> cebb6ea0fab3daf7d9b112c1146a6b54cd87ae9c
           </div>
         </ion-col>
       </ion-row>
       <!-- ./menú de acciones rápidas -->
+<<<<<<< HEAD
     </ion-grid>
   </div>
+=======
+    </div>
+  </div>
+>>>>>>> 5af72d2c2039decf33b27de80a34d8fba9da0ca7
+>>>>>>> cebb6ea0fab3daf7d9b112c1146a6b54cd87ae9c
 
   <div class="content-fluid">
     <div class="switch">
