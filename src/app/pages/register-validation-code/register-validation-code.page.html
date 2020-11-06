@@ -22,64 +22,28 @@
       <ion-row class="ion-align-items-center">
         <ion-col size="8" push="2"><div class="ion-text-center"><h2>Ingresa el código</h2></div></ion-col>
       </ion-row>
-        <form class="verificarion-form" method="POST" >
+      <div class="code-blocks">
+        <div class="code-block"></div>
+        <div class="code-block"></div>
+        <div class="code-block"></div>
+        <div class="code-block"></div>
+        <div class="code-block"></div>
+        <div class="code-block"></div>
+      </div>
           <ion-row class="code-fields-container" justify-content-center>
             <ion-col
-              class="ion-text-center  ion-no-padding"
-              size="2"
-              no-lines
-            >
-              <div class="code-field">
-                <ion-input class="code-input"  minlength="1" maxlenght="1" placeholder="*"></ion-input>
-              </div>
-            </ion-col>
-            <ion-col
-              class="ion-text-center  ion-no-padding"
-              size="2"
-              no-lines
-            >
-              <div class="code-field">
-                <ion-input class="code-input"></ion-input>
-              </div>
-            </ion-col>
-            <ion-col
-              class="ion-text-center  ion-no-padding"
-              size="2"
-              no-lines
-            >
-              <div class="code-field">
-                <ion-input class="code-input"></ion-input>
-              </div>
-            </ion-col>
-            <ion-col
-              class="ion-text-center  ion-no-padding"
-              size="2"
-              no-lines
-            >
-              <div class="code-field">
-                <ion-input class="code-input"></ion-input>
-              </div>
-            </ion-col>
-            <ion-col
-              class="ion-text-center  ion-no-padding"
-              size="2"
-              no-lines
-            >
-              <div class="code-field">
-                <ion-input class="code-input"></ion-input>
-              </div>
-            </ion-col>
-            <ion-col
               class="ion-text-center ion-no-padding"
-              size="2"
+              size="12"
               no-lines
             >
-              <div class="code-field">
-                <ion-input class="code-input"></ion-input>
-              </div>
+            
+                <form class="verificarion-form" method="POST" >
+                <ion-item class="code-field ion-align-items-center" lines="none">
+                  <ion-input onkeypress="" class="code-input ion-align-items-center" autofocus="true"></ion-input>
+                </ion-item>
+                </form>
             </ion-col>
           </ion-row>
-        </form>
       <ion-row>
         <ion-col size="12"><button class="submit-button"><strong>Validar</strong></button></ion-col>
       </ion-row>
