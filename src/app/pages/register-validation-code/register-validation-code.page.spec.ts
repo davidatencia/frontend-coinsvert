@@ -1,20 +1,19 @@
-  
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPage } from './menu.page';
+import { RegisterValidationCodePage } from './register-validation-code.page';
 
-describe('MenuPage', () => {
-  let component: MenuPage;
-  let fixture: ComponentFixture<MenuPage>;
+describe('RegisterValidationCodePage', () => {
+  let component: RegisterValidationCodePage;
+  let fixture: ComponentFixture<RegisterValidationCodePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MenuPage ],
+      declarations: [ RegisterValidationCodePage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MenuPage);
+    fixture = TestBed.createComponent(RegisterValidationCodePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

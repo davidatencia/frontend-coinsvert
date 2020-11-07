@@ -23,6 +23,11 @@ const routes: Routes = [
     path: 'new-password',
     loadChildren: () => import('./pages/new-password/new-password.module').then( m => m.NewPasswordPageModule)
   },
+  {
+    path: 'register-validation-code',
+    loadChildren: () => import('./pages/register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
+  },
+
 ];
 @NgModule({
   imports: [
@@ -31,3 +36,15 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+// ];
+// @NgModule({
+//   imports: [
+//     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+//   ],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }
+

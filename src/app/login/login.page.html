@@ -1,35 +1,95 @@
 <ion-content>
-
   <!-- INICIO -->
   <div id="containerinicio" *ngIf="condicion == 'inicio'">
-    <img id="imgLogoicinio" src="../../assets/coinsvrtlogos/coinsvert imagotipo-09.png" alt="coinsvert-logo">
+    <img
+      id="imgLogoicinio"
+      src="../../assets/coinsvrtlogos/coinsvert imagotipo-09.png"
+      alt="coinsvert-logo"
+    />
   </div>
 
-  <div class="container"  *ngIf="condicion != 'inicio'">
-    <div class="logo-section" [style.height] = "condicion == 'login' ? '26em' : '5em'">
+  <div class="container" *ngIf="condicion != 'inicio'">
+    <div
+      class="logo-section"
+      [style.height]="condicion == 'login' ? '26em' : '5em'"
+    >
       <figure class="logo">
-        <img id="imgLogo" src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo">
+        <img
+          id="imgLogo"
+          src="../../assets/icon/coinsvert imagotipo-10.png"
+          alt="coinsvert-logo"
+        />
       </figure>
     </div>
-    <div class="content" [style.height] = "condicion == 'login' ? '22em' : '44em'">
+    <div
+      class="content"
+      [style.height]="condicion == 'login' ? '22em' : '44em'"
+    >
       <div class="switch">
         <span class="slider"></span>
-        <button (click)=loginButton() (click)="condicion = 'login'" class="button"><strong>Iniciar Sesion</strong></button>
-        <button (click)=registerButton() (click)="condicion = 'register'" class="button"><strong>Registrar</strong></button>
+        <button
+          (click)="loginButton()"
+          (click)="condicion = 'login'"
+          class="button"
+        >
+          <strong>Iniciar Sesion</strong>
+        </button>
+        <button
+          (click)="registerButton()"
+          (click)="condicion = 'register'"
+          class="button"
+        >
+          <strong>Registrar</strong>
+        </button>
       </div>
 
       <!-- LOGIN -->
       <div class="subcontent" *ngIf="condicion == 'login'">
-
-        <form id="formInicio" class="formulario" #formIniciar="ngForm" (ngSubmit)="formIniciarSubmit()">
-          <ion-input class="input" placeholder="Usuario" name="usuario" #usuario="ngModel" [(ngModel)]="User.username" required></ion-input>
-            <span *ngIf="usuario.touched && !usuario.valid">Ingrese el nombre de usuario</span>
-          <ion-input class="input" type="password" placeholder="Contraseña" name="password" #password="ngModel" [(ngModel)]="User.password" required></ion-input>
-            <span *ngIf="password.touched && !password.valid">Ingrese su contraseña</span>
-          <button class="submit-button" [disabled]="!formIniciar.form.valid" [style.background] = "!formIniciar.form.valid ? 'gainsboro' : 'white'"><strong>Ingresar</strong></button>
+        <form
+          id="formInicio"
+          class="formulario"
+          #formIniciar="ngForm"
+          (ngSubmit)="formIniciarSubmit()"
+        >
+          <ion-input
+            class="input"
+            placeholder="Usuario"
+            name="usuario"
+            #usuario="ngModel"
+            [(ngModel)]="User.username"
+            required
+          ></ion-input>
+          <span *ngIf="usuario.touched && !usuario.valid"
+            >Ingrese el nombre de usuario</span
+          >
+          <ion-input
+            class="input"
+            type="password"
+            placeholder="Contraseña"
+            name="password"
+            #password="ngModel"
+            [(ngModel)]="User.password"
+            required
+          ></ion-input>
+          <span *ngIf="password.touched && !password.valid"
+            >Ingrese su contraseña</span
+          >
+          <button
+            class="submit-button"
+            [disabled]="!formIniciar.form.valid"
+            [style.background]="!formIniciar.form.valid ? 'gainsboro' : 'white'"
+          >
+            <strong>Ingresar</strong>
+          </button>
         </form>
 
-        <p style=" text-align: center;"><a style="color: white; text-decoration: none;" href="/password-recover">Olvidé mi contraseña</a></p>
+        <p style="text-align: center">
+          <a
+            style="color: white; text-decoration: none"
+            href="/password-recover"
+            >Olvidé mi contraseña</a
+          >
+        </p>
         <!-- <div class="login-social-media">
           <div class="ingresa-con">
           <div class="line"></div>
@@ -50,33 +110,108 @@
 
       <!-- REGISTER -->
       <div class="subcontent" *ngIf="condicion == 'register'">
-
-        <form id="formRegistro" class="formulario" #formRegistro="ngForm" (ngSubmit)="formRegistroSubmit()">
-          <ion-input class="input" type="text" placeholder="Usuario" name="rusuario" #rusuario="ngModel" [(ngModel)]="newUser.rusername" required></ion-input>
-            <span *ngIf="rusuario.touched && !rusuario.valid">Ingrese un nombre de usuario</span>
-          <ion-input class="input" type="email" placeholder="Email" name="remail" #remail="ngModel" [(ngModel)]="newUser.remail" required></ion-input>
-            <span *ngIf="remail.touched && !remail.valid">Ingrese una direccion de correo</span>
-          <ion-select class="input" placeholder="Seleccionar País" name="rpais" #rpais="ngModel" [(ngModel)]="newUser.rpais" required>
+        <form
+          id="formRegistro"
+          class="formulario"
+          #formRegistro="ngForm"
+          (ngSubmit)="formRegistroSubmit()"
+        >
+          <ion-input
+            class="input"
+            type="text"
+            placeholder="Usuario"
+            name="rusuario"
+            #rusuario="ngModel"
+            [(ngModel)]="newUser.rusername"
+            required
+          ></ion-input>
+          <span *ngIf="rusuario.touched && !rusuario.valid"
+            >Ingrese un nombre de usuario</span
+          >
+          <ion-input
+            class="input"
+            type="email"
+            placeholder="Email"
+            name="remail"
+            #remail="ngModel"
+            [(ngModel)]="newUser.remail"
+            required
+          ></ion-input>
+          <span *ngIf="remail.touched && !remail.valid"
+            >Ingrese una direccion de correo</span
+          >
+          <ion-select
+            class="input"
+            placeholder="Seleccionar País"
+            name="rpais"
+            #rpais="ngModel"
+            [(ngModel)]="newUser.rpais"
+            required
+          >
             <ion-select-option value="Colombia">Colombia</ion-select-option>
           </ion-select>
-            <span *ngIf="rpais.touched && !rpais.valid">Seleccione su país</span>
-          <ion-select class="input" placeholder="Seleccionar Estado"  name="restado" #restado="ngModel" [(ngModel)]="newUser.restado" required>
+          <span *ngIf="rpais.touched && !rpais.valid">Seleccione su país</span>
+          <ion-select
+            class="input"
+            placeholder="Seleccionar Estado"
+            name="restado"
+            #restado="ngModel"
+            [(ngModel)]="newUser.restado"
+            required
+          >
             <ion-select-option value="Atlantico">Atlantico</ion-select-option>
           </ion-select>
-            <span *ngIf="restado.touched && !restado.valid">Seleccione su estado</span>
-          <ion-select class="input" placeholder="Seleccionar ciudad" name="rciudad" #rciudad="ngModel" [(ngModel)]="newUser.rciudad" required>
-            <ion-select-option value="Barranquilla">Barranquilla</ion-select-option>
+          <span *ngIf="restado.touched && !restado.valid"
+            >Seleccione su estado</span
+          >
+          <ion-select
+            class="input"
+            placeholder="Seleccionar ciudad"
+            name="rciudad"
+            #rciudad="ngModel"
+            [(ngModel)]="newUser.rciudad"
+            required
+          >
+            <ion-select-option value="Barranquilla"
+              >Barranquilla</ion-select-option
+            >
           </ion-select>
-            <span *ngIf="rciudad.touched && !rciudad.valid">Seleccione su ciudad</span>
-          <ion-input class="input" type="number" placeholder="Teléfono Móvil" name="rTel" #rTel="ngModel" [(ngModel)]="newUser.rTel" required></ion-input>
-            <span *ngIf="rTel.touched && !rTel.valid">Ingrese un número de teléfono</span>
-          <ion-input class="input" type="password" placeholder="Contraseña" name="rpassword" #rpassword="ngModel" [(ngModel)]="newUser.rpassword" required></ion-input>
-            <span *ngIf="rpassword.touched && !rpassword.valid">Ingrese una contraseña</span>
-          <button class="submit-button" [disabled]="!formRegistro.form.valid" [style.background] = "!formRegistro.form.valid ? 'gainsboro' : 'white'">Ingresar</button>
+          <span *ngIf="rciudad.touched && !rciudad.valid"
+            >Seleccione su ciudad</span
+          >
+          <ion-input
+            class="input"
+            type="number"
+            placeholder="Teléfono Móvil"
+            name="rTel"
+            #rTel="ngModel"
+            [(ngModel)]="newUser.rTel"
+            required
+          ></ion-input>
+          <span *ngIf="rTel.touched && !rTel.valid"
+            >Ingrese un número de teléfono</span
+          >
+          <ion-input
+            class="input"
+            type="password"
+            placeholder="Contraseña"
+            name="rpassword"
+            #rpassword="ngModel"
+            [(ngModel)]="newUser.rpassword"
+            required
+          ></ion-input>
+          <span *ngIf="rpassword.touched && !rpassword.valid"
+            >Ingrese una contraseña</span
+          >
+          <button
+            class="submit-button"
+            [disabled]="!formRegistro.form.valid"
+            [style.background]="!formRegistro.form.valid ? 'gainsboro' : 'white'"
+          >
+            Ingresar
+          </button>
         </form>
-
       </div>
-
     </div>
   </div>
 </ion-content>
