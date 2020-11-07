@@ -4,7 +4,7 @@
     <div class="content">
       <ion-buttons slot="start">
         <ion-back-button
-          (click)="regresar_login()"
+          (click)="Redirigir(1)"
           text="Regresar"
           icon="chevron-back-outline"
           defaultHref="home"
@@ -45,7 +45,7 @@
               </ion-col>
             </ion-row>
         <ion-row>
-          <ion-col size="12"><button class="submit-button"><strong>Validar</strong></button></ion-col>
+          <ion-col size="12"><button (click)="Redirigir(2)" class="submit-button"><strong>Validar</strong></button></ion-col>
         </ion-row>
         </ion-grid>
         <!-- /Contenedor principal ingreso código de verificación -->

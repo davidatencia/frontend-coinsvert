@@ -16,11 +16,12 @@ export class PasswordRecoverPage implements OnInit {
   ngOnInit() {
   }
 
-  regresar_login(){
-    this._router.navigate(["/login"]);
-  }
-
-  redirigir_nC(){
-    this._router.navigate(["/new-password"]);
+  Redirigir(con){
+    if(con==1){
+      this._router.navigate(["/login"]);
+    }
+    if(con==2){
+      this._router.navigate(["/register-validation-code"]);
+    }
   }
 }
