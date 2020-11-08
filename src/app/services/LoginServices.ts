@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class PeticionesService{
+export class PeticionesLoginService{
 
     public url: string;
 

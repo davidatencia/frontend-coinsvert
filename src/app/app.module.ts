@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
-import { PeticionesService } from './services/LoginServices';
+import { PeticionesLoginService } from './services/LoginServices';
+import { PeticionesEditarPerfilService } from './services/EditarPerfilServices';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
-    PeticionesService,
+    PeticionesLoginService,
+    PeticionesEditarPerfilService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

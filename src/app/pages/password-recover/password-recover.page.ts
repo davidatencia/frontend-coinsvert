@@ -24,4 +24,8 @@ export class PasswordRecoverPage implements OnInit {
       this._router.navigate(["/register-validation-code"]);
     }
   }
+
+  formEnviarCSubmit(){
+    
+  }
 }

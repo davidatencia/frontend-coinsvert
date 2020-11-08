@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'register-validation-code',
     loadChildren: () => import('./pages/register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
   },
+  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
+  },
 
 ];
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PeticionesService} from '../services/LoginServices'
+import { PeticionesLoginService } from '../services/LoginServices';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginPage implements OnInit {
   public User: any;
   public newUser: any;
 
-  constructor(private _peticionesservice: PeticionesService) { 
+  constructor(private _peticionesservice: PeticionesLoginService) { 
     this.condicion= "inicio";
     this.User = {
       username: "",
@@ -52,23 +52,23 @@ export class LoginPage implements OnInit {
   // Inicio De Sesion
 
   formIniciarSubmit(){
-    this._peticionesservice.addUser(this.User).subscribe(Response=>{
-      console.log(Response);
-      // document.getElementById("formInicio").reset();
-    }, error=>{
-      console.log("ERROR"+<any>error);
-    })
+  //   this._peticionesservice.addUser(this.User).subscribe(Response=>{
+  //     console.log(Response);
+  //     // document.getElementById("formInicio").reset();
+  //   }, error=>{
+  //     console.log("ERROR"+<any>error);
+  //   })
   }
 
-  // Registrarse
+  // // Registrarse
 
   formRegistroSubmit(){
-    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
-    this.condicion="inicio"; 
-    //document.getElementById("formRegistro").reset();
-    console.log(Response);
-    }, error=>{
-      console.log("ERROR"+<any>error);
-    })
+  //   this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+  //   this.condicion="inicio"; 
+  //   //document.getElementById("formRegistro").reset();
+  //   console.log(Response);
+  //   }, error=>{
+  //     console.log("ERROR"+<any>error);
+  //   })
   }
 }

@@ -22,7 +22,7 @@
           <span *ngIf="usuario.touched && !usuario.valid">Ingrese el nombre de usuario</span>
           <ion-input class="input" type="password" placeholder="Contraseña" name="password"  #password="ngModel"  [(ngModel)]="User.password" required></ion-input>
           <span *ngIf="password.touched && !password.valid">Ingrese su contraseña</span>
-          <button class="submit-button" [disabled]="!formIniciar.form.valid" [style.background]="!formIniciar.form.valid ? 'gainsboro' : 'white'"><strong>Ingresar</strong></button>
+          <button routerLink="/menu" class="submit-button" [disabled]="!formIniciar.form.valid" [style.background]="!formIniciar.form.valid ? 'gainsboro' : 'white'"><strong>Ingresar</strong></button>
         </form>
 
         <p style="text-align: center">
