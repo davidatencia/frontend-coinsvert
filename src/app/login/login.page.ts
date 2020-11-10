@@ -19,13 +19,13 @@ export class LoginPage implements OnInit {
       password: ""
     };
     this.newUser = {
-      rusername: "",
-      remail: "",
-      rpais: "",
-      restado: "",
-      rciudad: "",
-      rTel: "",
-      rPassword: ""
+      nick_name: "",
+      email: "",
+      contry_id: "",
+      state_id: "",
+      city_id: "",
+      phone: "",
+      password: ""
     }
 
   }
@@ -52,23 +52,23 @@ export class LoginPage implements OnInit {
   // Inicio De Sesion
 
   formIniciarSubmit(){
-  //   this._peticionesservice.addUser(this.User).subscribe(Response=>{
-  //     console.log(Response);
-  //     // document.getElementById("formInicio").reset();
-  //   }, error=>{
-  //     console.log("ERROR"+<any>error);
-  //   })
+    this._peticionesservice.addUser(this.User).subscribe(Response=>{
+      console.log(Response);
+      // document.getElementById("formInicio").reset();
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
   }
 
   // // Registrarse
 
   formRegistroSubmit(){
-  //   this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
-  //   this.condicion="inicio"; 
-  //   //document.getElementById("formRegistro").reset();
-  //   console.log(Response);
-  //   }, error=>{
-  //     console.log("ERROR"+<any>error);
-  //   })
+    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+    this.condicion="inicio"; 
+    // document.getElementById("formRegistro").reset();
+    console.log(Response);
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
   }
 }

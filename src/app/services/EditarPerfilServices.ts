@@ -10,7 +10,7 @@ export class PeticionesEditarPerfilService{
     constructor(
         public _http: HttpClient
     ){
-        this.url="http://localhost:3000/";
+        this.url="160.153.253.91:3000/";
     }
 
     EditarInformacion(NewInfo):Observable<any>{
