@@ -1,0 +1,233 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-fluid {
+    background: linear-gradient(to top, #5fcedc 69%, #644296);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-weight: 400;
+    overflow: hidden;
+    overflow-y: scroll;
+    h1 {
+        color: white;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
+        font-weight: bold;
+        font-size: 10vw;
+        // max-width: 15vw;
+    }
+    h2 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: gray;
+    }
+    h3 {
+        // color: #fff;
+    }
+    h4 {
+        text-align: center;
+    }
+    h5 {
+        color: #fff;
+        text-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+        font-weight: bold;
+        font-size: 4vw;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-weight: 700;
+    }
+    ion-badge {
+        position: relative;
+        top: -0.5rem;
+        right: -0.2rem;
+        opacity: 0.9;
+    }
+}
+
+.content {
+    position: relative;
+    height: auto;
+    height: fit-content;
+    // border-style: dashed;
+    .cabecera {
+        padding: 15px;
+        height: auto;
+        height: 54px;
+    }
+}
+
+.notif-button.profile-icon {
+    margin-left: 39%;
+}
+
+.header-icons {
+    position: relative;
+    height: fit-content;
+    margin-bottom: 2vh;
+}
+
+.header-button-menu {
+    height: 3vh;
+}
+
+.header-button-notif {
+    height: 3vh;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.ion-color.ion-color-danger.ios.hydrated {
+    position: relative;
+    top: -0.5rem;
+    right: 0.8rem;
+    background-color: #70C6DD;
+    color: white;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.notif-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    left: -10px;
+}
+
+.profile-icon {
+    margin-left: 40px;
+    width: auto;
+    #user-icon {
+        width: 53px;
+    }
+}
+
+.notifications-icon,
+.menu-icon {
+    position: relative;
+    height: fit-content;
+    max-height: 15vh;
+    margin-right: 1.2rem;
+}
+
+//
+.content-fluid {
+    background: #ffffff;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+    border-radius: 40px 40px 0 0;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.slider {
+    position: absolute;
+    color: #644296;
+    top: 2px;
+    left: 2px;
+    right: 50%;
+    bottom: 2px;
+    background: #644296;
+    border-radius: 50px;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+//formulario de datos del usuario
+.content-fluid-form {
+    color: grey;
+    width: auto;
+    height: 410px;
+    margin-right: 40px;
+    margin-left: 30px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.subcontent {
+    width: 90%;
+    color: grey;
+    width: auto;
+    height: 50px;
+    // height: 610px;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .input{
+    color: gray;
+    border-bottom: gray solid 1px;
+    margin: 15px 0;
+    height: 20px;
+    flex: none;
+    ::-webkit-input-placeholder{
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .select{
+    width: 100%;
+    padding: 3px;
+  }
+
+.map-canvas {
+    height: 50px;
+    color: crimson;
+    border-color: crimson;
+    border-style: dashed;
+}
+
+.form-action-buttons {
+    display: flex;
+    height: 50px;
+    color: crimson;
+    border-color: crimson;
+    border-style: dashed;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-button {
+    height: 30px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 50px;
+    border: none;
+    // box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
+    color: #ffffff;
+    margin-top: 15px;
+    background: #644296;
+}
+
+.cancel-button {
+    height: 30px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 50px;
+    border-color: #644296;
+    border-style: solid;
+    // box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
+    color: #644296;
+    margin-top: 15px;
+    background: white;
+}

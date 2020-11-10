@@ -22,15 +22,15 @@ const routes: Routes = [
   {
     path: 'new-password',
     loadChildren: () => import('./pages/new-password/new-password.module').then( m => m.NewPasswordPageModule)
-  },  {
+  },
+  {
     path: 'register-validation-code',
     loadChildren: () => import('./pages/register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
   },
   {
-    path: 'editar-perfil',
-    loadChildren: () => import('./editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
-  },
-
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  }
 ];
 @NgModule({
   imports: [

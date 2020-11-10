@@ -27,27 +27,37 @@
                         </ion-row>
 
                         <ion-row class="code-fields-container ion-align-items-center">
-                            <ion-col class="ion-text-center ion-no-padding ion-justify      -items-center" size="12" offset="" no-lines>
-
+                            <ion-col class="ion-text-center ion-no-padding ion-justify-items-center" size="12" offset="" no-lines>
                                 <form class="verificarion-form" method="POST">
                                     <ion-item class="code-field" lines="none">
                                         <!-- <div class="code-blocks">
-                                            <div class="code-block"></div>
-                                            <div class="code-block"></div>
-                                            <div class="code-block"></div>
-                                            <div class="code-block"></div>
-                                            <div class="code-block"></div>
-                                            <div class="code-block"></div>
-                                        </div> -->
-                                        <ion-input onkeypress="" class="code-input" maxlength="6" autofocus="true"></ion-input>
+                                      <div class="code-block"></div>
+                                      <div class="code-block"></div>
+                                      <div class="code-block"></div>
+                                      <div class="code-block"></div>
+                                      <div class="code-block"></div>
+                                      <div class="code-block"></div>
+                                  </div> -->
+                                        <ion-input onkeypress="" class="input" maxlength="6" autofocus="true"></ion-input>
                                     </ion-item>
                                 </form>
                             </ion-col>
                         </ion-row>
                         <ion-row class="ion-align-items-center">
-                            <ion-col size="12"><button class="submit-button"><strong>Validar</strong></button></ion-col>
+                            <ion-col size="12"><button class="submit-button" id="botonValidar"><strong>Validar</strong></button></ion-col>
                         </ion-row>
                     </ion-grid>
+                    <!-- /Contenedor principal ingreso código de verificación -->
+                </div>
+
+            </div>
+            <div class="title">
+                <div class="confirmation-popup">
+                    <!-- Contenedor principal ingreso código de verificación-->
+                    <div class="popup-icon">
+                        <img src="../../../assets/imgs/aprovado-verificacion.svg" alt="email validado">
+                    </div>
+                    <h2>Email validado</h2>
                     <!-- /Contenedor principal ingreso código de verificación -->
                 </div>
             </div>
