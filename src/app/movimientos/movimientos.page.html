@@ -1,0 +1,154 @@
+<ion-content>
+
+  <div class="container-fluid">
+    <div class="content">
+      <div class="cabecera">
+        <!-- ICONOS DE NOTIFICACIÓN Y MENU DESPLEGABLE-->
+        <ion-row class="header-icons" no-padding justify-content-start align-items-start>
+          <ion-col class="ion-text-left" size="4">
+            <button (click)="onClick()" class="notif-button">
+              <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
+              <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
+            </button>
+          </ion-col>
+          <!-- TEXTO DE MOVIMIENTO -->
+          <ion-col class="ion-text-center" size="4">
+            <h3>Movimientos</h3>
+          </ion-col>
+          <!-- MENU DESPLEGABLE DE LA DERECHA -->
+          <ion-col size="4" class="ion-text-right">
+            <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
+              <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
+            </button>
+          </ion-col>
+        </ion-row>
+        <!-- ./iconos de notificación y menú desplegable -->
+      </div>
+    </div>
+
+
+    <!-- PARTE DE ABAJO -->
+    <div class="content-fluid">
+      <h4>Filtrar por:</h4>
+
+      <div class="subcontent">
+        <div class="subcontenido">
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label>Fecha Inicio</ion-label>
+                  <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Fecha Fin</ion-label>
+                  <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </div> <!-- Fin del subcontenido -->
+
+        <!-- ---- Tipo de movimiento -------->
+
+        <ion-content>
+          <ion-list>
+            <ion-item>
+              <ion-label>Tipo de Movimiento</ion-label>
+              <ion-select value="movimientos">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+              </ion-select>
+            </ion-item>
+      
+
+            <!-- -------------------Tipo de moneda --------------------- -->
+            <!-- <ion-list-header lines="full"> -->
+            <ion-item>
+              <ion-label>Tipo de Monedas</ion-label>
+              <ion-select value="monedas">
+                <ion-select-option value="bitcoin">Bitcoin</ion-select-option>
+                <ion-select-option value="dashcoin">Dashcoin</ion-select-option>
+                <ion-select-option value="ether">Ether</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <!-- </ion-list-header> -->
+
+
+            <!-- ------------------------------ VALORES ---------------------------- -->
+
+            <ion-item>
+              <ion-textarea placeholder="Min"></ion-textarea>
+              <ion-textarea placeholder="Max"></ion-textarea>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+
+
+        <!-- -------------------------------- TABLA ------------------------------- -->
+        
+        <!-- <ion-content class="table">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="2">Tipo</ion-col>
+              <ion-col size="2">Valor</ion-col>
+              <ion-col size="2">Moneda</ion-col>
+              <ion-col size="2">Fecha</ion-col>
+              <ion-col size="2">Hora</ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="2">Envio</ion-col>
+              <ion-col size="2">+1.90</ion-col>
+              <ion-col size="2">BTC</ion-col>
+              <ion-col size="2">19-09-2020</ion-col>
+              <ion-col size="2">13:30:4</ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="2">Retiro</ion-col>
+              <ion-col size="2">+1.90</ion-col>
+              <ion-col size="2">BTC</ion-col>
+              <ion-col size="2">19-09-2020</ion-col>
+              <ion-col size="2">13:30:4</ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="2">Envio</ion-col>
+              <ion-col size="2">+1.90</ion-col>
+              <ion-col size="2">BTC</ion-col>
+              <ion-col size="2">19-09-2020</ion-col>
+              <ion-col size="2">13:30:4</ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="2">Envio</ion-col>
+              <ion-col size="2">+1.90</ion-col>
+              <ion-col size="2">BTC</ion-col>
+              <ion-col size="2">19-09-2020</ion-col>
+              <ion-col size="2">13:30:4</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-content> -->
+        
+        <!-- ----------------------------- EXTRACTOS ---------------------- -->
+
+        <!-- <p>Enviar extractos de movimientos por email</p> -->
+        <!-- ----------------------------- BOTON SELECT ---------------------- -->
+
+        <!-- ----------------------------- BOTON ENVIAR Y VOLVER ---------------------- -->
+
+
+
+
+
+        <!-- ----------------------MENU------------------------- -->
+      </div> <!-- Fin de subcontent-->
+      <app-tab-bar></app-tab-bar>
+
+    </div>
+
+  </div>
+</ion-content>
