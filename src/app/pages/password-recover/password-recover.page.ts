@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-password-recover',
   templateUrl: './password-recover.page.html',
@@ -16,16 +17,11 @@ export class PasswordRecoverPage implements OnInit {
   ngOnInit() {
   }
 
-  Redirigir(con){
-    if(con==1){
-      this._router.navigate(["/login"]);
-    }
-    if(con==2){
-      this._router.navigate(["/register-validation-code"]);
-    }
+  RedirigirLogin(){
+    this._router.navigate(["/login"]);
   }
 
   formEnviarCSubmit(){
-    
+    this._router.navigate(["/register-validation-code"]);
   }
 }

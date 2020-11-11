@@ -26,8 +26,9 @@
         </form>
 
         <p style="text-align: center">
-          <a style="color: white; text-decoration: none" href="/password-recover" >Olvidé mi contraseña</a></p>
-        <!-- <div class="login-social-media">
+          <a style="color: white; text-decoration: none" [routerLink]="['/password-recover']" routerDirection="forward">Olvidé mi contraseña</a></p>
+        
+          <!-- <div class="login-social-media">
           <div class="ingresa-con">
           <div class="line"></div>
           <p style="font-size: 13px;">O ingresa con</p>
@@ -68,8 +69,7 @@
           <span *ngIf="rTel.touched && !rTel.valid">Ingrese un número de teléfono</span>
           <ion-input class="input" type="password"  placeholder="Contraseña" name="rpassword" #rpassword="ngModel" [(ngModel)]="newUser.rpassword" required></ion-input>
           <span *ngIf="rpassword.touched && !rpassword.valid">Ingrese una contraseña</span>
-          <button class="submit-button" [disabled]="!formRegistro.form.valid" [style.background]="!formRegistro.form.valid ? 'gainsboro' : 'white'">Ingresar
-          </button>
+          <button class="submit-button" [disabled]="!formRegistro.form.valid" [style.background]="!formRegistro.form.valid ? 'gainsboro' : 'white'">Ingresar</button>
         </form>
       </div>
     </div>
