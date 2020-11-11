@@ -49,25 +49,25 @@
       <!-- REGISTER -->
       <div class="subcontent" *ngIf="condicion == 'register'">
         <form id="formRegistro" class="formulario" #formRegistro="ngForm" (ngSubmit)="formRegistroSubmit()">
-          <ion-input class="input" type="text" placeholder="Usuario" name="rusuario" #rusuario="ngModel" [(ngModel)]="newUser.rusername" required></ion-input>
+          <ion-input class="input" type="text" placeholder="Usuario" name="rusuario" #rusuario="ngModel" [(ngModel)]="newUser.nick_name" required></ion-input>
           <span *ngIf="rusuario.touched && !rusuario.valid">Ingrese un nombre de usuario</span>
-          <ion-input class="input" type="email" placeholder="Email"  name="remail" #remail="ngModel" [(ngModel)]="newUser.remail" required></ion-input>
+          <ion-input class="input" type="email" placeholder="Email"  name="remail" #remail="ngModel" [(ngModel)]="newUser.email" required></ion-input>
           <span *ngIf="remail.touched && !remail.valid">Ingrese una direccion de correo</span>
-          <ion-select class="input"  placeholder="Seleccionar País" name="rpais" #rpais="ngModel" [(ngModel)]="newUser.rpais" required>
-            <ion-select-option value="Colombia">Colombia</ion-select-option>
+          <ion-select class="input"  placeholder="Seleccionar País" name="rpais" #rpais="ngModel" [(ngModel)]="newUser.contry_id" required>
+            <ion-select-option value="57">Colombia</ion-select-option>
           </ion-select>
           <span *ngIf="rpais.touched && !rpais.valid">Seleccione su país</span>
-          <ion-select class="input" placeholder="Seleccionar Estado" name="restado" #restado="ngModel" [(ngModel)]="newUser.restado" required>
-            <ion-select-option value="Atlantico">Atlantico</ion-select-option>
+          <ion-select class="input" placeholder="Seleccionar Estado" name="restado" #restado="ngModel" [(ngModel)]="newUser.state_id" required>
+            <ion-select-option value="5">Atlantico</ion-select-option>
           </ion-select>
           <span *ngIf="restado.touched && !restado.valid">Seleccione su estado</span>
-          <ion-select class="input" placeholder="Seleccionar ciudad"  name="rciudad" #rciudad="ngModel" [(ngModel)]="newUser.rciudad"required>
-            <ion-select-option value="Barranquilla">Barranquilla</ion-select-option >
+          <ion-select class="input" placeholder="Seleccionar ciudad"  name="rciudad" #rciudad="ngModel" [(ngModel)]="newUser.city_id"required>
+            <ion-select-option value="1">Barranquilla</ion-select-option >
           </ion-select>
           <span *ngIf="rciudad.touched && !rciudad.valid">Seleccione su ciudad</span>
-          <ion-input class="input" type="number" placeholder="Teléfono Móvil" name="rTel" #rTel="ngModel" [(ngModel)]="newUser.rTel" required></ion-input>
+          <ion-input class="input" type="number" placeholder="Teléfono Móvil" name="rTel" #rTel="ngModel" [(ngModel)]="newUser.phone" required></ion-input>
           <span *ngIf="rTel.touched && !rTel.valid">Ingrese un número de teléfono</span>
-          <ion-input class="input" type="password"  placeholder="Contraseña" name="rpassword" #rpassword="ngModel" [(ngModel)]="newUser.rpassword" required></ion-input>
+          <ion-input class="input" type="password"  placeholder="Contraseña" name="rpassword" #rpassword="ngModel" [(ngModel)]="newUser.password" required></ion-input>
           <span *ngIf="rpassword.touched && !rpassword.valid">Ingrese una contraseña</span>
           <button class="submit-button" [disabled]="!formRegistro.form.valid" [style.background]="!formRegistro.form.valid ? 'gainsboro' : 'white'">Ingresar</button>
         </form>
