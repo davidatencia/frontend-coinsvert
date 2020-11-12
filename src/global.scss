@@ -26,9 +26,14 @@
 // @import "~@ionic/angular/css/typography.css";
 // @import "~@ionic/angular/css/display.css";
 
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
 button{
     outline: none;
 }
+
 
 // //opcionales
 // @import "~@ionic/angular/css/padding.css";

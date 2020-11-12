@@ -1,0 +1,116 @@
+<ion-content>
+
+  <div class="container-fluid">
+    <div class="content">
+      <div class="cabecera">
+        <!-- ICONOS DE NOTIFICACIÓN Y MENU DESPLEGABLE-->
+        <ion-row class="header-icons" no-padding justify-content-start align-items-start>
+          <ion-col class="ion-text-left" size="4">
+            <button (click)="onClick()" class="notif-button">
+              <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
+              <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
+            </button>
+          </ion-col>
+          <!-- TEXTO DE MOVIMIENTO -->
+          <ion-col class="ion-text-center" size="4">
+            <h3>Movimientos</h3>
+          </ion-col>
+          <!-- MENU DESPLEGABLE DE LA DERECHA -->
+          <ion-col size="4" class="ion-text-right">
+            <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
+              <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
+            </button>
+          </ion-col>
+        </ion-row>
+        <!-- ./iconos de notificación y menú desplegable -->
+      </div>
+    </div>
+
+
+    <!-- PARTE DE ABAJO -->
+    <div class="content-fluid">
+      <div class="subcontent">
+        <h4><strong>Filtrar por:</strong></h4>
+        <!-- FORMULARIO -->
+        <div id="entradas">
+          <p style="color: gray;"><strong>Fecha</strong></p>
+          <div class="e-cortas">
+            <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2030-01-01" placeholder="Desde" name="Fechai" #Fechai="ngModel" [(ngModel)]="Movimientos.Fechai" required></ion-datetime>
+                  <span *ngIf="Fechai.touched && !Fechai.valid">Ingrese fecha de inicio</span>
+            <ion-datetime displayFormat="MM/DD/YYYY" min="2020-01-01" max="2030-01-01" placeholder="Hasta" name="Fechaf" #Fechaf="ngModel" [(ngModel)]="Movimientos.Fechaf" required></ion-datetime>
+                  <span *ngIf="Fechaf.touched && !Fechaf.valid">Ingrese fecha final</span>
+          </div>
+          <form id="formMovimientos" class="formulario" #formMovimientos="ngForm">
+            <ion-select class="input"  placeholder="Tipo De Movimineto" name="Tmovimiento" #Tmovimiento="ngModel" [(ngModel)]="Movimientos.Tmovimiento" required>
+              <ion-select-option value="1">1</ion-select-option>
+              <ion-select-option value="2">2</ion-select-option>
+              <ion-select-option value="3">3</ion-select-option>
+              <ion-select-option value="4">4</ion-select-option>
+              <ion-select-option value="5">5</ion-select-option>
+            </ion-select>
+                  <span *ngIf="Tmovimiento.touched && !Tmovimiento.valid">Seleccione el tipo de movimiento</span>
+            <ion-select class="input" placeholder="Moneda" name="Moneda" #Moneda="ngModel" [(ngModel)]="Movimientos.Moneda" required>
+              <ion-select-option value="bitcoin">Bitcoin</ion-select-option>
+              <ion-select-option value="dashcoin">Dashcoin</ion-select-option>
+              <ion-select-option value="ether">Ether</ion-select-option>
+            </ion-select>
+                  <span *ngIf="Moneda.touched && !Moneda.valid">Seleccione la moneda</span>
+            <p style="color: gray;"><strong>Valores</strong></p>
+            <div class="e-cortas">
+              <ion-input class="input corto" type="number" placeholder="Min" name="Valormin" #Valormin="ngModel" [(ngModel)]="Movimientos.Valormin" required></ion-input>
+                  <span *ngIf="Valormin.touched && !Valormin.valid">Ingrese un valor mínimo</span>
+            <ion-input class="input corto" type="number"  placeholder="Max" name="Valormax" #Valormax="ngModel" [(ngModel)]="Movimientos.Valormax" required></ion-input>
+                  <span *ngIf="Valormax.touched && !Valormax.valid">Ingrese un valor máximo</span>
+            </div>      
+          </form>
+        </div>
+
+        <!-- TABLA -->
+        <div id="tabla">
+          <div class="header">
+            <div class="col">Tipo</div>
+            <div class="col">Valor</div>
+            <div class="col" style="position: relative; right: 18px;">Moneda</div>
+            <div class="col" style="position: relative; right: 22px;">Fecha</div>
+            <div class="col">Hora</div>
+          </div>
+          <div class="row body" *ngFor="let item of prueba">
+            <div class="col">Envío</div>
+            <div class="col">+1.90</div>
+            <div class="col">BTC</div>
+            <div class="col">19-09-2020</div>
+            <div class="col">13:30:04</div>
+          </div>
+        </div>
+
+        <!-- PDF O EXCEL -->
+          <ion-radio-group>
+            <input type="radio" id="pdf" name="tarchivo" value="pdf">
+              <label for="pdf"><img src="../../assets/imgs/export iconos cv_pdf.svg" alt="PDF"></label>
+            <input style="margin-left: 50px;" type="radio" id="exel" name="tarchivo" value="exel">
+              <label for="exel"><img src="../../assets/imgs/exel.svg" alt="EXCEL"></label>
+          </ion-radio-group>
+
+        <!-- CORREO -->
+
+        <div class="E-correo">
+          <p><strong>Enviar extractos de movimientos por email</strong></p>
+          <ion-radio-group>
+            <input type="radio" id="micorreo" name="ecorreo" value="micorreo">
+              <label for="micorreo">Enviar a mi correo</label><br>
+            <input type="radio" id="otrocorreo" name="ecorreo" value="otrocorreo">
+              <label for="otrocorreo">Enviar a otro correo</label>
+          </ion-radio-group>
+          <ion-input class="input" type="email" placeholder="Email"></ion-input>
+
+          <div id="botones-e-v">
+            <button id="b-enviar"><strong>Enviar</strong></button>
+            <button id="b-volver"><strong>Volver</strong></button>
+          </div>
+        </div>
+      </div>
+      <app-tab-bar></app-tab-bar>
+    </div>
+
+  </div>
+</ion-content>

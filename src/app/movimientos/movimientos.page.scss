@@ -1,0 +1,298 @@
+
+* {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.container-fluid {
+  background: linear-gradient(to top, #5fcedc 65%, #644296);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-weight: 400;
+  overflow-y: scroll;
+
+  p {
+    color: #000;
+    text-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+    font-size: 3vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-weight: 400;
+  }
+
+  ion-badge {
+    position: relative;
+    top: -0.5rem;
+    right: -0.2rem;
+    opacity: 0.9;
+  }
+}
+
+.content {
+  position: relative;
+  height: auto;
+  height: fit-content;
+  // border-style: dashed;
+
+  .cabecera {
+    padding: 15px;
+    height: auto;
+    height: 54px;
+  }
+}
+
+.notif-button.profile-icon {
+  margin-left: 39%;
+}
+
+.header-icons {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 2vh;
+}
+
+.header-button-menu {
+  height: 3vh;
+}
+
+.header-button-notif {
+  height: 3vh;
+}
+
+.ion-color.ion-color-danger.ios.hydrated {
+  position: relative;
+  top: -0.5rem;
+  right: 0.8rem;
+  background-color: #70C6DD;
+  color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.notif-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  left: -10px;
+}
+
+.notifications-icon,
+.menu-icon {
+  position: relative;
+  height: fit-content;
+  max-height: 15vh;
+  margin-right: 1.2rem;
+}
+
+//PARTE DE ABAJO
+.content-fluid {
+  background: #fff;
+  color: gray;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+  border-radius: 40px 40px 0 0;
+  height: auto;
+  -webkit-border-radius: 40px 40px 0 0;
+  -moz-border-radius: 40px 40px 0 0;
+  -ms-border-radius: 40px 40px 0 0;
+  -o-border-radius: 40px 40px 0 0;
+}
+
+.subcontent {
+  width: auto;
+  height: 78vh;
+  color: gray;
+  padding: 5px 20px;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  h4{
+    text-align: center;
+  }
+  // ----------------------------------------- FORMULARIO
+  #entradas{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px;
+
+    .e-cortas{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      ion-datetime{
+        width: 35%;
+        border-bottom: 1px solid gray;
+      }
+
+      .corto{
+        width: 46%;
+        margin: 0px;
+      }
+    }
+    
+    .formulario {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  
+    .input {
+      color: gray;
+      border-bottom: gray solid 1px;
+      margin: 15px 0;
+      height: 20px;
+      flex: none;
+       ::-webkit-input-placeholder {
+          color: gray;
+      }
+    }
+  }
+  // ----------------------------------------- FORMULARIO
+  #tabla{
+    padding: 10px;
+    margin: 25px 0px;
+    box-shadow: 0 2px 9px 0 gray;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 20px;
+
+    .header{
+      font-size: 10px;
+      background-color: #644296;
+      color: white;
+      border: 2px solid white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    .body{
+      margin-bottom: 10px; 
+    }
+
+    .row{
+      font-size: 10px;
+      background-color: #ede7f6;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .col{
+      padding: 5px;
+    }
+  }
+
+  // ----------------------------------------- RADIO BUTTONS
+
+  input[type='radio']:after {
+    width: 7px;
+    height: 7px;
+    border-radius: 15px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid #644296;
+    }
+
+  input[type='radio']:checked:after {
+      width: 7px;
+      height: 7px;
+      border-radius: 15px;
+      top: 0px;
+      left: 0px;
+      position: relative;
+      background-color: #644296;
+  }
+
+  ion-radio-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    label{
+      img{
+        width: 70px;
+      }
+    }
+  }
+
+  // ----------------------------------------- ENVIAR CORREO
+
+  .E-correo{
+    color: gray;
+    padding: 0px 25px;
+
+    p{
+      font-size: 12px;
+      color: gray;
+      text-align: center;
+    }
+    ion-radio-group{
+      display: block;
+
+      label{
+        font-size: 13px;
+        margin-left: 10px;
+      }
+    }
+
+    .input {
+      color: gray;
+      border-bottom: gray solid 1px;
+      margin: 15px 0;
+      height: 20px;
+      flex: none;
+       ::-webkit-input-placeholder {
+          color: gray;
+      }
+    }
+  }
+    // BOTONES
+  #botones-e-v{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    #b-enviar{
+      height: 35px;
+      width: 110px;
+      margin: 0px 10px;
+      border-radius: 50px;
+      border: none;
+      color: white;
+      background: #644296;
+    }#b-enviar:hover{
+      box-shadow: 0 2px 9px 0 gray;
+    }
+
+    #b-volver{
+      height: 35px;
+      width: 110px;
+      margin: 0px 10px;
+      border-radius: 50px;
+      border: 2px solid #644296;
+      color: #644296;
+      background: white;
+    }#b-volver:hover{
+      box-shadow: 0 2px 9px 0 gray;
+    }
+  }
+}
