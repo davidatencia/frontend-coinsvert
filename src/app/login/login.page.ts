@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionesLoginService } from '../services/LoginServices';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,20 +13,20 @@ export class LoginPage implements OnInit {
   public User: any;
   public newUser: any;
 
-  constructor(private _peticionesservice: PeticionesLoginService) { 
+  constructor(private _peticionesservice: PeticionesLoginService, private _router: Router) { 
     this.condicion= "inicio";
     this.User = {
       username: "",
       password: ""
     };
     this.newUser = {
-      rusername: "",
-      remail: "",
-      rpais: "",
-      restado: "",
-      rciudad: "",
-      rTel: "",
-      rPassword: ""
+      nick_name: "",
+      email: "",
+      contry_id: "",
+      state_id: "",
+      city_id: "",
+      phone: "",
+      password: ""
     }
 
   }
@@ -52,23 +53,25 @@ export class LoginPage implements OnInit {
   // Inicio De Sesion
 
   formIniciarSubmit(){
-  //   this._peticionesservice.addUser(this.User).subscribe(Response=>{
-  //     console.log(Response);
-  //     // document.getElementById("formInicio").reset();
-  //   }, error=>{
-  //     console.log("ERROR"+<any>error);
-  //   })
+    this._peticionesservice.addUser(this.User).subscribe(Response=>{
+      console.log(Response);
+      this._router.navigate(["/menu"]);
+      // document.getElementById("formInicio").reset();
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
   }
 
   // // Registrarse
 
   formRegistroSubmit(){
-  //   this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
-  //   this.condicion="inicio"; 
-  //   //document.getElementById("formRegistro").reset();
-  //   console.log(Response);
-  //   }, error=>{
-  //     console.log("ERROR"+<any>error);
-  //   })
+    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+    this.condicion="inicio"; 
+    // document.getElementById("formRegistro").reset();
+    console.log(Response);
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
+
   }
 }

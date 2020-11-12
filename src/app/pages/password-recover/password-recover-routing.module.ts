@@ -10,8 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'register-validation-code',
-    loadChildren: () => import('../register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
-  },
+    loadChildren: '../register-validation-code/register-validation-code.module'
+  }
 ];
 
 @NgModule({
