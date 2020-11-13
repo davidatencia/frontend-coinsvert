@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { MenuPageRoutingModule } from '../menu/menu-routing.module';
 
-import { MenuPage } from '../menu/menu.page';
+import { MenuPage } from './menu.page';
 import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
 
 @NgModule({
