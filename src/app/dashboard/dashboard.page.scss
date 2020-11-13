@@ -1,0 +1,244 @@
+.container-fluid {
+    background: linear-gradient(to top, #5fcedc 55%, #644296);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-weight: 400;
+    overflow: hidden;
+    overflow-y: scroll;
+  
+    h1 {
+      color: white;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
+      font-weight: bold;
+      font-size: 10vw;
+      // max-width: 15vw;
+    }
+  
+    h2 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: gray;
+    }
+  
+    h5 {
+      color: #fff;
+      text-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+      font-weight: bold;
+      font-size: 4vw;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-weight: 700;
+    }
+  
+    ion-badge {
+      position: relative;
+      top: -0.5rem;
+      right: -0.2rem;
+      opacity: 0.9;
+    }
+  }
+  
+  .content {
+    position: relative;
+    height: auto;
+    height: fit-content;
+    // border-style: dashed;
+  
+    .cabecera{
+      padding: 15px;
+      height: auto;
+      height: 280px;
+    }
+  }
+  
+  .notif-button.profile-icon{
+   margin-left: 39%;
+  }
+  
+  .header-icons {
+    position: relative;
+    height: fit-content;
+    margin-bottom: 2vh;
+  }
+  
+  .header-button-menu {
+    height: 3vh;
+  }
+  
+  .header-button-notif {
+    height: 3vh;
+  }
+  
+  .ion-color.ion-color-danger.ios.hydrated{
+   position: relative;
+   top: -0.5rem;
+   right: 0.8rem;
+   background-color: #70C6DD;
+   color: white;
+   border-radius: 50px ;
+   -webkit-border-radius: 50px ;
+   -moz-border-radius: 50px ;
+   -ms-border-radius: 50px ;
+   -o-border-radius: 50px ;
+  }
+  
+  .notif-button {
+    background-color: transparent;
+    border: none;
+    outline:none;
+    position: relative;
+    left: -10px;
+   }
+  
+   .profile-icon{
+     margin-left: 40px;
+     width: auto;
+  
+     #user-icon{
+       width: 53px;
+     }
+   }
+  
+  .notifications-icon,
+  .menu-icon {
+    position: relative;
+    height: fit-content;
+    max-height: 15vh;
+    margin-right: 1.2rem;
+  }
+  
+  //Balance info
+  .balance-price {
+   margin: 0px;
+   
+  }
+  //menú acciones rápidas
+  .actions-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 13vh;
+    margin: 25px;
+    margin-bottom: 23px;
+    
+    *[_ngcontent-ptv-c132]{
+      padding: 0px;
+    }
+  }
+  
+  .actions-menu-button {
+    display: flex;
+    justify-content: left;
+    // position: fixed;
+    background: #5e4c9a45;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
+    border-radius: 10px;
+    width: 140px;
+    height: 112px;
+    size: 1%;
+  }
+  
+  .action-menu-col{
+    align-items: center;
+  }
+  
+   .icon {
+     width: 50px;
+   }
+   
+  .actions-menu-label {
+    position: relative;
+    width: 80%;
+    text-align: center;
+  
+    
+    .font-action-menu{
+      font-size: 60px;
+    }
+
+    .font-dash{
+      font-size: 20px;
+    }
+
+  }
+
+  .promedio{
+    display: flex;
+    position: relative;
+    background: #3866a291;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
+    border-radius: 10px;
+    width: 175px;
+    height: 58px;
+    // min-width: 50px;
+    max-width: 300px;
+    margin:auto;
+  }
+
+ 
+  //
+  .content-fluid {
+    background: #fff;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+    border-radius: 40px 40px 0 0;
+    height: auto;
+    padding-top: 20px;
+    align-items: center;
+    }
+  
+
+  //lista de transacciones
+  .content-t-p {
+     width: auto;
+     height: 414px;
+     padding: 1px 25px;
+     overflow: hidden;
+     overflow-y: scroll;
+  
+     //ITEM TRANSACCIONES
+     .item{
+       height: 50px;
+       padding: 10px;
+       margin-bottom: 10px;
+       display: flex;
+       box-shadow: 0px 0px 3px gainsboro;
+       border-radius: 14px;
+       -webkit-border-radius: 14px;
+       -moz-border-radius: 14px;
+       -ms-border-radius: 14px;
+       -o-border-radius: 14px;
+  
+       img{
+         position: relative;
+        width: 409px;
+        height: 152px;
+         margin-right: 10px;
+       }
+  
+       .info-item{
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+  
+         .nombre-item{
+           display: flex;
+           margin-top: -13px;
+           font-size: 21px;
+           color: gray;
+           font-family: "Source Sans Pro", sans-serif;
+           padding-left: 143px;
+         }
+       }
+     }
+  
+     .item-p{
+       padding: 23px 25px 15px 25px;
+       height: 180px;
+     }
+
+    //  --------------GRAFICAS----------
+
+  
+
+   }
