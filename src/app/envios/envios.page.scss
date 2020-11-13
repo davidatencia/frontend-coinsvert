@@ -153,7 +153,8 @@
 }
 
 .favorite-wallets {
-    padding: 5px;
+    padding: 10px;
+    height: 120px;
     border-style: dashed;
     border-color: rgb(255, 174, 0);
 }
@@ -173,7 +174,7 @@
 
 .submit-button {
     height: 30px;
-    width: 100px;
+    width: 90%;
     margin: 15px;
     border-radius: 50px;
     border: none;
@@ -184,14 +185,13 @@
 }
 
 .next-button {
-    height: 30px;
-    width: 100px;
+    height: 40px;
+    width: 70%;
     margin: 15px;
     border-radius: 50px;
-    border-color: #644296;
-    border-style: solid;
+    border: none;
     // box-shadow: 0 2px 9px 0 rgba(34, 26, 26, 0.3);
-    color: #644296;
+    color: #ffffff;
     margin-top: 15px;
-    background: white;
+    background: #644296;
 }

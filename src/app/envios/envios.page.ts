@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { NewPasswordPage } from '../pages/new-password/new-password.page'
 
 @Component({
   selector: 'app-envios',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnviosPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { 
 
+  // (click)=newPassword(){
+  //   this.navCtrl.push(NewPasswordPage);
+  // }
+}
   ngOnInit() {
   }
 

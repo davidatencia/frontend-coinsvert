@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import { PeticionesService } from './services/LoginServices';
 
+import { NewPasswordPage } from "./pages/new-password/new-password.page";
+
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -13,7 +15,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NewPasswordPage],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
@@ -22,6 +24,9 @@ import { AppRoutingModule } from './app-routing.module';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // entryComponents: [
+  //   NewPasswordPage
+  // ]
 })
 export class AppModule {}
