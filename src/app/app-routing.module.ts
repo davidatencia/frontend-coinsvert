@@ -34,7 +34,7 @@ const routes: Routes = [
   {    
   path: 'movimientos',
   loadChildren: () => import('./movimientos/movimientos.module').then( m => m.MovimientosPageModule)
-},
+  }
 ];
 @NgModule({
   imports: [
@@ -42,4 +42,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

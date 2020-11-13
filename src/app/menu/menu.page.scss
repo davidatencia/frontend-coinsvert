@@ -182,7 +182,7 @@
  position: relative;
 
  .button{
-   color: white;
+   color: #644296;
    width: 50%;
    height: 100%;
    border-radius: 50px;
@@ -190,7 +190,10 @@
    border: none;
    outline: 0;
    position: relative;
- }
+   font-size: 12px;
+ }.button:hover{
+    color: white;
+  }
 }
 
 .slider {
@@ -210,8 +213,8 @@
 }
 
 .clicked{
- left: 50%;
- right: 2px;
+  left: 50%;
+  right: 2px;
 }
 
 //lista de transacciones

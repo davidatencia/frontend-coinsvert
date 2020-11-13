@@ -1,7 +1,7 @@
 {
-  "name": "coinsvert",
+  "name": "Coinverts",
   "integrations": {
-    "cordova": {}
+    "capacitor": {}
   },
   "type": "angular"
 }

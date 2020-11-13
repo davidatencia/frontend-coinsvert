@@ -13,14 +13,5 @@ export class RegisterValidationCodePage implements OnInit {
 
   ngOnInit() {
   }
-
-  Redirigir(con){
-    if(con==1){
-      this._router.navigate(["/password-recover"]);
-    }
-    if(con==2){
-      this._router.navigate(["/new-password"]);
-    }
-  }
 }
 

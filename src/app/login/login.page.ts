@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionesLoginService } from '../services/LoginServices';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -37,6 +36,31 @@ export class LoginPage implements OnInit {
     }, 3000);
   }
 
+  // ----------------------------- Inicio De Sesion
+
+  formIniciarSubmit(){
+    // this._peticionesservice.getUser(this.User).subscribe(Response=>{
+    //   console.log(Response);
+      this._router.navigate(["/menu"]);
+      // document.getElementById("formInicio").reset();
+    // }, error=>{
+    //   console.log("ERROR"+<any>error);
+    // })
+  }
+
+  // ------------------------------ Registrarse
+
+  formRegistroSubmit(){
+    // this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+    this._router.navigate(["/register-validation-code"]);
+    // document.getElementById("formRegistro").reset();
+    // console.log(Response);
+    // }, error=>{
+    //   console.log("ERROR"+<any>error);
+    // })
+  }
+
+  //SLIDER Y CAMBIO DE IMAGEN
   loginButton(){
     let slider = document.querySelector(".slider");
     slider.classList.remove("clicked");
@@ -48,30 +72,5 @@ export class LoginPage implements OnInit {
     slider.classList.add("clicked");
     let logo = document.querySelector("#imgLogo");
     logo.setAttribute("src", "../../assets/coinsvrtlogos/coinsvert horizontal-24.svg");
-  }
-
-  // Inicio De Sesion
-
-  formIniciarSubmit(){
-    this._peticionesservice.addUser(this.User).subscribe(Response=>{
-      console.log(Response);
-      this._router.navigate(["/menu"]);
-      // document.getElementById("formInicio").reset();
-    }, error=>{
-      console.log("ERROR"+<any>error);
-    })
-  }
-
-  // // Registrarse
-
-  formRegistroSubmit(){
-    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
-    this.condicion="inicio"; 
-    // document.getElementById("formRegistro").reset();
-    console.log(Response);
-    }, error=>{
-      console.log("ERROR"+<any>error);
-    })
-
   }
 }

@@ -17,7 +17,6 @@ export class MenuPage implements OnInit {
   ngOnInit() {
   }
 
-
   loginButton(){
     let slider = document.querySelector(".slider");
     slider.classList.remove("clicked");

@@ -17,10 +17,6 @@ export class PasswordRecoverPage implements OnInit {
   ngOnInit() {
   }
 
-  RedirigirLogin(){
-    this._router.navigate(["/login"]);
-  }
-
   formEnviarCSubmit(){
     this._router.navigate(["/register-validation-code"]);
   }
