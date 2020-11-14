@@ -31,21 +31,21 @@
             <div class="content-t-p">
                 <ion-grid fixed>
                     <ion-row ion-justify-content-center ion-align-items-center>
-                        <ion-col size="12">
+                        <ion-col size="12" ion-item no-lines no-padding text-center>
                             <div class="content-title">
                                 <h4>Sigue los pasos</h4>
                             </div>
                         </ion-col>
                     </ion-row>
                     <ion-row class="fav-wallets-title" ion-justify-content-center ion-align-items-center>
-                        <ion-col size="12">
+                        <ion-col size="12" ion-item no-lines no-padding text-center>
                             <div class="avatar-title">
                                 <h4>Seleccina el destino</h4>
                             </div>
                         </ion-col>
                     </ion-row>
                     <ion-row class="fav-wallets-avatars" ion-justify-content-center ion-align-items-center>
-                        <ion-col size="4">
+                        <ion-col size="4" ion-item no-lines no-padding text-center>
                             <div class="avatar">
                                 <div class="user-img">
 
@@ -53,16 +53,16 @@
                                 <h4>Usuario</h4>
                             </div>
                         </ion-col>
-                        <ion-col size="4">
-                            <div class="avatar">
+                        <ion-col size="4" ion-item no-lines no-padding text-center>
+                            <div class="avatar" ion-item no-lines no-padding text-center>
                                 <div class="user-img">
 
                                 </div>
                                 <h4>Usuario</h4>
                             </div>
                         </ion-col>
-                        <ion-col size="4">
-                            <div class="avatar">
+                        <ion-col size="4" ion-item no-lines no-padding text-center>
+                            <div class="avatar" ion-item no-lines no-padding text-center>
                                 <div class="user-img">
 
                                 </div>
@@ -71,82 +71,84 @@
                         </ion-col>
                     </ion-row>
                     <ion-row class="fav-wallets-button" ion-justify-content-center ion-align-items-center>
-                        <ion-col size="12">
+                        <ion-col size="12" ion-item no-lines no-padding text-center>
                             <div class="btn-container">
-                                <button (click)="loginButton()" (click)="condicion = 'Paso1'" class="btn-add-wallet"><strong>Ultimas Transacciones</strong></button>
+                                <button (click)="loginButton()" (click)="condicion = 'Paso1'" class="btn-add-wallet"><strong>Añadir billetera</strong></button>
                             </div>
                         </ion-col>
                     </ion-row>
+                    <ion-row class="blank" ion-justify-content-center ion-align-items-center>
+                        <ion-col class="blank-col" size="12" ion-item no-lines no-padding text-center></ion-col>
+                    </ion-row>
+                    <ion-row class="steps-title" ion-justify-content-center ion-align-items-center>
+                        <ion-col size="12" ion-item no-lines no-padding text-center>
+                            <div class="content-title">
+                                <h5>Paso 1 de 3</h5>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="steplines" ion-justify-content-center ion-align-items-center>
+                        <ion-col size=" 4 " ion-item no-lines no-padding text-center>
+                            <div class="step1"></div>
+                        </ion-col>
+                        <ion-col size="4 " ion-item no-lines no-padding text-center>
+                            <div class="step2 "></div>
+                        </ion-col>
+                        <ion-col size="4 " ion-item no-lines no-padding text-center>
+                            <div class="step3 "></div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="ion-align-items-center" ion-justify-content-center ion-align-items-center>
+                        <ion-col size="12" ion-item no-lines no-padding text-center><button class="btn-next" id="botonValidar"><strong>Siguiente</strong></button></ion-col>
+                    </ion-row>
                 </ion-grid>
-
                 <!-- ----------------------PASO 1------------------------- -->
-                <div *ngIf="condicion == 'Paso1'">
+                <div *ngIf="condicion=='Paso1' ">
                     <!-- <ion-grid fixed>
                         <ion-row>
-                            <ion-col size="6"></ion-col>
-                            <ion-col size="6"></ion-col>
+                            <ion-col size="6 "></ion-col>
+                            <ion-col size="6 "></ion-col>
                         </ion-row>
                     </ion-grid> -->
                 </div>
 
-                <!-- <div class="switch">
-                    <span class="slider"></span>
-                    <button (click)="loginButton()" (click)="condicion = 'Paso1'" class="button"><strong>Ultimas Transacciones</strong></button>
-                    <button (click)="registerButton()" (click)="condicion = 'precios'" class="button"><strong>Precios</strong></button>
+                <!-- <div class="switch ">
+                    <span class="slider "></span>
+                    <button (click)="loginButton() " (click)="condicion='Paso1' " class="button "><strong>Ultimas Transacciones</strong></button>
+                    <button (click)="registerButton() " (click)="condicion='precios' " class="button "><strong>Precios</strong></button>
                 </div> -->
 
                 <!-- ----------------------PASO 2------------------------- -->
-                <div *ngIf="condicion == 'precios'">
-                    <div class="item item-p" *ngFor="let item of prueba">
-                        <img src="../../assets/icon/coin3.png" alt="coin">
-                        <div class="info-item">
-                            <div class="part">
-                                <p class="nombre-item">Bitcoin</p>
-                                <p class="info-coin">08-24 <span class="info-coin">20.04PM</span></p>
+                <div *ngIf="condicion=='paso2' ">
+                    <div class="item item-p " *ngFor="let item of prueba ">
+                        <img src="../../assets/icon/coin3.png " alt="coin ">
+                        <div class="info-item ">
+                            <div class="part ">
+                                <p class="nombre-item ">Bitcoin</p>
+                                <p class="info-coin ">08-24 <span class="info-coin ">20.04PM</span></p>
                             </div>
-                            <div class="part">
-                                <p class="info-coin">+0.94853</p>
-                                <p class="info-coin">$2,748.94</p>
+                            <div class="part ">
+                                <p class="info-coin ">+0.94853</p>
+                                <p class="info-coin ">$2,748.94</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- ----------------------PASO 3 ------------------------ -->
-                <div *ngIf="condicion == 'paso3'">
-                    <div class="code-main-container">
-                        <!-- Contenedor principal ingreso código de verificación-->
-                        <ion-grid class="code-grid">
-                            <ion-row class="ion-align-items-center">
-                                <ion-col size="12">
-                                    <div class="ion-text-center">
-                                        <h2>Ingresa el código</h2>
-                                    </div>
-                                </ion-col>
-                            </ion-row>
-
-                            <ion-row class="code-fields-container ion-align-items-center">
-                                <ion-col class="ion-text-center ion-no-padding ion-justify-items-center" size="12" offset="" no-lines>
-                                    <form class="verificarion-form" method="POST">
-                                        <ion-item class="code-field" lines="none">
-                                            <!-- <div class="code-blocks">
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                  </div> -->
-                                            <ion-input onkeypress="" class="input" maxlength="6" autofocus="true"></ion-input>
-                                        </ion-item>
-                                    </form>
-                                </ion-col>
-                            </ion-row>
-                            <ion-row class="ion-align-items-center">
-                                <ion-col size="12"><button class="submit-button" id="botonValidar"><strong>Validar</strong></button></ion-col>
-                            </ion-row>
-                        </ion-grid>
-                        <!-- /Contenedor principal ingreso código de verificación -->
+                <div *ngIf="condicion=='precios' ">
+                    <div class="item item-p " *ngFor="let item of prueba ">
+                        <img src="../../assets/icon/coin3.png " alt="coin ">
+                        <div class="info-item ">
+                            <div class="part ">
+                                <p class="nombre-item ">Bitcoin</p>
+                                <p class="info-coin ">08-24 <span class="info-coin ">20.04PM</span></p>
+                            </div>
+                            <div class="part ">
+                                <p class="info-coin ">+0.94853</p>
+                                <p class="info-coin ">$2,748.94</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
