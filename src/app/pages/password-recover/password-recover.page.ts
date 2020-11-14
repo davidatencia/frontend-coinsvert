@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PeticionesRecuperarPasswordService } from '../../services/RContraseña';
 
 @Component({
   selector: 'app-password-recover',
@@ -10,7 +11,7 @@ export class PasswordRecoverPage implements OnInit {
 
   public Correo: any;
 
-  constructor(private _router: Router) { 
+  constructor(private _router: Router, private _peticionesservice: PeticionesRecuperarPasswordService) { 
     this.Correo = "";
   }
 
@@ -18,6 +19,12 @@ export class PasswordRecoverPage implements OnInit {
   }
 
   formEnviarCSubmit(){
-    this._router.navigate(["/register-validation-code"]);
+    // this._peticionesservice.Rpassword(this.Correo).subscribe(Response=>{
+    //   console.log(Response);
+      this._router.navigate(["/register-validation-code"]);
+      //document.getElementById("formInicio").reset();
+    // }, error=>{
+    //   console.log("ERROR"+<any>error);
+    // })  
   }
 }

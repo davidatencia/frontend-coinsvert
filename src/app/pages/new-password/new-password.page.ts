@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PeticionesCPasswordService } from '../../services/C_contraseña';
 
 @Component({
   selector: 'app-new-password',
@@ -9,14 +10,24 @@ import { Router } from '@angular/router';
 export class NewPasswordPage implements OnInit {
 
   public Password: any;
+  public cpassword: any;
 
-  constructor( private _router: Router) {
+  constructor(private _peticionesservice: PeticionesCPasswordService, private _router: Router) {
     this.Password = {
-      npassword: "",
-      cnpassword: ""
+      npassword: ""
     };
    }
 
   ngOnInit() {
+  }
+
+  formrecureperarCSubmit(){
+    // this._peticionesservice.Cpassword(this.Password).subscribe(Response=>{
+      // console.log(Response);
+      this._router.navigate(["/login"]);
+      //document.getElementById("formInicio").reset();
+    // }, error=>{
+    //   console.log("ERROR"+<any>error);
+    // })
   }
 }

@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   constructor(private _peticionesservice: PeticionesLoginService, private _router: Router) { 
     this.condicion= "inicio";
     this.User = {
-      username: "",
+      nick_name: "",
       password: ""
     };
     this.newUser = {
@@ -52,7 +52,7 @@ export class LoginPage implements OnInit {
 
   formRegistroSubmit(){
     // this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
-    this._router.navigate(["/register-validation-code"]);
+       this._router.navigate(["/register-validation-code"]);
     // document.getElementById("formRegistro").reset();
     // console.log(Response);
     // }, error=>{

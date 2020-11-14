@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PeticionesEditarPerfilService } from '../../services/EditarPerfilServices';
+import { PeticionesEditarPerfilService } from '../../services/PerfilServices';
 
 @Component({
   selector: 'app-profile',
@@ -8,10 +8,10 @@ import { PeticionesEditarPerfilService } from '../../services/EditarPerfilServic
 })
 export class ProfilePage implements OnInit {
 
-  private User: any;
+  private EUser: any;
 
   constructor(private _peticionesservice: PeticionesEditarPerfilService) { 
-    this.User={
+    this.EUser={
       Nombre: "",
       Apellido: "",
       Email: "",
@@ -27,9 +27,9 @@ export class ProfilePage implements OnInit {
   }
 
   formEditarPSubmit(){
-    this._peticionesservice.EditarInformacion(this.User).subscribe(Response=>{
+    this._peticionesservice.EditarInformacion(this.EUser).subscribe(Response=>{
     //   document.getElementById("formRegistro").reset();
-    console.log(Response);
+      console.log(Response);
     }, error=>{
       console.log("ERROR"+<any>error);
     });

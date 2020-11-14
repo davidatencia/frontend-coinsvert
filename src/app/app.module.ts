@@ -3,8 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
+
+//servicios
+import { PeticionesCPasswordService } from './services/C_contraseña';
 import { PeticionesLoginService } from './services/LoginServices';
-import { PeticionesEditarPerfilService } from './services/EditarPerfilServices';
+import { PeticionesEditarPerfilService } from './services/PerfilServices';
+import { PeticionesRecuperarPasswordService } from './services/RContraseña';
+//servicios
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -21,6 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [
     PeticionesLoginService,
     PeticionesEditarPerfilService,
+    PeticionesRecuperarPasswordService,
+    PeticionesCPasswordService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

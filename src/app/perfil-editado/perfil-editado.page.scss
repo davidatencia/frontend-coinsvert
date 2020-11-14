@@ -1,0 +1,121 @@
+.container-fluid {
+    background: linear-gradient(to top, #5fcedc 65%, #644296);
+    color: white;
+    font-weight: lighter;
+    font-weight: 400;
+    overflow-y: scroll;
+
+    p {
+        color: #000;
+        text-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+        font-size: 3vw;
+        font-weight: lighter;
+        font-weight: 400;
+    }
+
+    ion-badge {
+        position: relative;
+        top: -0.5rem;
+        right: -0.2rem;
+        opacity: 0.9;
+    }
+}
+
+.content {
+    position: relative;
+    height: auto;
+    height: fit-content;
+  
+    .cabecera {
+      padding: 15px;
+      height: auto;
+      height: 54px;
+    }
+}
+
+.header-button-menu {
+    height: 3vh;
+}
+
+.header-button-notif {
+    height: 3vh;
+}
+  
+.ion-color.ion-color-danger.ios.hydrated {
+    position: relative;
+    top: -0.5rem;
+    right: 0.8rem;
+    background-color: #70C6DD;
+    color: white;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.notif-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    left: -10px;
+}
+
+//PARTE DE ABAJO
+.content-fluid {
+    background: #fff;
+    color: gray;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
+    border-radius: 40px 40px 0 0;
+    height: auto;
+    -webkit-border-radius: 40px 40px 0 0;
+    -moz-border-radius: 40px 40px 0 0;
+    -ms-border-radius: 40px 40px 0 0;
+    -o-border-radius: 40px 40px 0 0;
+
+    .subcontent {
+        width: auto;
+        height: 78vh;
+        color: gray;
+        padding: 5px 20px;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        //CAJAS
+        .caja{
+            padding: 20px 25px;
+            margin: 25px 0px;
+            box-shadow: 0 2px 9px 0 gray;
+            height: 300px;
+            overflow: hidden;
+            overflow-y: scroll;
+            border-radius: 20px;
+
+            h4{
+                text-align: center;
+                margin: 0px;
+                margin-bottom: 10px;
+            }
+
+            .input {
+                color: gray;
+                border-bottom: gray solid 1px;
+                margin: 20px 0;
+                height: 25px;
+                flex: none;
+                ::-webkit-input-placeholder {
+                    color: gray;
+                }
+
+                input.native-input.sc-ion-input-ios{
+                    padding-left: 40px;
+                }
+            }
+        }    
+    }
+}
+
+.native-input.sc-ion-input-ios{
+    padding-left: 40px;
+}

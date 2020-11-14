@@ -10,7 +10,7 @@ export class PeticionesEditarPerfilService{
     constructor(
         public _http: HttpClient
     ){
-        this.url="160.153.253.91:3000/";
+        this.url="http://160.153.253.91:3000/";
     }
 
     EditarInformacion(NewInfo):Observable<any>{
@@ -18,5 +18,7 @@ export class PeticionesEditarPerfilService{
         let headers = new HttpHeaders().set('Content-Type','application/json');
         return this._http.post(this.url+"", params, {headers: headers});
     }
+
+    
 }
 

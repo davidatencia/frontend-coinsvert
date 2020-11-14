@@ -18,7 +18,7 @@
       <!-- LOGIN -->
       <div class="subcontent" >
         <form *ngIf="condicion == 'login'" id="formInicio"  class="formulario" #formIniciar="ngForm" (ngSubmit)="formIniciarSubmit()">
-          <ion-input class="input"  placeholder="Usuario" name="usuario" #usuario="ngModel" [(ngModel)]="User.username" required></ion-input>
+          <ion-input class="input"  placeholder="Usuario" name="usuario" #usuario="ngModel" [(ngModel)]="User.nick_name" required></ion-input>
           <span *ngIf="usuario.touched && !usuario.valid">Ingrese el nombre de usuario</span>
           <ion-input class="input" type="password" placeholder="Contraseña" name="password"  #password="ngModel"  [(ngModel)]="User.password" required></ion-input>
           <span *ngIf="password.touched && !password.valid">Ingrese su contraseña</span>

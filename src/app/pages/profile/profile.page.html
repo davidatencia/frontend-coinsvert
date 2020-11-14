@@ -1,78 +1,78 @@
 <ion-content>
-
-    <div class="container-fluid">
-        <div class="content">
-            <div class="cabecera">
-                <!-- iconos de notificación y menú desplegable -->
-                <ion-row class="header-icons" no-padding justify-content-start align-items-start>
-                    <ion-col class="ion-text-left" size="4">
-                        <button (click)="onClick()" class="notif-button">
-                <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon">
-                <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
-              </button>
-                    </ion-col>
-                    <ion-col size="4" class="ion-text-center page-title" style="top: -10px;">
-                        <h3>Perfil</h3>
-                    </ion-col>
-                    <ion-col size="4" class="ion-text-right">
-                        <button (click)="onClick()" class="notif-button" style="margin-left: 87px;">
-                <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon">
-              </button>
-                    </ion-col>
-                </ion-row>
-                <!-- ./iconos de notificación y menú desplegable -->
-            </div>
-        </div>
-
-        <!-- PARTE DE ABAJO -->
-        <div class="content-fluid">
-
-            <div class="subcontent">
-                <h4>Editar información</h4>
-            </div>
-            <!-- formulario perfil de usuario -->
-            <div class="content-fluid-form">
-                <form id="formEditarP"  class="formulario" #formEditarP="ngForm" (ngSubmit)="formEditarPSubmit()">
-                    <ion-input class="input" type="text" placeholder="Nombre" name="Nombre" #Nombre="ngModel" [(ngModel)]="User.Nombre"></ion-input>
-                    <ion-input class="input" type="text" placeholder="Apellido" name="Apellido"  #Apellido="ngModel"  [(ngModel)]="User.Apellido"></ion-input>
-                    <ion-input class="input" type="email" placeholder="Email" name="Email"  #Email="ngModel"  [(ngModel)]="User.Email"></ion-input>
-                    <ion-select class="input select"  placeholder="Sexo" name="Sexo" #Sexo="ngModel" [(ngModel)]="User.Sexo">
-                      <ion-select-option value="1">Femenino</ion-select-option>
-                      <ion-select-option value="2">Masculino</ion-select-option>
-                      <ion-select-option value="3">Otros</ion-select-option>
-                    </ion-select>
-                    <ion-input class="input" type="Direccion" placeholder="Direccion" name="Direccion"  #Direccion="ngModel"  [(ngModel)]="User.Direccion"></ion-input>
-                    <ion-select class="input select"  placeholder="Seleccionar País" name="Pais" #Pais="ngModel" [(ngModel)]="User.Pais">
-                      <ion-select-option value="Colombia">Colombia</ion-select-option>
-                    </ion-select>
-                    <ion-select class="input select" placeholder="Seleccionar Estado" name="Estado" #Estado="ngModel" [(ngModel)]="User.Estado">
-                      <ion-select-option value="Atlantico">Atlantico</ion-select-option>
-                    </ion-select>
-                    <ion-select class="input select" placeholder="Seleccionar ciudad"  name="Ciudad" #Ciudad="ngModel" [(ngModel)]="User.Ciudad">
-                      <ion-select-option value="Barranquilla">Barranquilla</ion-select-option >
-                    </ion-select>
-                    <ion-input class="input" type="number" placeholder="Teléfono Móvil" name="Tmovil"  #Tmovil="ngModel"  [(ngModel)]="User.Tmovil"></ion-input>
-                  </form>
-            </div>
-            <div class="map-canvas">
-                <h4>API maps</h4>
-            </div>
-            <div class="map-canvas">
-                <h4>Captura de imágenes</h4>
-            </div>
-            <div class="form-action-buttons">
-                <button type="submit" class="submit-button">
-            Ingresar
-          </button>
-                <button type="reset" class="cancel-button">
-            Cancelar
-          </button>
-            </div>
-
-
-            <!-- ----------------------MENU------------------------- -->
-            <app-tab-bar></app-tab-bar>
-
-        </div>
+  <div class="container-fluid">
+    <div class="content">
+      <div class="cabecera">
+        <!-- iconos de notificación y menú desplegable -->
+        <ion-row class="header-icons" no-padding justify-content-start align-items-start>
+          <ion-col class="ion-text-left" size="4">
+            <button (click)="onClick()" class="notif-button">
+              <img class="header-button-notif" src="../../assets/imgs/notificacion.svg" alt="notifications-icon" />
+              <ion-badge color="danger" mode="ios" slot="start">2</ion-badge>
+            </button>
+          </ion-col>
+          <ion-col size="4" class="ion-text-center page-title" style="top: -10px">
+            <h3>Perfil</h3>
+          </ion-col>
+          <ion-col size="4" class="ion-text-right">
+            <button (click)="onClick()" class="notif-button" style="margin-left: 87px">
+              <img class="header-button-menu" src="../../assets/imgs/menu.svg" alt="menu-icon" />
+            </button>
+          </ion-col>
+        </ion-row>
+        <!-- ./iconos de notificación y menú desplegable -->
+      </div>
     </div>
+
+    <!-- PARTE DE ABAJO -->
+    <div class="content-fluid">
+      <div class="subcontent">
+        <h4>Editar información</h4>
+      </div>
+      <!-- formulario perfil de usuario -->
+      <div class="content-fluid-form">
+        <form id="formEditarP" class="formulario" #formEditarP="ngForm" (ngSubmit)="formEditarPSubmit()">
+          <ion-input class="input" type="text" placeholder="Nombre" name="Nombre" #Nombre="ngModel"
+            [(ngModel)]="EUser.Nombre"></ion-input>
+          <ion-input class="input" type="text" placeholder="Apellido" name="Apellido" #Apellido="ngModel"
+            [(ngModel)]="EUser.Apellido"></ion-input>
+          <ion-input class="input" type="email" placeholder="Email" name="Email" #Email="ngModel"
+            [(ngModel)]="EUser.Email"></ion-input>
+          <ion-select class="input select" placeholder="Sexo" name="Sexo" #Sexo="ngModel" [(ngModel)]="EUser.Sexo">
+            <ion-select-option value="1">Femenino</ion-select-option>
+            <ion-select-option value="2">Masculino</ion-select-option>
+            <ion-select-option value="3">Otros</ion-select-option>
+          </ion-select>
+          <ion-input class="input" type="Direccion" placeholder="Direccion" name="Direccion" #Direccion="ngModel"
+            [(ngModel)]="EUser.Direccion"></ion-input>
+          <ion-select class="input select" placeholder="Seleccionar País" name="Pais" #Pais="ngModel"
+            [(ngModel)]="EUser.Pais">
+            <ion-select-option value="Colombia">Colombia</ion-select-option>
+          </ion-select>
+          <ion-select class="input select" placeholder="Seleccionar Estado" name="Estado" #Estado="ngModel"
+            [(ngModel)]="EUser.Estado">
+            <ion-select-option value="Atlantico">Atlantico</ion-select-option>
+          </ion-select>
+          <ion-select class="input select" placeholder="Seleccionar ciudad" name="Ciudad" #Ciudad="ngModel"
+            [(ngModel)]="EUser.Ciudad">
+            <ion-select-option value="Barranquilla">Barranquilla</ion-select-option>
+          </ion-select>
+          <ion-input class="input" type="number" placeholder="Teléfono Móvil" name="Tmovil" #Tmovil="ngModel"
+            [(ngModel)]="EUser.Tmovil"></ion-input>
+        </form>
+      </div>
+      <div class="map-canvas">
+        <h4>API maps</h4>
+      </div>
+      <div class="map-canvas">
+        <h4>Captura de imágenes</h4>
+      </div>
+      <div class="form-action-buttons">
+        <button type="submit" class="submit-button">Ingresar</button>
+        <button type="reset" class="cancel-button">Cancelar</button>
+      </div>
+
+      <!-- ----------------------MENU------------------------- -->
+      <app-tab-bar></app-tab-bar>
+    </div>
+  </div>
 </ion-content>

@@ -34,6 +34,10 @@ const routes: Routes = [
   {    
   path: 'movimientos',
   loadChildren: () => import('./movimientos/movimientos.module').then( m => m.MovimientosPageModule)
+  },
+  {
+    path: 'perfil-editado',
+    loadChildren: () => import('./perfil-editado/perfil-editado.module').then( m => m.PerfilEditadoPageModule)
   }
 ];
 @NgModule({
