@@ -38,6 +38,14 @@ const routes: Routes = [
   {
     path: 'perfil-editado',
     loadChildren: () => import('./perfil-editado/perfil-editado.module').then( m => m.PerfilEditadoPageModule)
+  },
+  {
+    path: 'envios',
+    loadChildren: () => import('./envios/envios.module').then( m => m.EnviosPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   }
 ];
 @NgModule({

@@ -23,6 +23,11 @@
           </ion-col>
         </ion-row>
         <!-- ./iconos de notificación y menú desplegable -->
+        <div class="c-e-perfil">
+            <img src="../../assets/imgs/usuario.png" alt="foto">
+            <h4><strong>Juanito Perez</strong></h4>
+            <p>Registrado desde 10-10-2020</p>
+        </div>
       </div>
     </div>
 
@@ -32,10 +37,10 @@
         <!-- FORMULARIOS -->
         <div class="caja">
           <h4><strong>Información de la cuenta</strong></h4>
-          <input class="input" type="text" placeholder="hola" disabled/>
-          <input class="input" type="text" placeholder="hola" disabled/>
-          <input class="input" type="text" placeholder="hola" disabled/>
-          <ion-select class="input">
+          <input class="input" type="text" placeholder="Juanito Perez" disabled/>
+          <input class="input" type="text" placeholder="juanito@gmail.com" disabled/>
+          <input class="input" type="text" placeholder="**********" disabled/>
+          <ion-select style="border-bottom: none;" class="input" placeholder="Idioma">
             <ion-select-option value="Español">Español</ion-select-option>
             <ion-select-option value="Ingles">Ingles</ion-select-option>
           </ion-select>
@@ -43,8 +48,17 @@
 
         <div class="caja">
           <h4><strong>Información personal</strong></h4>
+          <input class="input" type="text" placeholder="sexo masculino" disabled/>
+          <input class="input" type="text" placeholder="Cra 00# 00-00" disabled/>
+          <input class="input" type="text" placeholder="Colombia" disabled/>
+          <input class="input" type="text" placeholder="Atlantico" disabled/>
+          <input class="input" type="text" placeholder="Barranquilla" disabled/>
+          <input style="border-bottom: none;" class="input" type="text" placeholder="300 888 9090" disabled/>
         </div>
-
+        
+        <div id="boton-e">
+          <button id="b-editar" [routerLink]="['/profile']"><strong>Editar</strong></button>
+        </div>
 
       </div>
       <app-tab-bar></app-tab-bar>

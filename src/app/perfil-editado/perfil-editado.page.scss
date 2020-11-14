@@ -28,8 +28,35 @@
   
     .cabecera {
       padding: 15px;
-      height: auto;
-      height: 54px;
+
+      .c-e-perfil{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          img{
+              width: 100px;
+              height: auto;
+              margin: 10px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+
+          h4{
+            margin: 0px;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          p{
+            margin: 0px;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+          }
+      }
     }
 }
 
@@ -76,7 +103,7 @@
 
     .subcontent {
         width: auto;
-        height: 78vh;
+        height: 58vh;
         color: gray;
         padding: 5px 20px;
         overflow: hidden;
@@ -86,10 +113,8 @@
         .caja{
             padding: 20px 25px;
             margin: 25px 0px;
-            box-shadow: 0 2px 9px 0 gray;
-            height: 300px;
-            overflow: hidden;
-            overflow-y: scroll;
+            box-shadow: 0px 0px 5px 0px gray;
+            text-align: center;
             border-radius: 20px;
 
             h4{
@@ -100,10 +125,13 @@
 
             .input {
                 color: gray;
+                border: none;
+                width: 80%;
                 border-bottom: gray solid 1px;
-                margin: 20px 0;
+                margin-top: 20px;
                 height: 25px;
-                flex: none;
+                padding-left: 40px;
+                text-align: left;
                 ::-webkit-input-placeholder {
                     color: gray;
                 }
@@ -112,7 +140,26 @@
                     padding-left: 40px;
                 }
             }
-        }    
+        }
+
+        #boton-e{
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+
+            #b-editar{
+                height: 35px;
+                width: 250px;
+                margin: 0px 10px;
+                border-radius: 50px;
+                border: none;
+                color: white;
+                background: #644296;
+              }#b-enviar:hover{
+                box-shadow: 0px 2px 9px 0px gray;
+              }  
+        }
+  
     }
 }
 
