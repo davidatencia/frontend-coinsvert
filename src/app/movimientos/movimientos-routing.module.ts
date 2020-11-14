@@ -1,13 +1,12 @@
-
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RegisterValidationCodePage } from './register-validation-code.page';
+import { MovimientosPage } from './movimientos.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: RegisterValidationCodePage
+    component: MovimientosPage
   }
 ];
 
@@ -15,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class RegisterValidationCodePageRoutingModule {}
+export class MovimientosPageRoutingModule {}

@@ -1,7 +1,9 @@
 #bottom-menu{
-    width: 100%;
+  width: 100%;
     display: flex;
     justify-content: space-between;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background: white;
     box-shadow: 0 2px 12px 0 grey;

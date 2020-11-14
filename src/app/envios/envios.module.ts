@@ -4,18 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPageRoutingModule } from '../menu/menu-routing.module';
+import { EnviosPageRoutingModule } from './envios-routing.module';
 
-import { MenuPage } from '../menu/menu.page';
-import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
+import { EnviosPage } from './envios.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuPageRoutingModule
+    EnviosPageRoutingModule
   ],
-  declarations: [MenuPage, TabBarComponent]
+  declarations: [EnviosPage]
 })
-export class MenuPageModule {}
+export class EnviosPageModule {}

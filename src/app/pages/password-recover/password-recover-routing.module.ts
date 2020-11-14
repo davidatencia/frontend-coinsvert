@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: PasswordRecoverPage
-  }
+  },
+  {
+    path: 'register-validation-code',
+    loadChildren: () => import('../register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
+  },
 ];
 
 @NgModule({

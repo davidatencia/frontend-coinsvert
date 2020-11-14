@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { RegisterValidationCodePage } from './register-validation-code.page';
+import { MovimientosPage } from './movimientos.page';
 
-describe('RegisterValidationCodePage', () => {
-  let component: RegisterValidationCodePage;
-  let fixture: ComponentFixture<RegisterValidationCodePage>;
+describe('MovimientosPage', () => {
+  let component: MovimientosPage;
+  let fixture: ComponentFixture<MovimientosPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisterValidationCodePage ],
+      declarations: [ MovimientosPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RegisterValidationCodePage);
+    fixture = TestBed.createComponent(MovimientosPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

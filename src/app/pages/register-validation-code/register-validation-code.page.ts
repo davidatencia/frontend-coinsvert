@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-validation-code',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterValidationCodePage implements OnInit {
 
-  constructor() { }
+
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }
 
+  Redirigir(con){
+    if(con==1){
+      this._router.navigate(["/password-recover"]);
+    }
+    if(con==2){
+      this._router.navigate(["/new-password"]);
+    }
+  }
 }
+

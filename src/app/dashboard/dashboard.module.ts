@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+
 
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPageRoutingModule } from '../menu/menu-routing.module';
+import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
-import { MenuPage } from './menu.page';
+import { DashboardPage } from './dashboard.page';
 import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    FormsModule,ChartsModule,
     IonicModule,
-    MenuPageRoutingModule,
-    ],
-  declarations: [MenuPage, TabBarComponent]
+    DashboardPageRoutingModule
+  ],
+  declarations: [DashboardPage, TabBarComponent]
 })
-export class MenuPageModule {}
+export class DashboardPageModule {}

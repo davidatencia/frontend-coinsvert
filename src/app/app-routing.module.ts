@@ -28,8 +28,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/register-validation-code/register-validation-code.module').then( m => m.RegisterValidationCodePageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+    path: 'movimientos',
+    loadChildren: () => import('./movimientos/movimientos.module').then( m => m.MovimientosPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
     path: 'envios',
@@ -44,15 +48,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-
-// ];
-// @NgModule({
-//   imports: [
-//     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-//   ],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
-
