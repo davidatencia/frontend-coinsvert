@@ -7,16 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { MovimientosPageRoutingModule } from './movimientos-routing.module';
 
 import { MovimientosPage } from './movimientos.page';
-import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
+import { ComponentModule } from '../compartido/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MovimientosPageRoutingModule
-  
+    MovimientosPageRoutingModule,
+    ComponentModule
   ],
-  declarations: [MovimientosPage,TabBarComponent]
+  declarations: [MovimientosPage]
 })
 export class MovimientosPageModule {}

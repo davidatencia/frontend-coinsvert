@@ -7,15 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
-import { TabBarComponent } from '../../compartido/tab-bar/tab-bar.component';
+import { ComponentModule } from 'src/app/compartido/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfilePageRoutingModule
+    ProfilePageRoutingModule,
+    ComponentModule
   ],
-  declarations: [ProfilePage, TabBarComponent]
+  declarations: [ProfilePage]
 })
 export class ProfilePageModule {}

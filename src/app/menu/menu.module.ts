@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { MenuPageRoutingModule } from './menu-routing.module';
 
 import { MenuPage } from './menu.page';
-import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
+import { ComponentModule } from '../compartido/components.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     MenuPageRoutingModule,
+    ComponentModule
     ],
-  declarations: [MenuPage, TabBarComponent]
+  declarations: [MenuPage]
 })
 export class MenuPageModule {}

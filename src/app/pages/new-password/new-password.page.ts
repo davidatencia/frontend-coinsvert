@@ -23,9 +23,8 @@ export class NewPasswordPage implements OnInit {
 
   formrecureperarCSubmit(){
     // this._peticionesservice.Cpassword(this.Password).subscribe(Response=>{
-      // console.log(Response);
+    //   console.log(Response);
       this._router.navigate(["/login"]);
-      //document.getElementById("formInicio").reset();
     // }, error=>{
     //   console.log("ERROR"+<any>error);
     // })

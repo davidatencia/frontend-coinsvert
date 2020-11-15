@@ -7,15 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { PerfilEditadoPageRoutingModule } from './perfil-editado-routing.module';
 
 import { PerfilEditadoPage } from './perfil-editado.page';
-import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
+import { ComponentModule } from '../compartido/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PerfilEditadoPageRoutingModule
+    PerfilEditadoPageRoutingModule,
+    ComponentModule
   ],
-  declarations: [PerfilEditadoPage, TabBarComponent]
+  declarations: [PerfilEditadoPage]
 })
 export class PerfilEditadoPageModule {}

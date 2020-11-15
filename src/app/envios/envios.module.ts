@@ -7,15 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { EnviosPageRoutingModule } from './envios-routing.module';
 
 import { EnviosPage } from './envios.page';
-import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
+import { ComponentModule } from '../compartido/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EnviosPageRoutingModule
+    EnviosPageRoutingModule,
+    ComponentModule
   ],
-  declarations: [EnviosPage, TabBarComponent]
+  declarations: [EnviosPage]
 })
 export class EnviosPageModule {}

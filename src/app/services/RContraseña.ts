@@ -13,7 +13,7 @@ export class PeticionesRecuperarPasswordService{
         this.url='http://160.153.253.91:3000/';
     }
 
-    Rpassword(correo):Observable<any>{
+    Rpassword(correo: String):Observable<any>{
         let params = JSON.stringify(correo);
         console.log(params);
         let headers = new HttpHeaders().set('Content-Type','application/json');

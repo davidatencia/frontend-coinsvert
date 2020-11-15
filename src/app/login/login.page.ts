@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   constructor(private _peticionesservice: PeticionesLoginService, private _router: Router) { 
     this.condicion= "inicio";
     this.User = {
-      nick_name: "",
+      address: "",
       password: ""
     };
     this.newUser = {
@@ -39,25 +39,25 @@ export class LoginPage implements OnInit {
   // ----------------------------- Inicio De Sesion
 
   formIniciarSubmit(){
-    // this._peticionesservice.getUser(this.User).subscribe(Response=>{
-    //   console.log(Response);
+    this._peticionesservice.getUser(this.User).subscribe(Response=>{
+      console.log(Response);
       this._router.navigate(["/menu"]);
       // document.getElementById("formInicio").reset();
-    // }, error=>{
-    //   console.log("ERROR"+<any>error);
-    // })
+    }, error=>{
+      console.log("ERROR"+<any>error);
+    })
   }
 
   // ------------------------------ Registrarse
 
   formRegistroSubmit(){
-    // this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
-       this._router.navigate(["/register-validation-code"]);
-    // document.getElementById("formRegistro").reset();
-    // console.log(Response);
-    // }, error=>{
-    //   console.log("ERROR"+<any>error);
-    // })
+    this._peticionesservice.addUser(this.newUser).subscribe(Response=>{
+      this._router.navigate(["/register-validation-code"]);
+    //document.getElementById("formRegistro").reset();
+    console.log(Response);
+    }, error=>{
+       console.log("ERROR"+<any>error);
+    })
   }
 
   //SLIDER Y CAMBIO DE IMAGEN

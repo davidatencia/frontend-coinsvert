@@ -8,7 +8,7 @@ import { PeticionesEditarPerfilService } from '../../services/PerfilServices';
 })
 export class ProfilePage implements OnInit {
 
-  private EUser: any;
+  public EUser: any;
 
   constructor(private _peticionesservice: PeticionesEditarPerfilService) { 
     this.EUser={
@@ -27,11 +27,11 @@ export class ProfilePage implements OnInit {
   }
 
   formEditarPSubmit(){
-    this._peticionesservice.EditarInformacion(this.EUser).subscribe(Response=>{
+    // this._peticionesservice.EditarInformacion(this.EUser).subscribe(Response=>{
     //   document.getElementById("formRegistro").reset();
-      console.log(Response);
-    }, error=>{
-      console.log("ERROR"+<any>error);
-    });
-    }
+  //     console.log(Response);
+  //   }, error=>{
+  //     console.log("ERROR"+<any>error);
+  //   });
+  }
 }

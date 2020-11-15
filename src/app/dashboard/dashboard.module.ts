@@ -9,15 +9,16 @@ import { IonicModule } from '@ionic/angular';
 import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
-import { TabBarComponent } from '../compartido/tab-bar/tab-bar.component';
+import { ComponentModule } from '../compartido/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,ChartsModule,
     IonicModule,
-    DashboardPageRoutingModule
+    DashboardPageRoutingModule,
+    ComponentModule
   ],
-  declarations: [DashboardPage, TabBarComponent]
+  declarations: [DashboardPage]
 })
 export class DashboardPageModule {}

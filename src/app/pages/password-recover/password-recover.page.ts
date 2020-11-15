@@ -9,7 +9,7 @@ import { PeticionesRecuperarPasswordService } from '../../services/RContraseña'
 })
 export class PasswordRecoverPage implements OnInit {
 
-  public Correo: any;
+  public Correo: String;
 
   constructor(private _router: Router, private _peticionesservice: PeticionesRecuperarPasswordService) { 
     this.Correo = "";

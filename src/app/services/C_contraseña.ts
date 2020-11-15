@@ -17,7 +17,7 @@ export class PeticionesCPasswordService{
         let params = JSON.stringify(npassword);
         console.log(params);
         let headers = new HttpHeaders().set('Content-Type','application/json');
-        return this._http.post(this.url+'', params, {headers: headers});
+        return this._http.post(this.url+'fail_pass', params, {headers: headers});
     }
 }
 
