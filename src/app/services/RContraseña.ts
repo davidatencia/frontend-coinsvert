@@ -10,7 +10,7 @@ export class PeticionesRecuperarPasswordService{
     constructor(
         public _http: HttpClient
     ){
-        this.url='http://160.153.253.91:3000/';
+        this.url='https://160.153.253.91:3000/';
     }
 
     Rpassword(correo: String):Observable<any>{

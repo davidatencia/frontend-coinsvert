@@ -5,14 +5,14 @@
   </div>
 
   <div class="container" *ngIf="condicion != 'inicio'">
-    <div class="logo-section"[style.height]="condicion == 'login' ? '26em' : '5em'">
+    <div class="logo-section"[style.height]="condicion == 'login' ? '45%' : '9%'">
       <figure class="logo"><img id="imgLogo" src="../../assets/icon/coinsvert imagotipo-10.png" alt="coinsvert-logo"/></figure>
     </div>
-    <div class="content" [style.height]="condicion == 'login' ? '23em' : '44em'">
+    <div class="content" [style.height]="condicion == 'login' ? '49%' : '85%'">
       <div class="switch">
         <span class="slider"></span>
-        <button (click)="loginButton()" (click)="condicion = 'login'"class="button"><strong>Iniciar Sesion</strong></button>
-        <button (click)="registerButton()" (click)="condicion = 'register'" class="button"><strong>Registrar</strong></button>
+        <button (click)="condicion = 'login'; loginButton()"class="button"><strong>Iniciar Sesion</strong></button>
+        <button (click)="condicion = 'register'; registerButton()" class="button"><strong>Registrar</strong></button>
       </div>
 
       <!-- LOGIN -->
@@ -26,7 +26,7 @@
         </form>
 
         <p *ngIf="condicion == 'login'" style="text-align: center">
-          <a style="color: white; text-decoration: none" [routerLink]="['/password-recover']">Olvidé mi contraseña</a>
+          <a style="color: gray; text-decoration: none" [routerLink]="['/password-recover']">Olvidé mi contraseña</a>
         </p>
         
           <!-- <div class="login-social-media">

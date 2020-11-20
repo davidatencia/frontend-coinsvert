@@ -2,14 +2,10 @@
   background: linear-gradient(to top, #5fcedc 45%, #644296);
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-  font-weight: 400;
-  overflow: hidden;
-  overflow-y: scroll;
+  height: 100%;
 
   h1 {
     color: white;
-    font-family: 'Source Sans Pro', sans-serif;
     text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
     font-weight: bold;
     font-size: 10vw;
@@ -17,7 +13,6 @@
   }
 
   h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: gray;
   }
 
@@ -39,18 +34,10 @@
   }
 }
 
-.content {
-  position: relative;
-  height: auto;
-  height: fit-content;
-  // border-style: dashed;
-
-  .cabecera{
-    padding: 15px;
-    height: auto;
-    height: 280px;
-  }
-}
+.cabecera{
+  padding: 15px;
+  height: 32%;
+} 
 
 .notif-button.profile-icon{
  margin-left: 39%;
@@ -134,10 +121,7 @@
   background: #3866a291;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.137);
   border-radius: 10px;
-  width: 75px;
-  height: 75px;
-  min-width: 50px;
-  max-width: 100px;
+  padding: 10px;
 }
 
  .action-menu-icon {
@@ -161,41 +145,36 @@
   background: #fff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
   border-radius: 40px 40px 0 0;
-  height: auto;
+  max-height: 63%;
+  min-height: 53%;
   padding-top: 20px;
-  align-items: center;
   }
 
-
+  
 //switch últimas transacciones - precios
 
 .switch{
- width: 85%;
- margin: 0px 25px;
- height: 30px;
- border-radius: 50px;
- background: #eae7f2;
- box-shadow: 0 2px 9px 0 rgba(0,0,0,.1);
- padding: 5px;
- margin-bottom: 10px;
- font-family: 'Montserrat', sans-serif;
- position: relative;
+  width: 85%;
+  height: 30px;
+  border-radius: 50px;
+  background: #eae7f2;
+  box-shadow: 0 2px 9px 0 rgba(0,0,0,.1);
+  padding: 5px;
+  margin: 0px auto 10px;
+  position: relative;
 }
 
 .button{
   color: white;
-   width: 50%;
-   height: 100%;
-   border-radius: 50px;
-   background: transparent;
-   border: none;
-   outline: 0;
-   position: relative;
-   font-size: 10px;
- }
-//  .button:hover{
-//     color: white;
-//   }
+  font-size: 11px;
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  background: transparent;
+  border: none;
+  outline: 0;
+  position: relative;
+}
 
 .slider {
   position: absolute;
@@ -219,7 +198,7 @@
 //lista de transacciones
 .content-t-p {
    width: auto;
-   height: 350px;
+   height: 373px;
    padding: 1px 25px;
    overflow: hidden;
    overflow-y: scroll;
