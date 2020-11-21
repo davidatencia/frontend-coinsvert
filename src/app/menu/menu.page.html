@@ -81,9 +81,9 @@
     <div class="content-fluid">
       
       <div class="switch">
-        <span class="slider"></span>
-        <button (click)="condicion = 'Utransacciones'; UltimasTransaccionesButton()" class="button" id="but"><strong>Ultimas Transacciones</strong></button>
-        <button (click)="condicion = 'precios'; PreciosButton()" class="button"><strong>Precios</strong></button>
+        <span class="slider" [ngClass]="{'clicked': slider == 1}"></span>
+        <button (click)="condicion = 'Utransacciones'; slider = 0"  class="button" id="but"><strong>Ultimas Transacciones</strong></button>
+        <button (click)="condicion = 'precios'; ; slider = 1" class="button"><strong>Precios</strong></button>
       </div>
       
       <!-- ----------------------TRANSACCIONES - PRECIOS ------------------------- -->

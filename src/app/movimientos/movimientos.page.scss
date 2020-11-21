@@ -1,9 +1,8 @@
 .container-fluid {
   background: linear-gradient(to top, #5fcedc 65%, #644296);
   color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-  font-weight: 400;
+  height: 100%;
+  overflow: hidden;
   overflow-y: scroll;
 
   p {
@@ -25,13 +24,10 @@
 
 .content {
   position: relative;
-  height: auto;
-  height: fit-content;
+  height: 8%;
 
   .cabecera {
     padding: 15px;
-    height: auto;
-    height: 54px;
   }
 }
 
@@ -84,7 +80,7 @@
   color: gray;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
   border-radius: 40px 40px 0 0;
-  height: auto;
+  height: 92%;
   -webkit-border-radius: 40px 40px 0 0;
   -moz-border-radius: 40px 40px 0 0;
   -ms-border-radius: 40px 40px 0 0;
@@ -93,7 +89,7 @@
 
 .subcontent {
   width: auto;
-  height: 78vh;
+  height: calc(100% - 99px);
   color: gray;
   padding: 5px 20px;
   overflow: hidden;

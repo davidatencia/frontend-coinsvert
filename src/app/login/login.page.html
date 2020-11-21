@@ -16,7 +16,7 @@
       </div>
 
       <!-- LOGIN -->
-      <div class="subcontent" >
+      <div class="subcontent">
         <form *ngIf="condicion == 'login'" id="formInicio"  class="formulario" #formIniciar="ngForm" (ngSubmit)="formIniciarSubmit()">
           <ion-input class="input"  placeholder="Usuario" name="usuario" #usuario="ngModel" [(ngModel)]="User.address" required></ion-input>
           <span *ngIf="usuario.touched && !usuario.valid">Ingrese el nombre de usuario</span>

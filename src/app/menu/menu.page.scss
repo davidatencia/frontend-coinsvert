@@ -145,8 +145,7 @@
   background: #fff;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
   border-radius: 40px 40px 0 0;
-  max-height: 63%;
-  min-height: 53%;
+  height: 62%;
   padding-top: 20px;
   }
 
@@ -198,7 +197,7 @@
 //lista de transacciones
 .content-t-p {
    width: auto;
-   height: 373px;
+   height: calc(100% - 142px);
    padding: 1px 25px;
    overflow: hidden;
    overflow-y: scroll;

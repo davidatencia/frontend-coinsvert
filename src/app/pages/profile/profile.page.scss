@@ -8,8 +8,10 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-weight: 400;
+    height: 100%;
     overflow: hidden;
     overflow-y: scroll;
+
     h1 {
         color: white;
         font-family: 'Source Sans Pro', sans-serif;
@@ -21,9 +23,6 @@
     h2 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: gray;
-    }
-    h3 {
-        // color: #fff;
     }
     h4 {
         text-align: center;
@@ -45,16 +44,9 @@
     }
 }
 
-.content {
-    position: relative;
-    height: auto;
-    height: fit-content;
-    // border-style: dashed;
-    .cabecera {
-        padding: 15px;
-        height: auto;
-        height: 54px;
-    }
+.cabecera {
+    padding: 15px;
+    height: 5%;
 }
 
 .notif-button.profile-icon {
@@ -121,7 +113,7 @@
     background: #ffffff;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
     border-radius: 40px 40px 0 0;
-    height: auto;
+    height: 90%;
     padding-top: 20px;
     align-items: center;
 }
@@ -153,16 +145,10 @@
     overflow-y: scroll;
 }
 
-.subcontent {
-    width: 90%;
+.tituloparteabajo {
     color: grey;
-    width: auto;
-    height: 50px;
-    // height: 610px;
     padding-left: 40px;
     padding-right: 40px;
-    overflow: hidden;
-    overflow-y: scroll;
 }
 
 .formulario{

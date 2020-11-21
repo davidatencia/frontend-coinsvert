@@ -2,17 +2,17 @@
     background: linear-gradient(to top, #5fcedc 55%, #644296);
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
-    font-weight: 400;
+    height: 100%;
     overflow: hidden;
     overflow-y: scroll;
+
     h1 {
         color: white;
         font-family: 'Source Sans Pro', sans-serif;
         text-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.425);
         font-weight: bold;
         font-size: 10vw;
-        // max-width: 15vw;
+
     }
     h2 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -38,13 +38,11 @@
 
 .content {
     position: relative;
-    height: auto;
-    height: fit-content;
+    height: 32%;
 
     .cabecera {
         padding: 15px;
         height: auto;
-        height: 260px;
     }
 }
 
@@ -171,7 +169,7 @@
     background: #fff;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
     border-radius: 40px 40px 0 0;
-    height: auto;
+    height: 66%;
     padding-top: 20px;
     align-items: center;
 }
@@ -179,7 +177,7 @@
 //lista de transacciones
 .content-t-p {
     width: auto;
-    height: 414px;
+    height: calc(100% - 90px);
     padding: 1px 25px;
     overflow: hidden;
     overflow-y: scroll;

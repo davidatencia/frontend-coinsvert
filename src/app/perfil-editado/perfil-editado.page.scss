@@ -1,9 +1,8 @@
 .container-fluid {
     background: linear-gradient(to top, #5fcedc 65%, #644296);
     color: white;
-    font-weight: lighter;
-    font-weight: 400;
     overflow-y: scroll;
+    height: 100%;
 
     p {
         color: #000;
@@ -23,8 +22,7 @@
 
 .content {
     position: relative;
-    height: auto;
-    height: fit-content;
+    height: 32%;
   
     .cabecera {
       padding: 15px;
@@ -36,7 +34,7 @@
           justify-content: center;
 
           img{
-              width: 100px;
+              width: 20%;
               height: auto;
               margin: 10px;
               margin-left: auto;
@@ -95,7 +93,7 @@
     color: gray;
     box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.425);
     border-radius: 40px 40px 0 0;
-    height: auto;
+    height: 69%;
     -webkit-border-radius: 40px 40px 0 0;
     -moz-border-radius: 40px 40px 0 0;
     -ms-border-radius: 40px 40px 0 0;
@@ -103,7 +101,7 @@
 
     .subcontent {
         width: auto;
-        height: 58vh;
+        height: calc(100% - 99px);
         color: gray;
         padding: 5px 20px;
         overflow: hidden;

@@ -8,26 +8,16 @@ import { Router } from '@angular/router';
 })
 export class MenuPage implements OnInit {
 
-  prueba: any[] = Array(20);
+  public prueba: any[] = Array(20);
+  public slider: any;
+  public condicion: String;
 
-
-  condicion: String;
   constructor(private _router: Router) { 
     this.condicion= "Utransacciones";
+    this.slider=0;
   }
 
   ngOnInit() {
     console.log("oninit");
-  }
-
-  UltimasTransaccionesButton(){
-    let slider = document.querySelector(".slider");
-    slider.classList.remove("clicked");
-    console.log("UltimasTransaccionesButton");
-  }
-  PreciosButton(){
-    let slider = document.querySelector(".slider");
-    slider.classList.add("clicked");
-    console.log("PreciosButton");
   }
 }
