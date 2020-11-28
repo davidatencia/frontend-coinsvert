@@ -17,7 +17,7 @@ export class PeticionesRecuperarPasswordService{
         let params = JSON.stringify(correo);
         console.log(params);
         let headers = new HttpHeaders().set('Content-Type','application/json');
-        return this._http.post(this.url+'forgot_pass/:email', params, {headers: headers});
+        return this._http.post(this.url+'forgot_pass/'+correo, params, {headers: headers});
     }
 }
 

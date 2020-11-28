@@ -74,4 +74,22 @@
       </div>
     </div>
   </div>
+
+  <!-- ALERTAS -->
+  <div class="alerta" *ngIf="alerta == 'activa'">
+    <div class="mensaje">
+      <div class="icono {{mensaje_alerta.icono}}"></div>
+      
+      <h4>{{mensaje_alerta.titulo1}}<br>{{mensaje_alerta.titulo2}}</h4>
+
+      <div class="recordatorio" *ngIf="mensaje_alerta.titulo1 != 'Bienvenido'"> 
+        <p>
+          <span>Recordatorio</span><br>
+          {{mensaje_alerta.nota}}
+          <!-- Para poder acceder a todas las funcionalidades debe activar su cuenta.
+          para activarla ingrese a su perfil y valide sus datos. -->
+        </p>
+      </div>
+    </div>
+  </div>
 </ion-content>

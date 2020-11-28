@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 import { PeticionesRecuperarPasswordService } from '../../services/RContraseña';
 
 @Component({
@@ -11,11 +12,12 @@ export class PasswordRecoverPage implements OnInit {
 
   public Correo: String;
 
-  constructor(private _router: Router, private _peticionesservice: PeticionesRecuperarPasswordService) { 
+  constructor(private _router: Router, private _peticionesservice: PeticionesRecuperarPasswordService, private menuCrl: MenuController) { 
     this.Correo = "";
   }
 
   ngOnInit() {
+    this.menuCrl.enable(false);
   }
 
   formEnviarCSubmit(){

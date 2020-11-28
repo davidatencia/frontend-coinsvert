@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-movimientos',
@@ -10,7 +11,7 @@ export class MovimientosPage implements OnInit {
   public Movimientos: any;
   prueba: any[] = Array(20);
    
-  constructor() {
+  constructor(private menuCrl: MenuController) {
     this.Movimientos = {
       Fechai: "",
       Fechaf: "",
@@ -22,6 +23,11 @@ export class MovimientosPage implements OnInit {
    }
 
   ngOnInit() {
+    this.menuCrl.enable(true);
+  }
+
+  openMenu(){
+    this.menuCrl.toggle();
   }
 
   formMovimientosSubmit(){

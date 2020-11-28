@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { PeticionesEditarPerfilService } from '../../services/PerfilServices';
 
 @Component({
@@ -10,7 +11,7 @@ export class ProfilePage implements OnInit {
 
   public EUser: any;
 
-  constructor(private _peticionesservice: PeticionesEditarPerfilService) { 
+  constructor(private _peticionesservice: PeticionesEditarPerfilService, private menuCrl: MenuController) { 
     this.EUser={
       Nombre: "",
       Apellido: "",
@@ -24,6 +25,11 @@ export class ProfilePage implements OnInit {
   }
 
   ngOnInit() {
+    this.menuCrl.enable(true);
+  }
+
+  openMenu(){
+    this.menuCrl.toggle();
   }
 
   formEditarPSubmit(){

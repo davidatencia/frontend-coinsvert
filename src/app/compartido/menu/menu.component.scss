@@ -1,0 +1,36 @@
+ion-content{
+    --ion-background-color: linear-gradient( 180deg, #31b1c7,#3f80b5 , #625f94 83%);
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:auto;
+        margin-top: 25px;
+
+        .item{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 50px;
+            width: 90%;
+            padding-left: 20px;
+            outline: none;
+
+            img{
+                width: 35px;
+                margin-right: 10px;
+                height: auto;
+            }
+
+            p{
+                font-size: 17px;
+                color: white;
+            }
+        }
+    }
+}
+
+.morado{
+    background-color: #3a78afce;
+}

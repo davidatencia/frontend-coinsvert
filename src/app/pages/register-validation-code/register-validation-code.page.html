@@ -3,11 +3,7 @@
   <div class="container-fluid">
     <div class="content">
       <ion-buttons slot="start">
-        <ion-back-button
-          text="Regresar"
-          icon="chevron-back-outline"
-          defaultHref="home"
-        ></ion-back-button>
+        <ion-back-button text="Regresar" icon="chevron-back-outline" defaultHref="/"></ion-back-button>
       </ion-buttons>
       <div class="title">
         <div class="ion-text-center">
@@ -17,58 +13,34 @@
           <p>Hemos enviado un código al e-mail registrado.</p>
         </div>
       </div>
-      <div class="cabecera">
-        <!-- <h5>Ingresa el código de verificación</h5> -->
-        <div class="code-main-container">
-          <!-- Contenedor principal ingreso código de verificación-->
-          <ion-grid class="code-grid">
-            <ion-row class="ion-align-items-center">
-              <ion-col size="12">
-                <div class="ion-text-center">
-                  <h2>Ingresa el código</h2>
-                </div>
-              </ion-col>
-            </ion-row>
 
-            <ion-row class="code-fields-container ion-align-items-center">
-              <ion-col class="ion-text-center ion-no-padding ion-justify-items-center"  size="12" offset="" no-lines>
-                <form class="verificarion-form" method="POST">
-                  <ion-item class="code-field" lines="none">
-                    <!-- <div class="code-blocks">
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                                      <div class="code-block"></div>
-                        </div> -->
-                    <ion-input onkeypress="" class="input" maxlength="6" autofocus="true"></ion-input>
-                  </ion-item>
-                </form>
-              </ion-col>
-            </ion-row>
-            <ion-row class="ion-align-items-center">
-              <ion-col size="12">
-                  <button class="submit-button" id="botonValidar"><strong>Validar</strong></button>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          <!-- /Contenedor principal ingreso código de verificación -->
+      <!-- Contenedor principal ingreso código de verificación-->
+      <div class="caja1">
+
+        <div id="marcas">
+          <div class="piesa"></div>
+          <div class="piesa"></div>
+          <div class="piesa"></div>
+          <div class="piesa"></div>
+          <div class="piesa"></div>
+          <div class="piesa"></div>
         </div>
+ 
+        <!--<form id="formInicio" class="formulario" #formCodigo="ngForm" (ngSubmit)="formCodigo()"> -->
+          <form id="formInicio" class="formulario" #formCodigo="ngForm">
+          <h2>Ingresa el código</h2>
+          <input  maxlength="6" class="input" type="number" name="codigo" #codigo="ngModel" [(ngModel)]="Codigo.codi" required>
+          <button class="submit-button" [disabled]="!formCodigo.form.valid" [style.background]="!formCodigo.form.valid ? 'gainsboro' : 'white'"><strong>Validar</strong></button>
+        </form>
       </div>
-      <div class="title">
-        <div class="confirmation-popup">
-          <!-- Contenedor principal ingreso código de verificación-->
-          <div class="popup-icon">
-            <img
-              src="../../../assets/imgs/aprovado-verificacion.svg"
-              alt="email validado"
-            />
-          </div>
-          <h2>Email validado</h2>
-          <!-- /Contenedor principal ingreso código de verificación -->
-        </div>
+
+    
+      <!-- MENSAJE -->
+      <div class="confirmation-popup">
+        <img src="../../../assets/imgs/aprobado.svg" alt="email validado"/>
+        <h3>Email validado</h3>
       </div>
+
     </div>
   </div>
 </ion-content>

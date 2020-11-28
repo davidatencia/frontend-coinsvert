@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
 import * as pluginAnnotations from 'chartjs-plugin-annotation';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -33,11 +34,17 @@ export class DashboardPage implements OnInit {
  public lineChartPlugins = [pluginAnnotations];
 
   @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective;
-  constructor() { }
+  constructor(private menuCrl: MenuController) { }
 
-   ngOnInit() {
-  
+  ngOnInit() {
+    this.menuCrl.enable(true);
   }
+
+  //abrir menu lateral
+  openMenu(){
+    this.menuCrl.toggle();
+  }
+
  public randomize(): void {
    for (let i = 0; i < this.lineChartData.length; i++) {
      for (let j = 0; j < this.lineChartData[i].data.length; j++) {

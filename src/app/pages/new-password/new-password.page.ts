@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 import { PeticionesCPasswordService } from '../../services/C_contraseña';
 
 @Component({
@@ -12,13 +13,14 @@ export class NewPasswordPage implements OnInit {
   public Password: any;
   public cpassword: any;
 
-  constructor(private _peticionesservice: PeticionesCPasswordService, private _router: Router) {
+  constructor(private _peticionesservice: PeticionesCPasswordService, private _router: Router, private menuCrl: MenuController) {
     this.Password = {
       npassword: ""
     };
    }
 
   ngOnInit() {
+    this.menuCrl.enable(false);
   }
 
   formrecureperarCSubmit(){
